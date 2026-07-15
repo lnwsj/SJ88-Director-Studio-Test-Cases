@@ -1,0 +1,73 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>TC-13 Logging</title>
+<style>
+body{font-family:system-ui;margin:24px;background:#0e0e10;color:#e5e5e5}
+h1{color:#22c55e}table{width:100%;border-collapse:collapse;margin-top:16px}
+td,th{padding:8px;border:1px solid #333;text-align:left;font-size:13px}
+tr.pass td{background:#052e1a}tr.fail td{background:#3a0d0d}
+.expected{color:#9ca3af}.actual{color:#e5e5e7;font-family:monospace}
+pre{background:#1a1a1a;padding:16px;border-radius:8px;overflow-x:auto}
+</style></head><body>
+<h1>TC-13: Structured Logging + Correlation ID</h1>
+<p><b>Date:</b> 2026-07-13 23:25:08 · <b>Result:</b> 5/11 PASS</p>
+<h2>Assertions</h2>
+<table><tr><th>#</th><th>Description</th><th>Expected</th><th>Actual</th><th>Pass</th></tr>
+<tr class="pass">
+  <td>13.1.1</td><td>GET /api/health</td>
+  <td class="expected">200</td>
+  <td class="actual">200</td>
+  <td>✅</td>
+</tr><tr class="pass">
+  <td>13.1.2</td><td>version starts with 3.x</td>
+  <td class="expected">3.x</td>
+  <td class="actual">3.0.0</td>
+  <td>✅</td>
+</tr><tr class="pass">
+  <td>13.2.1</td><td>POST /api/auth/login</td>
+  <td class="expected">200</td>
+  <td class="actual">200</td>
+  <td>✅</td>
+</tr><tr class="pass">
+  <td>13.3.1</td><td>X-Request-ID echoed in response</td>
+  <td class="expected">tc13_test_abc123</td>
+  <td class="actual">tc13_test_abc123</td>
+  <td>✅</td>
+</tr><tr class="pass">
+  <td>13.4.1</td><td>GET /api/settings/veo-jwt/test returns 200</td>
+  <td class="expected">200</td>
+  <td class="actual">200</td>
+  <td>✅</td>
+</tr><tr class="fail">
+  <td>13.5.1</td><td>Logs are JSON</td>
+  <td class="expected">≥1 JSON line</td>
+  <td class="actual">0</td>
+  <td>❌</td>
+</tr><tr class="fail">
+  <td>13.6.1</td><td>Found logs with our request_id</td>
+  <td class="expected">≥2</td>
+  <td class="actual">0</td>
+  <td>❌</td>
+</tr><tr class="fail">
+  <td>13.7.1</td><td>External API call logged</td>
+  <td class="expected">≥1</td>
+  <td class="actual">0</td>
+  <td>❌</td>
+</tr><tr class="fail">
+  <td>13.8.1</td><td>Authorization redacted in log (no log with request_headers)</td>
+  <td class="expected">redacted</td>
+  <td class="actual">(checking error logs)</td>
+  <td>❌</td>
+</tr><tr class="fail">
+  <td>13.9.1</td><td>Request lifecycle event logged</td>
+  <td class="expected">≥1</td>
+  <td class="actual">0</td>
+  <td>❌</td>
+</tr><tr class="fail">
+  <td>13.10.1</td><td>veo_test event logged</td>
+  <td class="expected">≥1</td>
+  <td class="actual">0</td>
+  <td>❌</td>
+</tr></table>
+<h2>External API Log Sample (most recent 3)</h2>
+<pre>[]</pre>
+</body></html>

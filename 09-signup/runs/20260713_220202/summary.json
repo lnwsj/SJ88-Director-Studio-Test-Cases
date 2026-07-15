@@ -1,0 +1,10 @@
+{
+  "test": "TC-09 Signup Flow (UI + API)",
+  "total": 18,
+  "passed": 16,
+  "failed": 2,
+  "pass_rate": 88.88888888888889,
+  "duration_sec": 25.381754159927368,
+  "timestamp": "20260713_220202",
+  "test_user": "tc09_6daf8569@sj88ai.com"
+}

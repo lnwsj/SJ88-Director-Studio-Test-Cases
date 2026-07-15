@@ -1,0 +1,115 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>TC-12 Real Veo API</title>
+<style>
+body{font-family:system-ui;margin:24px;background:#0e0e10;color:#e5e5e5}
+h1{color:#22c55e}
+table{width:100%;border-collapse:collapse;margin-top:16px}
+td,th{padding:8px;border:1px solid #333;text-align:left;font-size:13px}
+tr.pass td{background:#052e1a}tr.fail td{background:#3a0d0d}
+.expected{color:#9ca3af}.actual{color:#e5e5e7;font-family:monospace}
+ul{background:#1a1a1a;padding:16px 32px;border-radius:8px}
+img{max-width:100%;border:1px solid #333;margin:8px 0}
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px;margin-top:16px}
+.card{background:#1a1a1a;padding:8px;border-radius:8px}
+</style></head><body>
+<h1>TC-12: Real Veo API Integration</h1>
+<p><b>Date:</b> 2026-07-14 21:01:43 · <b>Result:</b> 11/14 PASS</p>
+
+<h2>Findings</h2>
+<ul><li>⚠️ Test button not visible in Settings UI</li></ul>
+
+<h2>Assertions</h2>
+<table>
+<tr><th>#</th><th>Description</th><th>Expected</th><th>Actual</th><th>Pass</th></tr>
+<tr class="pass">
+  <td>12.1.1</td>
+  <td>GET /api/health</td>
+  <td class="expected">200</td>
+  <td class="actual">200</td>
+  <td>✅</td>
+</tr><tr class="pass">
+  <td>12.2.1</td>
+  <td>POST /api/auth/login</td>
+  <td class="expected">200</td>
+  <td class="actual">200</td>
+  <td>✅</td>
+</tr><tr class="fail">
+  <td>12.2.2</td>
+  <td>User role is admin</td>
+  <td class="expected">True</td>
+  <td class="actual">False</td>
+  <td>❌</td>
+</tr><tr class="pass">
+  <td>12.3.1</td>
+  <td>GET /api/settings</td>
+  <td class="expected">200</td>
+  <td class="actual">200</td>
+  <td>✅</td>
+</tr><tr class="pass">
+  <td>12.3.2</td>
+  <td>has_veo_jwt = true</td>
+  <td class="expected">True</td>
+  <td class="actual">True</td>
+  <td>✅</td>
+</tr><tr class="pass">
+  <td>12.3.3</td>
+  <td>veo_jwt_decrypt_ok = true</td>
+  <td class="expected">True</td>
+  <td class="actual">True</td>
+  <td>✅</td>
+</tr><tr class="pass">
+  <td>12.3.4</td>
+  <td>fingerprint starts with 'sha256:'</td>
+  <td class="expected">sha256:...</td>
+  <td class="actual">sha256:e0cbc...</td>
+  <td>✅</td>
+</tr><tr class="pass">
+  <td>12.4.1</td>
+  <td>GET /api/settings/veo-jwt/test returns 200</td>
+  <td class="expected">200</td>
+  <td class="actual">200</td>
+  <td>✅</td>
+</tr><tr class="pass">
+  <td>12.4.2</td>
+  <td>ok = true</td>
+  <td class="expected">True</td>
+  <td class="actual">True</td>
+  <td>✅</td>
+</tr><tr class="pass">
+  <td>12.4.3</td>
+  <td>username = sj888</td>
+  <td class="expected">sj888</td>
+  <td class="actual">sj888</td>
+  <td>✅</td>
+</tr><tr class="pass">
+  <td>12.4.4</td>
+  <td>balance is a number ≥ 0</td>
+  <td class="expected">≥0</td>
+  <td class="actual">104392</td>
+  <td>✅</td>
+</tr><tr class="pass">
+  <td>12.4.5</td>
+  <td>total_remaining is a number ≥ 0</td>
+  <td class="expected">≥0</td>
+  <td class="actual">100</td>
+  <td>✅</td>
+</tr><tr class="fail">
+  <td>12.5.1</td>
+  <td>UI Test button visible</td>
+  <td class="expected">True</td>
+  <td class="actual">False</td>
+  <td>❌</td>
+</tr><tr class="fail">
+  <td>12.5.2</td>
+  <td>Fingerprint 'sha256:...' visible in UI</td>
+  <td class="expected">True</td>
+  <td class="actual">False</td>
+  <td>❌</td>
+</tr>
+</table>
+
+<h2>Screenshots</h2>
+<div class="gallery">
+<div class="card"><b>12_5_01_login.png</b><br><img src="12_5_01_login.png"></div><div class="card"><b>12_5_02_logged_in.png</b><br><img src="12_5_02_logged_in.png"></div><div class="card"><b>12_5_03_settings.png</b><br><img src="12_5_03_settings.png"></div>
+</div>
+</body></html>

@@ -1,0 +1,189 @@
+{
+  "events": [
+    {
+      "step": "S.01",
+      "time": "2026-07-14T21:00:12.365405",
+      "action": "Navigate to /",
+      "result": "Loading...",
+      "screenshot": null
+    },
+    {
+      "step": "S.01",
+      "time": "2026-07-14T21:00:17.800955",
+      "action": "Landing page loaded",
+      "result": "Login tab visible",
+      "screenshot": "screenshots/signup/01_landing_login_tab.png"
+    },
+    {
+      "step": "S.02",
+      "time": "2026-07-14T21:00:17.862216",
+      "action": "Check default tab",
+      "result": "email=True, password=True, display_name=False",
+      "screenshot": null
+    },
+    {
+      "step": "S.03",
+      "time": "2026-07-14T21:00:19.750863",
+      "action": "Clicked signup tab",
+      "result": "Tab switched",
+      "screenshot": "screenshots/signup/02_after_click_signup_tab.png"
+    },
+    {
+      "step": "S.04",
+      "time": "2026-07-14T21:00:20.072997",
+      "action": "Verify signup form",
+      "result": "display_name=True, email=True, password=True",
+      "screenshot": "screenshots/signup/03_signup_empty_form.png"
+    },
+    {
+      "step": "S.05",
+      "time": "2026-07-14T21:00:23.173221",
+      "action": "Empty submit",
+      "result": "still_on_page=True, has_error_msg=False",
+      "screenshot": "screenshots/signup/05_after_empty_submit.png"
+    },
+    {
+      "step": "S.06",
+      "time": "2026-07-14T21:00:23.574235",
+      "action": "Fill form",
+      "result": "email=tc11ui_c9aa6266@sj88ai.com",
+      "screenshot": "screenshots/signup/06_filled_form.png"
+    },
+    {
+      "step": "S.07",
+      "time": "2026-07-14T21:00:31.809208",
+      "action": "Submit signup",
+      "result": "is_app_view=True, signup_form_still_visible=False",
+      "screenshot": "screenshots/signup/07b_after_submit.png"
+    },
+    {
+      "step": "S.08",
+      "time": "2026-07-14T21:00:31.812067",
+      "action": "Check localStorage",
+      "result": "token=present (len=180)",
+      "screenshot": null
+    },
+    {
+      "step": "S.logout.01",
+      "time": "2026-07-14T21:00:35.185500",
+      "action": "Logout",
+      "result": "token_cleared=True, back_on_login=True",
+      "screenshot": "screenshots/session/03_after_logout.png"
+    },
+    {
+      "step": "L.admin.02",
+      "time": "2026-07-14T21:00:37.737864",
+      "action": "Verify login form",
+      "result": "email=True, password=True, display_name_shown=False",
+      "screenshot": "screenshots/login/01_fresh_login_page.png"
+    },
+    {
+      "step": "L.admin.03",
+      "time": "2026-07-14T21:00:40.433293",
+      "action": "Empty submit",
+      "result": "See screenshot for any error",
+      "screenshot": "screenshots/login/02_after_empty_submit.png"
+    },
+    {
+      "step": "L.admin.04",
+      "time": "2026-07-14T21:00:44.119923",
+      "action": "Wrong password",
+      "result": "still_on_login=True, error_visible=False",
+      "screenshot": "screenshots/login/03b_after_wrong_password.png"
+    },
+    {
+      "step": "L.admin.05",
+      "time": "2026-07-14T21:00:47.773441",
+      "action": "Wrong email",
+      "result": "still_on_login=True",
+      "screenshot": "screenshots/login/04b_after_wrong_email.png"
+    },
+    {
+      "step": "L.admin.06",
+      "time": "2026-07-14T21:00:53.218325",
+      "action": "Valid login",
+      "result": "is_app_view=True, auth_form_visible=False, token=present",
+      "screenshot": "screenshots/login/06_after_valid_login.png"
+    },
+    {
+      "step": "L.admin.07",
+      "time": "2026-07-14T21:00:53.303709",
+      "action": "Check user chip",
+      "result": "text='Admin'",
+      "screenshot": "screenshots/session/01_user_chip.png"
+    },
+    {
+      "step": "L.admin.08",
+      "time": "2026-07-14T21:00:56.646494",
+      "action": "Refresh page",
+      "result": "still_logged_in=True, auth_form_visible=False",
+      "screenshot": "screenshots/session/02_after_refresh.png"
+    },
+    {
+      "step": "L.logout.01",
+      "time": "2026-07-14T21:01:00.097335",
+      "action": "Logout",
+      "result": "token_cleared=True, back_on_login=True",
+      "screenshot": "screenshots/session/03_after_logout.png"
+    },
+    {
+      "step": "L.new.02",
+      "time": "2026-07-14T21:01:02.621845",
+      "action": "Verify login form",
+      "result": "email=True, password=True, display_name_shown=False",
+      "screenshot": "screenshots/login/01_fresh_login_page.png"
+    },
+    {
+      "step": "L.new.03",
+      "time": "2026-07-14T21:01:05.382395",
+      "action": "Empty submit",
+      "result": "See screenshot for any error",
+      "screenshot": "screenshots/login/02_after_empty_submit.png"
+    },
+    {
+      "step": "L.new.04",
+      "time": "2026-07-14T21:01:09.062868",
+      "action": "Wrong password",
+      "result": "still_on_login=True, error_visible=False",
+      "screenshot": "screenshots/login/03b_after_wrong_password.png"
+    },
+    {
+      "step": "L.new.05",
+      "time": "2026-07-14T21:01:12.724794",
+      "action": "Wrong email",
+      "result": "still_on_login=True",
+      "screenshot": "screenshots/login/04b_after_wrong_email.png"
+    },
+    {
+      "step": "L.new.06",
+      "time": "2026-07-14T21:01:18.444116",
+      "action": "Valid login",
+      "result": "is_app_view=True, auth_form_visible=True, token=absent",
+      "screenshot": "screenshots/login/06_after_valid_login.png"
+    },
+    {
+      "step": "L.new.07",
+      "time": "2026-07-14T21:01:18.757404",
+      "action": "Check user chip",
+      "result": "text=''",
+      "screenshot": "screenshots/session/01_user_chip.png"
+    },
+    {
+      "step": "L.new.08",
+      "time": "2026-07-14T21:01:22.432461",
+      "action": "Refresh page",
+      "result": "still_logged_in=True, auth_form_visible=True",
+      "screenshot": "screenshots/session/02_after_refresh.png"
+    },
+    {
+      "step": "X.01",
+      "time": "2026-07-14T21:01:30.051766",
+      "action": "Open โรงเรียนรัก → EP1",
+      "result": "App navigation works",
+      "screenshot": "screenshots/session/05_app_ep1.png"
+    }
+  ],
+  "network_calls": 168,
+  "console_events": 5,
+  "duration_sec": 79.01014614105225
+}

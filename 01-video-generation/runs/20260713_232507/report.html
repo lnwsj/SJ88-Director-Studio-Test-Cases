@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>TC-01 Video Generation (UI) Report</title>
+<style>
+body { font-family: -apple-system, sans-serif; max-width: 1400px; margin: 0 auto; padding: 20px; background: #0f0f1a; color: #e0e0e0; }
+h1 { color: #fbbf24; }
+h2 { color: #60a5fa; border-bottom: 1px solid #333; padding-bottom: 8px; }
+.step { background: #1a1a2e; border-radius: 8px; padding: 16px; margin: 16px 0; border-left: 4px solid #555; }
+.step.PASS { border-left-color: #10b981; }
+.step.FAIL { border-left-color: #ef4444; }
+.status { display: inline-block; padding: 4px 12px; border-radius: 4px; font-weight: bold; }
+.status.PASS { background: #065f46; color: #6ee7b7; }
+.status.FAIL { background: #7f1d1d; color: #fca5a5; }
+.field { margin: 6px 0; }
+.label { color: #888; font-size: 12px; text-transform: uppercase; }
+.value { color: #fff; font-family: 'Monaco', monospace; font-size: 13px; }
+.screenshots { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 12px; margin-top: 12px; }
+.screenshots img { width: 100%; border-radius: 4px; border: 1px solid #333; cursor: pointer; }
+.screenshots img:hover { transform: scale(1.02); transition: 0.2s; }
+.network { background: #000; padding: 8px; border-radius: 4px; font-family: monospace; font-size: 11px; max-height: 300px; overflow: auto; }
+.network .ok { color: #6ee7b7; }
+.network .err { color: #fca5a5; }
+.summary { display: flex; gap: 16px; margin: 16px 0; }
+.summary .box { background: #1a1a2e; padding: 16px; border-radius: 8px; flex: 1; text-align: center; }
+.summary .num { font-size: 36px; font-weight: bold; }
+.summary .lbl { color: #888; font-size: 12px; }
+</style></head>
+<body>
+<h1>🎬 TC-01 Video Generation (UI)</h1>
+<p><strong>Started:</strong> 2026-07-13T23:25:07.240033</p>
+<p><strong>Elapsed:</strong> 17.6s</p>
+
+<div class="summary">
+    <div class="box"><div class="num" style="color:#10b981">4</div><div class="lbl">PASSED</div></div>
+    <div class="box"><div class="num" style="color:#ef4444">1</div><div class="lbl">FAILED</div></div>
+    <div class="box"><div class="num">5</div><div class="lbl">TOTAL STEPS</div></div>
+    <div class="box"><div class="num">7</div><div class="lbl">NETWORK CALLS</div></div>
+</div>
+
+<div class="step PASS">
+    <h2>Step 1: เปิดหน้า Login <span class="status PASS">PASS</span></h2>
+    <div class="field"><span class="label">Expected:</span> <span class="value">เห็น form email + password</span></div>
+    <div class="field"><span class="label">Actual:</span> <span class="value">URL=https://directorstudio.sj88ai.com/</span></div>
+    
+    <div class="field"><span class="label">Screenshots (1):</span></div>
+    <div class="screenshots">
+<img src="screenshots/01-login-page.png" loading="lazy" />
+</div></div>
+<div class="step PASS">
+    <h2>Step 2: Submit login form <span class="status PASS">PASS</span></h2>
+    <div class="field"><span class="label">Expected:</span> <span class="value">เข้าหน้า projects</span></div>
+    <div class="field"><span class="label">Actual:</span> <span class="value">URL=https://directorstudio.sj88ai.com/</span></div>
+    
+    <div class="field"><span class="label">Screenshots (2):</span></div>
+    <div class="screenshots">
+<img src="screenshots/02a-filled-form.png" loading="lazy" />
+<img src="screenshots/02b-after-submit.png" loading="lazy" />
+</div></div>
+<div class="step PASS">
+    <h2>Step 3: คลิก โรงเรียนรัก <span class="status PASS">PASS</span></h2>
+    <div class="field"><span class="label">Expected:</span> <span class="value">เห็น EP1 card</span></div>
+    <div class="field"><span class="label">Actual:</span> <span class="value">EP1 visible=True</span></div>
+    
+    <div class="field"><span class="label">Screenshots (1):</span></div>
+    <div class="screenshots">
+<img src="screenshots/03-project-opened.png" loading="lazy" />
+</div></div>
+<div class="step PASS">
+    <h2>Step 4: เปิด EP1 + Veo tab <span class="status PASS">PASS</span></h2>
+    <div class="field"><span class="label">Expected:</span> <span class="value">10 prompts shown</span></div>
+    <div class="field"><span class="label">Actual:</span> <span class="value">'Veo Prompts (10)' in DOM=True</span></div>
+    
+    <div class="field"><span class="label">Screenshots (2):</span></div>
+    <div class="screenshots">
+<img src="screenshots/04a-ep1-script-tab.png" loading="lazy" />
+<img src="screenshots/04b-ep1-veo-tab.png" loading="lazy" />
+</div></div>
+<div class="step FAIL">
+    <h2>Step 5: กด Generate Video + รอจบ <span class="status FAIL">FAIL</span></h2>
+    <div class="field"><span class="label">Expected:</span> <span class="value">✅ completed + video player + 8s clip</span></div>
+    <div class="field"><span class="label">Actual:</span> <span class="value">final=failed, video_src=None</span></div>
+    <div class="field"><span class="label">Notes:</span> <span class="value">Polled 3 new network calls</span></div>
+    <div class="field"><span class="label">Screenshots (2):</span></div>
+    <div class="screenshots">
+<img src="screenshots/05b-after-click.png" loading="lazy" />
+<img src="05d-final" loading="lazy" />
+</div><div class="field"><span class="label">Network (3 calls):</span></div><div class="network"><div class="ok">[13.3s] 200 POST https://directorstudio.sj88ai.com/api/jobs</div>
+<div class="ok">[13.3s] 200 GET https://directorstudio.sj88ai.com/api/jobs/190e2c7de1984c33</div>
+<div class="ok">[15.3s] 200 GET https://directorstudio.sj88ai.com/api/jobs/190e2c7de1984c33</div>
+</div></div>
+</body></html>

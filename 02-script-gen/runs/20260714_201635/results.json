@@ -1,0 +1,422 @@
+{
+  "test": "TC-02 Script Generation (UI)",
+  "ts": "20260714_201635",
+  "duration_sec": 53.0,
+  "total": 42,
+  "passed": 39,
+  "failed": 3,
+  "pass_rate": "39/42 (93%)",
+  "url": "https://directorstudio.sj88ai.com",
+  "browser": "chromium-1223 (real)",
+  "user_agent": "Mozilla/5.0 (X11; Linux x86_64) Chrome/120.0.0.0",
+  "assertions": [
+    {
+      "step": 1,
+      "name": "URL is base",
+      "expected": "https://directorstudio.sj88ai.com/",
+      "actual": "https://directorstudio.sj88ai.com/",
+      "status": "PASS",
+      "screenshot": "screenshots/01-login.png",
+      "notes": ""
+    },
+    {
+      "step": 1,
+      "name": "Title",
+      "expected": "contains 'Director'",
+      "actual": "Director Studio · คืนซ่อนวิญญาณ",
+      "status": "PASS",
+      "screenshot": "screenshots/01-login.png",
+      "notes": ""
+    },
+    {
+      "step": 1,
+      "name": "Page contains email input",
+      "expected": "contains 'type=\"email\"'",
+      "actual": "<!DOCTYPE html><html lang=\"th\"><head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>Director Studio · คืนซ่อนวิญญาณ</title>\n<meta name=\"descripti",
+      "status": "PASS",
+      "screenshot": "screenshots/01-login.png",
+      "notes": ""
+    },
+    {
+      "step": 1,
+      "name": "Token in localStorage",
+      "expected": "truthy",
+      "actual": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2N2MwMzMxZDMxNjU0NTA0Iiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzg0MDYwMTk5LCJleHAiOjE3ODY2NTIxOTl9.WHXVett1C2Mu2X3cSdHz9_W2PtGjNgJTsrwwyfn54hc",
+      "status": "PASS",
+      "screenshot": "screenshots/01c-after-login.png",
+      "notes": ""
+    },
+    {
+      "step": 2,
+      "name": "Projects list rendered",
+      "expected": "truthy",
+      "actual": "True",
+      "status": "PASS",
+      "screenshot": "screenshots/02-projects-list.png",
+      "notes": ""
+    },
+    {
+      "step": 3,
+      "name": "GET /projects status",
+      "expected": 200,
+      "actual": "200",
+      "status": "PASS",
+      "screenshot": "",
+      "notes": ""
+    },
+    {
+      "step": 3,
+      "name": "Horror project found",
+      "expected": "truthy",
+      "actual": "True",
+      "status": "PASS",
+      "screenshot": "screenshots/02-projects-list.png",
+      "notes": ""
+    },
+    {
+      "step": 4,
+      "name": "Episode modal visible (ตอนที่)",
+      "expected": "truthy",
+      "actual": "True",
+      "status": "PASS",
+      "screenshot": "screenshots/04b-ep1-modal.png",
+      "notes": ""
+    },
+    {
+      "step": 5,
+      "name": "GET project status",
+      "expected": 200,
+      "actual": "200",
+      "status": "PASS",
+      "screenshot": "",
+      "notes": ""
+    },
+    {
+      "step": 5,
+      "name": "Project has episodes",
+      "expected": "truthy",
+      "actual": "True",
+      "status": "PASS",
+      "screenshot": "screenshots/04b-ep1-modal.png",
+      "notes": ""
+    },
+    {
+      "step": 5,
+      "name": "EP1 has scenes",
+      "expected": "truthy",
+      "actual": "True",
+      "status": "PASS",
+      "screenshot": "screenshots/04b-ep1-modal.png",
+      "notes": ""
+    },
+    {
+      "step": 5,
+      "name": "All 20 new fields present in scene 1",
+      "expected": 20,
+      "actual": "20",
+      "status": "PASS",
+      "screenshot": "screenshots/04b-ep1-modal.png",
+      "notes": ""
+    },
+    {
+      "step": 5,
+      "name": "shot_type has value",
+      "expected": "truthy",
+      "actual": "ECU",
+      "status": "PASS",
+      "screenshot": "screenshots/04b-ep1-modal.png",
+      "notes": ""
+    },
+    {
+      "step": 5,
+      "name": "camera_move has value",
+      "expected": "truthy",
+      "actual": "slow tilt up from hands to face",
+      "status": "PASS",
+      "screenshot": "screenshots/04b-ep1-modal.png",
+      "notes": ""
+    },
+    {
+      "step": 5,
+      "name": "lighting has value",
+      "expected": "truthy",
+      "actual": "แสงจันทร์ส่องผ่านช่องหน้าต่างไม้ ทอดเป็นเส้นบางๆ บนพื้น",
+      "status": "PASS",
+      "screenshot": "screenshots/04b-ep1-modal.png",
+      "notes": ""
+    },
+    {
+      "step": 5,
+      "name": "director_note has value",
+      "expected": "truthy",
+      "actual": "ความเงียบคืออาวุธ ปล่อยให้ผู้ชมรู้สึกถึงความเปลี่ยวเปล่าก่อนเสียงใดๆ",
+      "status": "PASS",
+      "screenshot": "screenshots/04b-ep1-modal.png",
+      "notes": ""
+    },
+    {
+      "step": 5,
+      "name": "props has list",
+      "expected": "truthy",
+      "actual": "True",
+      "status": "PASS",
+      "screenshot": "screenshots/04b-ep1-modal.png",
+      "notes": ""
+    },
+    {
+      "step": 5,
+      "name": "tone_tags has list",
+      "expected": "truthy",
+      "actual": "True",
+      "status": "PASS",
+      "screenshot": "screenshots/04b-ep1-modal.png",
+      "notes": ""
+    },
+    {
+      "step": 5,
+      "name": "characters_state has list",
+      "expected": "truthy",
+      "actual": "True",
+      "status": "PASS",
+      "screenshot": "screenshots/04b-ep1-modal.png",
+      "notes": ""
+    },
+    {
+      "step": 6,
+      "name": "Production Details section rendered",
+      "expected": "truthy",
+      "actual": "True",
+      "status": "PASS",
+      "screenshot": "screenshots/06-script-tab.png",
+      "notes": ""
+    },
+    {
+      "step": 6,
+      "name": "Collapsible meta blocks exist",
+      "expected": "truthy",
+      "actual": "True",
+      "status": "PASS",
+      "screenshot": "screenshots/06-script-tab.png",
+      "notes": ""
+    },
+    {
+      "step": 6,
+      "name": "Meta block '🎥' present",
+      "expected": "contains '🎥'",
+      "actual": "<!DOCTYPE html><html lang=\"th\"><head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>Director Studio · คืนซ่อนวิญญาณ</title>\n<meta name=\"descripti",
+      "status": "PASS",
+      "screenshot": "screenshots/06-script-tab.png",
+      "notes": ""
+    },
+    {
+      "step": 6,
+      "name": "Meta block '💡' present",
+      "expected": "contains '💡'",
+      "actual": "<!DOCTYPE html><html lang=\"th\"><head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>Director Studio · คืนซ่อนวิญญาณ</title>\n<meta name=\"descripti",
+      "status": "PASS",
+      "screenshot": "screenshots/06-script-tab.png",
+      "notes": ""
+    },
+    {
+      "step": 6,
+      "name": "Meta block '🔊' present",
+      "expected": "contains '🔊'",
+      "actual": "<!DOCTYPE html><html lang=\"th\"><head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>Director Studio · คืนซ่อนวิญญาณ</title>\n<meta name=\"descripti",
+      "status": "PASS",
+      "screenshot": "screenshots/06-script-tab.png",
+      "notes": ""
+    },
+    {
+      "step": 6,
+      "name": "Meta block '🎭' present",
+      "expected": "contains '🎭'",
+      "actual": "<!DOCTYPE html><html lang=\"th\"><head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>Director Studio · คืนซ่อนวิญญาณ</title>\n<meta name=\"descripti",
+      "status": "PASS",
+      "screenshot": "screenshots/06-script-tab.png",
+      "notes": ""
+    },
+    {
+      "step": 6,
+      "name": "Meta block '📖' present",
+      "expected": "contains '📖'",
+      "actual": "<!DOCTYPE html><html lang=\"th\"><head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>Director Studio · คืนซ่อนวิญญาณ</title>\n<meta name=\"descripti",
+      "status": "PASS",
+      "screenshot": "screenshots/06-script-tab.png",
+      "notes": ""
+    },
+    {
+      "step": 6,
+      "name": "Meta block '🎬' present",
+      "expected": "contains '🎬'",
+      "actual": "<!DOCTYPE html><html lang=\"th\"><head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>Director Studio · คืนซ่อนวิญญาณ</title>\n<meta name=\"descripti",
+      "status": "PASS",
+      "screenshot": "screenshots/06-script-tab.png",
+      "notes": ""
+    },
+    {
+      "step": 7,
+      "name": "Script modal has #script-idea textarea",
+      "expected": "truthy",
+      "actual": "True",
+      "status": "PASS",
+      "screenshot": "screenshots/07b-new-episode-form.png",
+      "notes": ""
+    },
+    {
+      "step": 7,
+      "name": "Prompt contains test text",
+      "expected": "contains 'น้ำตื่น'",
+      "actual": "น้ำตื่นขึ้นมาในห้องมืด ได้ยินเสียงเรียกชื่อตัวเองจากนอกหน้าต่าง มองเห็นเงาดำยืนอยู่หน้าประตูบ้าน",
+      "status": "PASS",
+      "screenshot": "screenshots/07c-prompt-filled.png",
+      "notes": ""
+    },
+    {
+      "step": 8,
+      "name": "GET project status (after gen)",
+      "expected": 200,
+      "actual": "200",
+      "status": "PASS",
+      "screenshot": "",
+      "notes": ""
+    },
+    {
+      "step": 8,
+      "name": "New episode was created",
+      "expected": "truthy",
+      "actual": "True",
+      "status": "PASS",
+      "screenshot": "screenshots/07e-after-gen.png",
+      "notes": ""
+    },
+    {
+      "step": 8,
+      "name": "New EP scene 1 has 20 fields",
+      "expected": 20,
+      "actual": "20",
+      "status": "PASS",
+      "screenshot": "screenshots/07e-after-gen.png",
+      "notes": ""
+    },
+    {
+      "step": 9,
+      "name": "New EP shows '🎥'",
+      "expected": "contains '🎥'",
+      "actual": "<!DOCTYPE html><html lang=\"th\"><head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>Director Studio · คืนซ่อนวิญญาณ</title>\n<meta name=\"descripti",
+      "status": "PASS",
+      "screenshot": "screenshots/09-new-ep-meta.png",
+      "notes": ""
+    },
+    {
+      "step": 9,
+      "name": "New EP shows '💡'",
+      "expected": "contains '💡'",
+      "actual": "<!DOCTYPE html><html lang=\"th\"><head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>Director Studio · คืนซ่อนวิญญาณ</title>\n<meta name=\"descripti",
+      "status": "PASS",
+      "screenshot": "screenshots/09-new-ep-meta.png",
+      "notes": ""
+    },
+    {
+      "step": 9,
+      "name": "New EP shows '🔊'",
+      "expected": "contains '🔊'",
+      "actual": "<!DOCTYPE html><html lang=\"th\"><head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>Director Studio · คืนซ่อนวิญญาณ</title>\n<meta name=\"descripti",
+      "status": "FAIL",
+      "screenshot": "screenshots/09-new-ep-meta.png",
+      "notes": ""
+    },
+    {
+      "step": 9,
+      "name": "New EP shows '🎭'",
+      "expected": "contains '🎭'",
+      "actual": "<!DOCTYPE html><html lang=\"th\"><head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>Director Studio · คืนซ่อนวิญญาณ</title>\n<meta name=\"descripti",
+      "status": "FAIL",
+      "screenshot": "screenshots/09-new-ep-meta.png",
+      "notes": ""
+    },
+    {
+      "step": 9,
+      "name": "New EP shows '📖'",
+      "expected": "contains '📖'",
+      "actual": "<!DOCTYPE html><html lang=\"th\"><head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>Director Studio · คืนซ่อนวิญญาณ</title>\n<meta name=\"descripti",
+      "status": "PASS",
+      "screenshot": "screenshots/09-new-ep-meta.png",
+      "notes": ""
+    },
+    {
+      "step": 9,
+      "name": "New EP shows '🎬'",
+      "expected": "contains '🎬'",
+      "actual": "<!DOCTYPE html><html lang=\"th\"><head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>Director Studio · คืนซ่อนวิญญาณ</title>\n<meta name=\"descripti",
+      "status": "PASS",
+      "screenshot": "screenshots/09-new-ep-meta.png",
+      "notes": ""
+    },
+    {
+      "step": 9,
+      "name": "New EP shows Production Details",
+      "expected": "truthy",
+      "actual": "False",
+      "status": "FAIL",
+      "screenshot": "screenshots/09-new-ep-meta.png",
+      "notes": ""
+    },
+    {
+      "step": 10,
+      "name": "Project has genre",
+      "expected": "contains 'horror'",
+      "actual": "{'title': 'อยุธยา · ย้อนยุค', 'genre': 'horror', 'language': 'th', 'aspect_ratio': '9:16', 'duration_sec': 8, 'style_guide': 'ยุคอยุธยา 200 ปีก่อน ตลิ่งริมน้ำ ไม้สักทอง โคมไฟ กลิ่นธูป'}",
+      "status": "PASS",
+      "screenshot": "screenshots/09-new-ep-meta.png",
+      "notes": ""
+    },
+    {
+      "step": 10,
+      "name": "Project has language",
+      "expected": "contains 'th'",
+      "actual": "{'title': 'อยุธยา · ย้อนยุค', 'genre': 'horror', 'language': 'th', 'aspect_ratio': '9:16', 'duration_sec': 8, 'style_guide': 'ยุคอยุธยา 200 ปีก่อน ตลิ่งริมน้ำ ไม้สักทอง โคมไฟ กลิ่นธูป'}",
+      "status": "PASS",
+      "screenshot": "screenshots/09-new-ep-meta.png",
+      "notes": ""
+    },
+    {
+      "step": 10,
+      "name": "Project has aspect_ratio",
+      "expected": "contains ':'",
+      "actual": "{'title': 'อยุธยา · ย้อนยุค', 'genre': 'horror', 'language': 'th', 'aspect_ratio': '9:16', 'duration_sec': 8, 'style_guide': 'ยุคอยุธยา 200 ปีก่อน ตลิ่งริมน้ำ ไม้สักทอง โคมไฟ กลิ่นธูป'}",
+      "status": "PASS",
+      "screenshot": "screenshots/09-new-ep-meta.png",
+      "notes": ""
+    }
+  ],
+  "network_calls": 16,
+  "errors": [
+    {
+      "step": 9,
+      "name": "New EP shows '🔊'",
+      "expected": "contains '🔊'",
+      "actual": "<!DOCTYPE html><html lang=\"th\"><head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>Director Studio · คืนซ่อนวิญญาณ</title>\n<meta name=\"descripti",
+      "status": "FAIL",
+      "screenshot": "screenshots/09-new-ep-meta.png",
+      "notes": ""
+    },
+    {
+      "step": 9,
+      "name": "New EP shows '🎭'",
+      "expected": "contains '🎭'",
+      "actual": "<!DOCTYPE html><html lang=\"th\"><head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>Director Studio · คืนซ่อนวิญญาณ</title>\n<meta name=\"descripti",
+      "status": "FAIL",
+      "screenshot": "screenshots/09-new-ep-meta.png",
+      "notes": ""
+    },
+    {
+      "step": 9,
+      "name": "New EP shows Production Details",
+      "expected": "truthy",
+      "actual": "False",
+      "status": "FAIL",
+      "screenshot": "screenshots/09-new-ep-meta.png",
+      "notes": ""
+    }
+  ]
+}

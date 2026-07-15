@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>TC-08 Video Generation v2 (UI + Direct Veo API) — Results</title>
+<style>
+  body { font-family: -apple-system, sans-serif; background: #0a0a0a; color: #e5e5e5; padding: 32px; margin: 0; }
+  .container { max-width: 1400px; margin: 0 auto; }
+  h1 { color: #10b981; font-size: 36px; margin-bottom: 8px; }
+  h2 { color: #fbbf24; margin-top: 32px; }
+  .stats { display: flex; gap: 16px; margin: 24px 0; flex-wrap: wrap; }
+  .stat { background: #1a1a1a; padding: 16px 24px; border-radius: 12px; border: 1px solid #333; }
+  .stat .num { font-size: 32px; font-weight: 800; color: #10b981; }
+  .stat .label { font-size: 12px; color: #888; text-transform: uppercase; }
+  table { width: 100%; border-collapse: collapse; margin-top: 16px; background: #1a1a1a; border-radius: 8px; overflow: hidden; }
+  th { background: #262626; padding: 12px; text-align: left; color: #fbbf24; font-size: 12px; text-transform: uppercase; }
+  td { padding: 12px; border-top: 1px solid #2a2a2a; font-size: 14px; }
+  .expected, .actual { font-family: monospace; font-size: 12px; max-width: 300px; overflow: hidden; text-overflow: ellipsis; }
+  tr.pass { border-left: 4px solid #10b981; }
+  tr.fail { border-left: 4px solid #ef4444; background: #2a1a1a; }
+  .badge { padding: 4px 10px; border-radius: 100px; font-size: 11px; font-weight: 700; }
+  .badge-pass { background: #10b981; color: #000; }
+  .badge-fail { background: #ef4444; color: #fff; }
+  .screenshot a { color: #38bdf8; text-decoration: none; }
+  .meta { color: #888; font-size: 13px; margin-top: 4px; }
+  video { max-width: 100%; margin: 12px 0; border-radius: 8px; }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>TC-08 Video Generation v2 (UI + Direct Veo API)</h1>
+  <p class="meta">Run: 20260714_204846 · Duration: 16.4s · Output: /workspace/director-studio-test-cases/08-video-gen-v2/runs/20260714_204846</p>
+  <div class="stats">
+    <div class="stat"><div class="num" style="color: #10b981">5/5</div><div class="label">Passed</div></div>
+    <div class="stat"><div class="num">100%</div><div class="label">Pass Rate</div></div>
+    <div class="stat"><div class="num">0</div><div class="label">Failed</div></div>
+    <div class="stat"><div class="num">0</div><div class="label">Videos</div></div>
+    <div class="stat"><div class="num">16.4s</div><div class="label">Duration</div></div>
+  </div>
+  
+  <h2>📋 All Assertions (5)</h2>
+  <table>
+    <thead>
+      <tr><th>Step</th><th>Name</th><th>Expected</th><th>Actual</th><th>Status</th><th>Screenshot</th></tr>
+    </thead>
+    <tbody>
+        <tr class="pass">
+          <td>1</td>
+          <td>Project has episodes</td>
+          <td class="expected">truthy</td>
+          <td class="actual">True</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+          <td class="screenshot"></td>
+        </tr>
+
+        <tr class="pass">
+          <td>1</td>
+          <td>EP1 has scenes</td>
+          <td class="expected">truthy</td>
+          <td class="actual">True</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+          <td class="screenshot"></td>
+        </tr>
+
+        <tr class="pass">
+          <td>1</td>
+          <td>EP1 has timeline (Veo prompts)</td>
+          <td class="expected">truthy</td>
+          <td class="actual">True</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+          <td class="screenshot"></td>
+        </tr>
+
+        <tr class="pass">
+          <td>1</td>
+          <td>First Veo prompt not empty</td>
+          <td class="expected">truthy</td>
+          <td class="actual">True</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+          <td class="screenshot"></td>
+        </tr>
+
+        <tr class="pass">
+          <td>5</td>
+          <td>Veo tab loaded</td>
+          <td class="expected">contains 'prompt'</td>
+          <td class="actual"><!doctype html><html lang="th"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>director studio · คืนซ่อนวิญญาณ</title>
+<meta name="description" content="ai director studio — multi-tenant, per-user veo keys, per-user projects.">
+<link rel="p</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+          <td class="screenshot"><a href="screenshots/05_veo_tab.png">05_veo_tab.png</a></td>
+        </tr></tbody>
+  </table>
+</div>
+</body>
+</html>

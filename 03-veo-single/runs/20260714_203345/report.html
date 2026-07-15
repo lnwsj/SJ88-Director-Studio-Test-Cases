@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>TC-03 Veo Single-Scene (UI)</title>
+<style>
+body { font-family: -apple-system, system-ui, sans-serif; max-width: 1200px; margin: 20px auto; padding: 20px; background: #0a0a0a; color: #e0e0e0; }
+h1 { color: #d4a574; border-bottom: 2px solid #d4a574; padding-bottom: 8px; }
+.summary { display: flex; gap: 16px; margin: 20px 0; flex-wrap: wrap; }
+.stat { padding: 16px; background: #1a1a1a; border-radius: 8px; flex: 1; min-width: 150px; border-left: 4px solid #d4a574; }
+.stat .num { font-size: 32px; font-weight: bold; }
+.stat.passed .num { color: #4ade80; }
+.stat.failed .num { color: #f87171; }
+.section { margin: 32px 0; padding: 16px; background: #111; border-radius: 8px; }
+table { width: 100%; border-collapse: collapse; margin: 8px 0; }
+th, td { text-align: left; padding: 8px; border-bottom: 1px solid #333; }
+th { background: #222; color: #d4a574; }
+tr.pass td { color: #4ade80; }
+tr.fail td { color: #f87171; }
+tr.fail { background: #2a1515; }
+.screenshot { max-width: 100%; border: 1px solid #333; border-radius: 4px; margin: 8px 0; }
+.tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; margin-right: 4px; }
+.tag.pass { background: #14532d; color: #4ade80; }
+.tag.fail { background: #7f1d1d; color: #fca5a5; }
+.notes { color: #888; font-size: 12px; font-style: italic; }
+</style></head><body>
+<h1>🎬 TC-03 Veo Single-Scene (UI)</h1>
+<p><strong>Timestamp:</strong> 20260714_203345 · <strong>URL:</strong> https://directorstudio.sj88ai.com · <strong>Duration:</strong> 58.9s</p>
+<p><strong>Max chars cap:</strong> 1500 · <strong>API calls:</strong> 6</p>
+<div class="summary">
+    <div class="stat passed"><div class="num">56</div><div>Passed</div></div>
+    <div class="stat failed"><div class="num">1</div><div>Failed</div></div>
+    <div class="stat"><div class="num">57</div><div>Total</div></div>
+    <div class="stat"><div class="num">56/57 (98%)</div><div>Pass Rate</div></div>
+    <div class="stat"><div class="num">6</div><div>API calls</div></div>
+</div>
+<div class="section">
+<h2>📊 Test Coverage</h2>
+<ul>
+    <li><strong>Step 1-3:</strong> Login + load horror project + verify 20 director fields in scene 1</li>
+    <li><strong>Step 4:</strong> API: direct call to /api/llm/generate-veo-single (max 1500)</li>
+    <li><strong>Step 5-6:</strong> UI: per-scene button + click scene 1 + verify result badge + prompt</li>
+    <li><strong>Step 7-8:</strong> UI: click scenes 2 + 3 + verify each gets its own output</li>
+    <li><strong>Step 9:</strong> API: ep.timeline populated with 3 prompts (each <= 1500)</li>
+    <li><strong>Step 10:</strong> API: cross-genre (romance) works with same endpoint</li>
+    <li><strong>Step 11:</strong> API: max_chars=500 cap respected (smart truncation)</li>
+</ul>
+</div>
+<div class="section">
+<h2>🖼️ Screenshots</h2>
+
+<h3>Step 1: JWT token in localStorage</h3>
+<img class="screenshot" src="screenshots/01b-after-login.png" />
+<h3>Step 3: Scene 1 has all 20 director fields</h3>
+<img class="screenshot" src="screenshots/03-ep1-loaded.png" />
+<h3>Step 4: POST /generate-veo-single status</h3>
+<img class="screenshot" src="screenshots/04-api-call.png" />
+<h3>Step 5: Per-scene buttons == 3 (one per scene)</h3>
+<img class="screenshot" src="screenshots/05-ep1-modal.png" />
+<h3>Step 6: Badge shows 'chars'</h3>
+<img class="screenshot" src="screenshots/06-scene1-result.png" />
+<h3>Step 7: Scene 2 badge has 'chars'</h3>
+<img class="screenshot" src="screenshots/07-scene2-result.png" />
+<h3>Step 8: Scene 3 badge has 'chars'</h3>
+<img class="screenshot" src="screenshots/08-scene3-result.png" />
+</div><div class="section"><h2>📋 All Assertions</h2><table>
+<tr><th>#</th><th>Step</th><th>Name</th><th>Expected</th><th>Actual</th><th>Status</th><th>Notes</th></tr>
+<tr class="pass"><td>1</td><td>1</td><td>JWT token in localStorage</td><td>truthy</td><td>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2N2MwMzMxZDMxNjU0NTA0Iiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzg0MDYxMjI5LCJleHAiOjE3ODY2NTMyMjl9.VQxAU90fIF_X6dm0VrP-VS0LqiZBLq-K_C1r9gxHr1g</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>2</td><td>2</td><td>GET horror project</td><td>200</td><td>200</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>3</td><td>2</td><td>Horror project has refs</td><td>truthy</td><td>True</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>4</td><td>2</td><td>Horror project genre</td><td>contains 'horror'</td><td>{'title': 'อยุธยา · ย้อนยุค', 'genre': 'horror', 'language': 'th', 'aspect_ratio': '9:16', 'duration_sec': 8, 'style_guide': 'ยุคอยุธยา 200 ปีก่อน ตลิ่งริมน้ำ ไม้สักทอง โคมไฟ กลิ่นธูป'}</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>5</td><td>3</td><td>Horror has episodes</td><td>truthy</td><td>True</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>6</td><td>3</td><td>EP1 has scenes</td><td>truthy</td><td>True</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>7</td><td>3</td><td>Scene 1 has all 20 director fields</td><td>20</td><td>20</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>8</td><td>3</td><td>Field 'shot_type' populated</td><td>truthy</td><td>ECU</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>9</td><td>3</td><td>Field 'camera_move' populated</td><td>truthy</td><td>slow tilt up from hands to face</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>10</td><td>3</td><td>Field 'lens' populated</td><td>truthy</td><td>35mm</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>11</td><td>3</td><td>Field 'duration_sec' populated</td><td>truthy</td><td>8</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>12</td><td>3</td><td>Field 'lighting' populated</td><td>truthy</td><td>แสงจันทร์ส่องผ่านช่องหน้าต่างไม้ ทอดเป็นเส้นบางๆ บนพื้น</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>13</td><td>3</td><td>Field 'mood_color' populated</td><td>truthy</td><td>น้ำเงินเข้ม + เงาดำ</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>14</td><td>3</td><td>Field 'time_of_day' populated</td><td>truthy</td><td>02:13</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>15</td><td>3</td><td>Field 'weather' populated</td><td>truthy</td><td>ฝนพรำเบาๆ กลางคืน</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>16</td><td>3</td><td>Field 'ambient' populated</td><td>truthy</td><td>['เสียงน้ำกระทบไม้', 'เสียงจิ้งหรีดห่างไกล', 'เสียงลมพัดผ่านใต้ถุนบ้าน']</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>17</td><td>3</td><td>Field 'sfx' populated</td><td>truthy</td><td>['เสียงพื้นไม้เก่าส่าย', 'เสียงหายใจเบาๆ']</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>18</td><td>3</td><td>Field 'characters_state' populated</td><td>truthy</td><td>[{'name': '[ref1]', 'emotion': 'fear+disorientation', 'intensity': 6, 'pose': 'นั่งบนพื้น มือแตะผนัง ตากวาดมองรอบห้อง'}]</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>19</td><td>3</td><td>Field 'plot_advances' populated</td><td>truthy</td><td>['[ref1] ค้นพบว่าตนเองอยู่ในบ้านริมน้ำที่ไม่รู้จัก', 'เริ่มได้ยินเสียงเรียก']</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>20</td><td>3</td><td>Field 'foreshadowing' populated</td><td>truthy</td><td>['เงาที่เคลื่อนไหวในมุมห้อง', 'เสียงเรียกชื่อที่จะดังขึ้นในฉากถัดไป']</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>21</td><td>3</td><td>Field 'props' populated</td><td>truthy</td><td>['พื้นไม้เก่า', 'หมอนผ้าฝ้ายขาด', 'ช่องหน้าต่างไม้']</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>22</td><td>3</td><td>Field 'vfx_notes' populated</td><td>truthy</td><td>เพิ่มหมอกบางๆ เคลื่อนผ่านพื้น แสงจันทร์กระทบฝุ่นลอย</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>23</td><td>3</td><td>Field 'transition_in' populated</td><td>truthy</td><td>fade in from black, 2s</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>24</td><td>3</td><td>Field 'transition_out' populated</td><td>truthy</td><td>smash cut</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>25</td><td>3</td><td>Field 'director_note' populated</td><td>truthy</td><td>ความเงียบคืออาวุธ ปล่อยให้ผู้ชมรู้สึกถึงความเปลี่ยวเปล่าก่อนเสียงใดๆ</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>26</td><td>3</td><td>Field 'pacing' populated</td><td>truthy</td><td>slow burn</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>27</td><td>3</td><td>Field 'tone_tags' populated</td><td>truthy</td><td>['eerie', 'isolated', 'foggy']</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>28</td><td>4</td><td>POST /generate-veo-single status</td><td>200</td><td>200</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>29</td><td>4</td><td>Result has 'ok' flag</td><td>truthy</td><td>True</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>30</td><td>4</td><td>Result has 1 timeline clip (not batched)</td><td>truthy</td><td>True</td><td><span class="tag pass">PASS</span></td><td class="notes">Got 1 clips (expected exactly 1)</td></tr>
+<tr class="pass"><td>31</td><td>4</td><td>Prompt <= max_chars (1500)</td><td><= 1500</td><td>963</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>32</td><td>4</td><td>Prompt is non-empty</td><td>truthy</td><td>True</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>33</td><td>4</td><td>vo field present</td><td>truthy</td><td>"นี่...ที่ไหน...เสียงน้ำไหล"</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>34</td><td>4</td><td>audio_cue field present</td><td>truthy</td><td>rain tapping wood, distant crickets, wind under floorboards, old teak creaking, shallow breathing</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>35</td><td>4</td><td>camera.move from script</td><td>truthy</td><td>slow tilt up from hands to face</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>36</td><td>4</td><td>Prompt uses shot_type (ECU)</td><td>contains 'ECU'</td><td>ECU shot, slow tilt up from hands to face, 35mm lens. [ref1] lies groggily on the weathered teak floor of a pitch-black lower room, lifting one trembling hand to press against a damp, mold-stained woo</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>37</td><td>4</td><td>Prompt uses camera_move</td><td>contains 'slow tilt'</td><td>ECU shot, slow tilt up from hands to face, 35mm lens. [ref1] lies groggily on the weathered teak floor of a pitch-black lower room, lifting one trembling hand to press against a damp, mold-stained woo</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>38</td><td>4</td><td>Prompt uses lens (35mm)</td><td>contains '35mm'</td><td>ECU shot, slow tilt up from hands to face, 35mm lens. [ref1] lies groggily on the weathered teak floor of a pitch-black lower room, lifting one trembling hand to press against a damp, mold-stained woo</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>39</td><td>5</td><td>Per-scene buttons == 3 (one per scene)</td><td>3</td><td>3</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>40</td><td>5</td><td>Button text mentions 'max 1500'</td><td>contains '1500'</td><td>🎬 Generate Veo Prompt (1 scene, max 1500 chars)</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>41</td><td>6</td><td>Badge shows 'chars'</td><td>contains 'chars'</td><td>✓ 755 chars</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>42</td><td>6</td><td>UI badge chars <= 1500</td><td><= 1500</td><td>755</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>43</td><td>6</td><td>UI prompt text <= 1500</td><td><= 1500</td><td>755</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>44</td><td>6</td><td>UI prompt has > 200 chars (rich content)</td><td>truthy</td><td>True</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="fail"><td>45</td><td>7</td><td>Scene 2 badge has 'chars'</td><td>contains 'chars'</td><td>✨ fresh</td><td><span class="tag fail">FAIL</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>46</td><td>8</td><td>Scene 3 badge has 'chars'</td><td>contains 'chars'</td><td>✓ 1137 chars</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>47</td><td>9</td><td>ep.timeline has 3 prompts</td><td>truthy</td><td>True</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>48</td><td>9</td><td>Clip 1 prompt <= 1500</td><td><= 1500</td><td>755</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>49</td><td>9</td><td>Clip 2 prompt <= 1500</td><td><= 1500</td><td>1137</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>50</td><td>9</td><td>Clip 3 prompt <= 1500</td><td><= 1500</td><td>1097</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>51</td><td>10</td><td>GET romance project</td><td>200</td><td>200</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>52</td><td>10</td><td>Romance /generate-veo-single status</td><td>200</td><td>200</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>53</td><td>10</td><td>Romance: 1 timeline clip</td><td>truthy</td><td>True</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>54</td><td>10</td><td>Romance prompt <= 1500</td><td><= 1500</td><td>1144</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>55</td><td>10</td><td>Romance prompt has [ref1] slot</td><td>contains '[ref1]'</td><td>Wide tracking shot, slow dolly forward, 35mm lens. [ref1], a Thai high school girl in a crisp white shirt and navy pleated skirt, walks through a sunlit school gate clutching a pastel mint-green canva</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>56</td><td>11</td><td>POST max_chars=500 status</td><td>200</td><td>200</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>57</td><td>11</td><td>Prompt <= 500 when max_chars=500</td><td><= 500</td><td>488</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+</table></div></body></html>

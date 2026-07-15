@@ -1,0 +1,13 @@
+# TC-25 Full Test
+# Project ID: b577af2eb9bb4866
+# Exported: 2026-07-14T22:14:51.052Z
+# Genre: horror
+# Language: th
+# Aspect: 9:16
+
+# ===== EP1: S1 EP1 =====
+# S1 EP1
+# สาวจีนในชุดเชียงเชียนแดงกลับมาที่บ้านเก่าในต่างจังหวัด เธอเห็นเงาของตัวเองในกระจก แต่เงายิ้มก่อนเธอ
+# Exported: 2026-07-14T22:14:51.053Z
+
+EP1_S01_01: [ref1] [ref1] in a red cheongsam stands before an old wooden house at night, holding a lantern, looking up

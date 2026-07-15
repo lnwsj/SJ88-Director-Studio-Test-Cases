@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>TC-01a Deep Report</title>
+<style>
+body { font-family: -apple-system, sans-serif; max-width: 1400px; margin: 0 auto; padding: 20px; background: #0a0a14; color: #e0e0e0; }
+h1 { color: #fbbf24; }
+h2 { color: #60a5fa; border-bottom: 1px solid #333; padding-bottom: 8px; margin-top: 32px; }
+.summary { display: flex; gap: 16px; margin: 16px 0; }
+.box { background: #1a1a2e; padding: 16px; border-radius: 8px; flex: 1; text-align: center; }
+.num { font-size: 36px; font-weight: bold; }
+.lbl { color: #888; font-size: 12px; }
+table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+th { background: #2a2a3e; padding: 8px; text-align: left; color: #fbbf24; }
+td { padding: 6px 8px; border-bottom: 1px solid #222; vertical-align: top; }
+tr.PASS td { background: rgba(16, 185, 129, 0.05); }
+tr.FAIL td { background: rgba(239, 68, 68, 0.05); }
+.badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-weight: bold; font-size: 11px; }
+.badge.PASS { background: #065f46; color: #6ee7b7; }
+.badge.FAIL { background: #7f1d1d; color: #fca5a5; }
+.screenshot { max-width: 100%; border-radius: 4px; border: 1px solid #333; margin: 8px 0; }
+.network { background: #000; padding: 12px; border-radius: 4px; font-family: monospace; font-size: 11px; max-height: 400px; overflow: auto; }
+.network .ok { color: #6ee7b7; }
+.network .err { color: #fca5a5; }
+.step-section { background: #1a1a2e; border-radius: 8px; padding: 20px; margin: 16px 0; border-left: 4px solid #60a5fa; }
+</style></head>
+<body>
+<h1>🧪 TC-01a: Steps 1-4 Deep Test</h1>
+<p><strong>Started:</strong> 2026-07-13T23:41:34.678049</p>
+<p><strong>Elapsed:</strong> 15.1s</p>
+
+<div class="summary">
+    <div class="box"><div class="num" style="color:#10b981">48</div><div class="lbl">PASSED</div></div>
+    <div class="box"><div class="num" style="color:#ef4444">2</div><div class="lbl">FAILED</div></div>
+    <div class="box"><div class="num">50</div><div class="lbl">TOTAL</div></div>
+    <div class="box"><div class="num">4</div><div class="lbl">API CALLS</div></div>
+</div>
+
+<h2>📋 Assertions by Step</h2>
+<table>
+<thead><tr><th>Step</th><th>Sub</th><th>Name</th><th>Expected</th><th>Actual</th><th>Status</th></tr></thead>
+<tbody>
+<tr class="PASS">
+    <td>1</td>
+    <td>1</td>
+    <td>URL</td>
+    <td><code>https://directorstudio.sj88ai.com/</code></td>
+    <td><code>https://directorstudio.sj88ai.com/</code></td>
+    <td><span class="badge PASS">PASS</span></td>
+</tr>
+<tr class="PASS">
+    <td>1</td>
+    <td>1</td>
+    <td>Title</td>
+    <td><code>contains 'Director Studio'</code></td>
+    <td><code>Director Studio · คืนซ่อนวิญญาณ</code></td>
+    <td><span class="badge PASS">PASS</span></td>
+</tr>
+<tr class="PASS">
+    <td>1</td>
+    <td>1</td>
+    <td>Email input visible</td>
+    <td><code>True</code></td>
+    <td><code>True</code></td>
+    <td><span class="badge PASS">PASS</span></td>
+</tr>
+<tr class="PASS">
+    <td>1</td>
+    <td>1</td>
+    <td>Email input type</td>
+    <td><code>email</code></td>
+    <td><code>email</code></td>
+    <td><span class="badge PASS">PASS</span></td>
+</tr>
+<tr class="PASS">
+    <td>1</td>
+    <td>1</td>
+    <td>Password input visible</td>
+    <td><code>True</code></td>
+    <td><code>True</code></td>
+    <td><span class="badge PASS">PASS</span></td>
+</tr>
+<tr class="PASS">
+    <td>1</td>
+    <td>1</td>
+    <td>Password input type</td>
+    <td><code>password</code></td>
+    <td><code>password</code></td>
+    <td><span class="badge PASS">PASS</span></td>
+</tr>
+<tr class="PASS">
+    <td>1</td>
+    <td>1</td>
+    <td>Submit button visible</td>
+    <td><code>True</code></td>
+    <td><code>True</code></td>
+    <td><span class="badge PASS">PASS</span></td>
+</tr>
+<tr class="PASS">
+    <td>1</td>
+    <td>2</td>
+    <td>Email field accepts text</td>
+    <td><code>admin@sj88ai.com</code></td>
+    <td><code>admin@sj88ai.com</code></td>
+    <td><span class="badge PASS">PASS</span></td>
+</tr>
+<tr class="PASS">
+    <td>1</td>
+    <td>2</td>
+    <td>Password field accepts text</td>
+    <td><code>admin1234</code></td>
+    <td><code>admin1234</code></td>
+    <td><span class="badge PASS">PASS</span></td>
+</tr>
+<tr class="PASS">
+    <td>2</td>
+    <td>1</td>
+    <td>POST /api/auth/login status</td>
+    <td><code>200</code></td>
+    <td><code>200</code></td>
+    <td><span class="badge PASS">PASS</span></td>
+</tr>
+<tr class="PASS">
+    <td>2</td>
+    <td>1</td>
+    <td>GET /api/auth/me status</td>
+    <td><code>200</code></td>
+    <td><code>200</code></td>
+    <td><span class="badge PASS">PASS</span></td>
+</tr>
+<tr class="PASS">
+    <td>2</td>
+    <td>1</td>
+    <td>GET /api/projects status</td>
+    <td><code>200</code></td>
+    <td><code>200</code></td>
+    <td><span class="badge PASS">PASS</span></td>
+</tr>
+<tr class="PASS">
+    <td>2</td>
+    <td>2</td>
+    <td>Admin badge visible</td>
+    <td><code>True</code></td>
+    <td><code>True</code></td>
+    <td><span class="badge PASS">PASS</span></td>
+</tr>
+<tr class="PASS">
+    <td>2</td>
+    <td>2</td>
+    <td>Email form hidden</td>
+    <td><code>True</code></td>
+    <td><code>True</code></td>
+    <td><span class="badge PASS">PASS</span></td>
+</tr>
+<tr class="PASS">
+    <td>2</td>
+    <td>2</td>
+    <td>Project cards present</td>
+    <td><code>True</code></td>
+    <td><code>True</code></td>
+    <td><span class="badge PASS">PASS</span></td>
+</tr>
+<tr class="PASS">
+    <td>2</td>
+    <td>2</td>
+    <td>โรงเรียนรัก in project list</td>
+    <td><code>contains 'โรงเรียนรัก'</code></td>
+    <td><code>['โรงเรียนรัก']</code></td>
+    <td><span class="badge PASS">PASS</span></td>
+</tr>
+<tr class="PASS">
+    <td>3</td>
+    <td>1</td>
+    <td>โรงเรียนรัก card visible</td>
+    <td><code>True</code></td>
+    <td><code>True</code></td>
+    <td><span class="badge PASS">PASS</span></td>
+</tr>
+<tr class="PASS">
+    <td>3</td>
+    <td>2</td>
+    <td>โรงเรียนรัก shown on page</td>
+    <td><code>contains 'โรงเรียนรัก'</code></td>
+    <td><code>
+
+
+
+  
+    
+      ◈
+      DIRECTOR STUDIO
+      คืนซ่อนวิญญาณ · multi-tenant v2
+    
+    
+      เข้าสู่ระบบ
+      สมัครสมาชิก
+    
+    
+      
+       </code></td>
+    <td><span class="badge PASS">PASS</span></td>
+</tr>
+<tr class="PASS">
+    <td>3</td>
+    <td>2</td>
+    <td>Back link visible</td>
+    <td><code>True</code></td>
+    <td><code>True</code></td>
+    <td><span class="badge PASS">PASS</span></td>
+</tr>
+<tr class="PASS">
+    <td>3</td>
+    <td>2</td>
+    <td>EP1 visible</td>
+    <td><code>True</code></td>
+    <td><code>True</code></td>
+    <td><span class="badge PASS">PASS</span></td>
+</tr>
+<tr class="PASS">
+    <td>3</td>
+    <td>2</td>
+    <td>+ Episode ใหม่ button</td>
+    <td><code>True</code></td>
+    <td><code>True</code></td>
+    <td><span class="badge PASS">PASS</span></td>
+</tr>
+<tr class="PASS">
+    <td>3</td>
+    <td>2</td>
+    <td>✨ Generate Episode (AI) button</td>
+    <td><code>True</code></td>
+    <td><code>True</code></td>
+    <td><span class="badge PASS">PASS</span></td>
+</tr>
+<tr class="PASS">
+    <td>3</td>
+    <td>2</td>
+    <td>Seed EP1-3 button removed</td>
+    <td><code>False</code></td>
+    <td><code>False</code></td>
+    <td><span class="badge PASS">PASS</span></td>
+</tr>
+<tr class="PASS">
+    <td>4</td>
+    <td>1</td>
+    <td>Modal title</td>
+    <td><code>contains 'วันแรกที่โรงเรียน'</code></td>
+    <td><code>
+
+
+
+  
+    
+      ◈
+      DIRECTOR STUDIO
+      คืนซ่อนวิญญาณ · multi-tenant v2
+    
+    
+      เข้าสู่ระบบ
+      สมัครสมาชิก
+    
+    
+      
+       </code></td>
+    <td><span class="badge PASS">PASS</span></td>
+</tr>
+<tr class="PASS">
+    <td>4</td>
+    <td>1</td>
+    <td>บท tab visible</td>
+    <td><code>True</code></td>
+    <td><code>True</code></td>
+    <td><span class="badge PASS">PASS</span></td>
+</tr>
+<tr class="PASS">
+    <td>4</td>
+    <td>1</td>
+    <td>Veo tab visible</td>
+    <td><code>True</code></td>
+    <td><code>True</code></td>
+    <td><span class="badge PASS">PASS</span></td>
+</tr>
+<tr class="PASS">
+    <td>4</td>
+    <td>1</td>
+    <td>วิดีโอ tab visible</td>
+    <td><code>True</code></td>
+    <td><code>True</code></td>
+    <td><span class="badge PASS">PASS</span></td>
+</tr>
+<tr class="PASS">
+    <td>4</td>
+    <td>2</td>
+    <td>EP1 has 10 scenes</td>
+    <td><code>10</code></td>
+    <td><code>10</code></td>
+    <td><span class="badge PASS">PASS</span></td>
+</tr>
+<tr class="PASS">
+    <td>4</td>
+    <td>2</td>
+    <td>EP1 has logline</td>
+    <td><code>contains 'มิ้นท์'</code></td>
+    <td><code>มิ้นท์ นักเรียนหญิง ม.6 ย้ายมาใหม่ วันแรกเธอทำกระเป๋าตกหน้าห้องเรียน รุ่นพี่หน้าตาดีหยิบขึ้นมาส่ง จุดเริ่มต้นของมิตรภาพที่ค่อยๆ กลายเป็นความรู้สึกดีๆ</code></td>
+    <td><span class="badge PASS">PASS</span></td>
+</tr>
+<tr class="PASS">
+    <td>4</td>
+    <td>2</td>
+    <td>EP1 chars: mint,phom,peach</td>
+    <td><code>True</code></td>
+    <td><code>True</code></td>
+    <td><span class="badge PASS">PASS</span></td>
+</tr>
+<tr class="PASS">
+    <td>4</td>
+    <td>2</td>
+    <td>Thai dialogue in scenes</td>
+    <td><code>True</code></td>
+    <td><code>True</code></td>
+    <td><span class="badge PASS">PASS</span></td>
+</tr>
+<tr class="PASS">
+    <td>4</td>
+    <td>2</td>
+    <td>All scenes have emotional_beat</td>
+    <td><code>True</code></td>
+    <td><code>True</code></td>
+    <td><span class="badge PASS">PASS</span></td>
+</tr>
+<tr class="PASS">
+    <td>4</td>
+    <td>3</td>
+    <td>Veo Prompts (10) header</td>
+    <td><code>True</code></td>
+    <td><code>True</code></td>
+    <td><span class="badge PASS">PASS</span></td>
+</tr>
+<tr class="PASS">
+    <td>4</td>
+    <td>3</td>
+    <td>Duration 0.0-8 shown</td>
+    <td><code>True</code></td>
+    <td><code>True</code></td>
+    <td><span class="badge PASS">PASS</span></td>
+</tr>
+<tr class="PASS">
+    <td>4</td>
+    <td>3</td>
+    <td>veo_config.duration = 8s</td>
+    <td><code>8s</code></td>
+    <td><code>8s</code></td>
+    <td><span class="badge PASS">PASS</span></td>
+</tr>
+<tr class="PASS">
+    <td>4</td>
+    <td>3</td>
+    <td>veo_config.aspect = 9:16</td>
+    <td><code>9:16</code></td>
+    <td><code>9:16</code></td>
+    <td><span class="badge PASS">PASS</span></td>
+</tr>
+<tr class="PASS">
+    <td>4</td>
+    <td>4</td>
+    <td>timeline has 10 entries</td>
+    <td><code>10</code></td>
+    <td><code>10</code></td>
+    <td><span class="badge PASS">PASS</span></td>
+</tr>
+<tr class="PASS">
+    <td>4</td>
+    <td>4</td>
+    <td>S01_01 has t</td>
+    <td><code>0.0-8</code></td>
+    <td><code>0.0-8</code></td>
+    <td><span class="badge PASS">PASS</span></td>
+</tr>
+<tr class="PASS">
+    <td>4</td>
+    <td>4</td>
+    <td>S01_01 has refs</td>
+    <td><code>True</code></td>
+    <td><code>True</code></td>
+    <td><span class="badge PASS">PASS</span></td>
+</tr>
+<tr class="PASS">
+    <td>4</td>
+    <td>4</td>
+    <td>S01_01 has prompt (long)</td>
+    <td><code>True</code></td>
+    <td><code>True</code></td>
+    <td><span class="badge PASS">PASS</span></td>
+</tr>
+<tr class="PASS">
+    <td>4</td>
+    <td>4</td>
+    <td>S01_01 has vo (Thai)</td>
+    <td><code>True</code></td>
+    <td><code>True</code></td>
+    <td><span class="badge PASS">PASS</span></td>
+</tr>
+<tr class="PASS">
+    <td>4</td>
+    <td>4</td>
+    <td>S01_01 has audio_cue</td>
+    <td><code>True</code></td>
+    <td><code>True</code></td>
+    <td><span class="badge PASS">PASS</span></td>
+</tr>
+<tr class="PASS">
+    <td>4</td>
+    <td>4</td>
+    <td>Thai VO in all 10 clips</td>
+    <td><code>10</code></td>
+    <td><code>10</code></td>
+    <td><span class="badge PASS">PASS</span></td>
+</tr>
+<tr class="FAIL">
+    <td>4</td>
+    <td>4</td>
+    <td>Scene 1 VO rendered</td>
+    <td><code>contains 'มิ้นท์'</code></td>
+    <td><code></code></td>
+    <td><span class="badge FAIL">FAIL</span></td>
+</tr>
+<tr class="FAIL">
+    <td>4</td>
+    <td>4</td>
+    <td>Scene 1 Audio rendered</td>
+    <td><code>contains 'morning'</code></td>
+    <td><code></code></td>
+    <td><span class="badge FAIL">FAIL</span></td>
+</tr>
+<tr class="PASS">
+    <td>4</td>
+    <td>4</td>
+    <td>Generate Video button visible</td>
+    <td><code>True</code></td>
+    <td><code>True</code></td>
+    <td><span class="badge PASS">PASS</span></td>
+</tr>
+<tr class="PASS">
+    <td>4</td>
+    <td>5</td>
+    <td>Project has 3 refs</td>
+    <td><code>3</code></td>
+    <td><code>3</code></td>
+    <td><span class="badge PASS">PASS</span></td>
+</tr>
+<tr class="PASS">
+    <td>4</td>
+    <td>5</td>
+    <td>Ref slots: ref1, ref2, ref3</td>
+    <td><code>True</code></td>
+    <td><code>True</code></td>
+    <td><span class="badge PASS">PASS</span></td>
+</tr>
+<tr class="PASS">
+    <td>4</td>
+    <td>5</td>
+    <td>All ref files exist on disk</td>
+    <td><code>True</code></td>
+    <td><code>True</code></td>
+    <td><span class="badge PASS">PASS</span></td>
+</tr>
+<tr class="PASS">
+    <td>4</td>
+    <td>5</td>
+    <td>veo_assets has 3 refs</td>
+    <td><code>3</code></td>
+    <td><code>3</code></td>
+    <td><span class="badge PASS">PASS</span></td>
+</tr>
+</tbody></table><div class="step-section">
+<h2>Step 1</h2>
+<p>9 assertions</p>
+<img class="screenshot" src="screenshots/01-login-initial.png" />
+<img class="screenshot" src="screenshots/01-login-filled.png" />
+</div>
+<div class="step-section">
+<h2>Step 2</h2>
+<p>7 assertions</p>
+<img class="screenshot" src="screenshots/02-projects-list.png" />
+<img class="screenshot" src="screenshots/02-after-submit.png" />
+</div>
+<div class="step-section">
+<h2>Step 3</h2>
+<p>7 assertions</p>
+<img class="screenshot" src="screenshots/03b-project-view.png" />
+<img class="screenshot" src="screenshots/03a-before-click.png" />
+</div>
+<div class="step-section">
+<h2>Step 4</h2>
+<p>27 assertions</p>
+<img class="screenshot" src="screenshots/04a-modal-script.png" />
+<img class="screenshot" src="screenshots/04d-veo-scene-1.png" />
+<img class="screenshot" src="screenshots/04c-veo-tab.png" />
+<img class="screenshot" src="screenshots/04b-script-default.png" />
+</div>
+<h2>📡 Network Calls</h2><div class="network"><div class="ok">[2.6s] 200 POST https://directorstudio.sj88ai.com/api/auth/login</div>
+<div class="ok">[2.6s] 200 GET https://directorstudio.sj88ai.com/api/auth/me</div>
+<div class="ok">[2.6s] 200 GET https://directorstudio.sj88ai.com/api/projects</div>
+<div class="ok">[5.6s] 200 GET https://directorstudio.sj88ai.com/api/projects/8c495498e41d41b1</div>
+</div></body></html>

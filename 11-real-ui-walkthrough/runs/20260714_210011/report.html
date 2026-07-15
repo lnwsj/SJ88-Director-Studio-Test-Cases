@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="th"><head><meta charset="UTF-8"><title>TC-11 Full Real UI Walkthrough</title>
+<style>
+body{font-family:-apple-system,sans-serif;background:#0a0a0a;color:#e5e5e5;padding:32px;margin:0;}
+.container{max-width:1600px;margin:0 auto;}
+h1{color:#10b981;font-size:36px;margin-bottom:8px;}
+h2{color:#fbbf24;margin-top:40px;border-bottom:1px solid #333;padding-bottom:8px;}
+.meta{color:#888;font-size:13px;}
+.stats{display:flex;gap:16px;margin:24px 0;flex-wrap:wrap;}
+.stat{background:#1a1a1a;padding:16px 24px;border-radius:12px;border:1px solid #333;}
+.stat .num{font-size:28px;font-weight:800;color:#10b981;}
+.stat .label{font-size:11px;color:#888;text-transform:uppercase;}
+table{width:100%;border-collapse:collapse;margin-top:16px;background:#1a1a1a;border-radius:8px;overflow:hidden;}
+th{background:#262626;padding:12px;text-align:left;color:#fbbf24;font-size:11px;text-transform:uppercase;}
+td{padding:12px;border-top:1px solid #2a2a2a;font-size:13px;}
+.result{color:#10b981;}
+.screenshot img{max-width:200px;max-height:120px;border-radius:4px;border:1px solid #333;}
+.screenshot a{display:block;}
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px;margin-top:16px;}
+.screenshot-item{background:#1a1a1a;border:1px solid #333;border-radius:8px;padding:8px;}
+.screenshot-item img{width:100%;border-radius:4px;}
+.caption{font-size:11px;color:#888;margin-top:4px;word-break:break-all;}
+</style></head><body>
+<div class="container">
+<h1>🎬 TC-11 Full Real UI Walkthrough</h1>
+<p class="meta">Run: 20260714_210011 · Duration: 79.0s · Test user: tc11_18e7d242@sj88ai.com · Admin: admin@sj88ai.com</p>
+<div class="stats">
+<div class="stat"><div class="num">26</div><div class="label">Events</div></div>
+<div class="stat"><div class="num">168</div><div class="label">Network Calls</div></div>
+<div class="stat"><div class="num">5</div><div class="label">Console Events</div></div>
+<div class="stat"><div class="num">79.0s</div><div class="label">Duration</div></div>
+<div class="stat"><div class="num">22</div><div class="label">Screenshots</div></div>
+</div>
+
+<h2>📋 Event Timeline</h2>
+<table>
+<thead><tr><th>Step</th><th>Action</th><th>Result</th><th>Screenshot</th></tr></thead>
+<tbody>
+        <tr>
+          <td><code>S.01</code></td>
+          <td>Navigate to /</td>
+          <td><span class="result">Loading...</span></td>
+          <td class="screenshot">—</td>
+        </tr>
+
+        <tr>
+          <td><code>S.01</code></td>
+          <td>Landing page loaded</td>
+          <td><span class="result">Login tab visible</span></td>
+          <td class="screenshot"><a href="screenshots/screenshots/signup/01_landing_login_tab.png" target="_blank"><img src="screenshots/screenshots/signup/01_landing_login_tab.png" loading="lazy"/></a></td>
+        </tr>
+
+        <tr>
+          <td><code>S.02</code></td>
+          <td>Check default tab</td>
+          <td><span class="result">email=True, password=True, display_name=False</span></td>
+          <td class="screenshot">—</td>
+        </tr>
+
+        <tr>
+          <td><code>S.03</code></td>
+          <td>Clicked signup tab</td>
+          <td><span class="result">Tab switched</span></td>
+          <td class="screenshot"><a href="screenshots/screenshots/signup/02_after_click_signup_tab.png" target="_blank"><img src="screenshots/screenshots/signup/02_after_click_signup_tab.png" loading="lazy"/></a></td>
+        </tr>
+
+        <tr>
+          <td><code>S.04</code></td>
+          <td>Verify signup form</td>
+          <td><span class="result">display_name=True, email=True, password=True</span></td>
+          <td class="screenshot"><a href="screenshots/screenshots/signup/03_signup_empty_form.png" target="_blank"><img src="screenshots/screenshots/signup/03_signup_empty_form.png" loading="lazy"/></a></td>
+        </tr>
+
+        <tr>
+          <td><code>S.05</code></td>
+          <td>Empty submit</td>
+          <td><span class="result">still_on_page=True, has_error_msg=False</span></td>
+          <td class="screenshot"><a href="screenshots/screenshots/signup/05_after_empty_submit.png" target="_blank"><img src="screenshots/screenshots/signup/05_after_empty_submit.png" loading="lazy"/></a></td>
+        </tr>
+
+        <tr>
+          <td><code>S.06</code></td>
+          <td>Fill form</td>
+          <td><span class="result">email=tc11ui_c9aa6266@sj88ai.com</span></td>
+          <td class="screenshot"><a href="screenshots/screenshots/signup/06_filled_form.png" target="_blank"><img src="screenshots/screenshots/signup/06_filled_form.png" loading="lazy"/></a></td>
+        </tr>
+
+        <tr>
+          <td><code>S.07</code></td>
+          <td>Submit signup</td>
+          <td><span class="result">is_app_view=True, signup_form_still_visible=False</span></td>
+          <td class="screenshot"><a href="screenshots/screenshots/signup/07b_after_submit.png" target="_blank"><img src="screenshots/screenshots/signup/07b_after_submit.png" loading="lazy"/></a></td>
+        </tr>
+
+        <tr>
+          <td><code>S.08</code></td>
+          <td>Check localStorage</td>
+          <td><span class="result">token=present (len=180)</span></td>
+          <td class="screenshot">—</td>
+        </tr>
+
+        <tr>
+          <td><code>S.logout.01</code></td>
+          <td>Logout</td>
+          <td><span class="result">token_cleared=True, back_on_login=True</span></td>
+          <td class="screenshot"><a href="screenshots/screenshots/session/03_after_logout.png" target="_blank"><img src="screenshots/screenshots/session/03_after_logout.png" loading="lazy"/></a></td>
+        </tr>
+
+        <tr>
+          <td><code>L.admin.02</code></td>
+          <td>Verify login form</td>
+          <td><span class="result">email=True, password=True, display_name_shown=False</span></td>
+          <td class="screenshot"><a href="screenshots/screenshots/login/01_fresh_login_page.png" target="_blank"><img src="screenshots/screenshots/login/01_fresh_login_page.png" loading="lazy"/></a></td>
+        </tr>
+
+        <tr>
+          <td><code>L.admin.03</code></td>
+          <td>Empty submit</td>
+          <td><span class="result">See screenshot for any error</span></td>
+          <td class="screenshot"><a href="screenshots/screenshots/login/02_after_empty_submit.png" target="_blank"><img src="screenshots/screenshots/login/02_after_empty_submit.png" loading="lazy"/></a></td>
+        </tr>
+
+        <tr>
+          <td><code>L.admin.04</code></td>
+          <td>Wrong password</td>
+          <td><span class="result">still_on_login=True, error_visible=False</span></td>
+          <td class="screenshot"><a href="screenshots/screenshots/login/03b_after_wrong_password.png" target="_blank"><img src="screenshots/screenshots/login/03b_after_wrong_password.png" loading="lazy"/></a></td>
+        </tr>
+
+        <tr>
+          <td><code>L.admin.05</code></td>
+          <td>Wrong email</td>
+          <td><span class="result">still_on_login=True</span></td>
+          <td class="screenshot"><a href="screenshots/screenshots/login/04b_after_wrong_email.png" target="_blank"><img src="screenshots/screenshots/login/04b_after_wrong_email.png" loading="lazy"/></a></td>
+        </tr>
+
+        <tr>
+          <td><code>L.admin.06</code></td>
+          <td>Valid login</td>
+          <td><span class="result">is_app_view=True, auth_form_visible=False, token=present</span></td>
+          <td class="screenshot"><a href="screenshots/screenshots/login/06_after_valid_login.png" target="_blank"><img src="screenshots/screenshots/login/06_after_valid_login.png" loading="lazy"/></a></td>
+        </tr>
+
+        <tr>
+          <td><code>L.admin.07</code></td>
+          <td>Check user chip</td>
+          <td><span class="result">text='Admin'</span></td>
+          <td class="screenshot"><a href="screenshots/screenshots/session/01_user_chip.png" target="_blank"><img src="screenshots/screenshots/session/01_user_chip.png" loading="lazy"/></a></td>
+        </tr>
+
+        <tr>
+          <td><code>L.admin.08</code></td>
+          <td>Refresh page</td>
+          <td><span class="result">still_logged_in=True, auth_form_visible=False</span></td>
+          <td class="screenshot"><a href="screenshots/screenshots/session/02_after_refresh.png" target="_blank"><img src="screenshots/screenshots/session/02_after_refresh.png" loading="lazy"/></a></td>
+        </tr>
+
+        <tr>
+          <td><code>L.logout.01</code></td>
+          <td>Logout</td>
+          <td><span class="result">token_cleared=True, back_on_login=True</span></td>
+          <td class="screenshot"><a href="screenshots/screenshots/session/03_after_logout.png" target="_blank"><img src="screenshots/screenshots/session/03_after_logout.png" loading="lazy"/></a></td>
+        </tr>
+
+        <tr>
+          <td><code>L.new.02</code></td>
+          <td>Verify login form</td>
+          <td><span class="result">email=True, password=True, display_name_shown=False</span></td>
+          <td class="screenshot"><a href="screenshots/screenshots/login/01_fresh_login_page.png" target="_blank"><img src="screenshots/screenshots/login/01_fresh_login_page.png" loading="lazy"/></a></td>
+        </tr>
+
+        <tr>
+          <td><code>L.new.03</code></td>
+          <td>Empty submit</td>
+          <td><span class="result">See screenshot for any error</span></td>
+          <td class="screenshot"><a href="screenshots/screenshots/login/02_after_empty_submit.png" target="_blank"><img src="screenshots/screenshots/login/02_after_empty_submit.png" loading="lazy"/></a></td>
+        </tr>
+
+        <tr>
+          <td><code>L.new.04</code></td>
+          <td>Wrong password</td>
+          <td><span class="result">still_on_login=True, error_visible=False</span></td>
+          <td class="screenshot"><a href="screenshots/screenshots/login/03b_after_wrong_password.png" target="_blank"><img src="screenshots/screenshots/login/03b_after_wrong_password.png" loading="lazy"/></a></td>
+        </tr>
+
+        <tr>
+          <td><code>L.new.05</code></td>
+          <td>Wrong email</td>
+          <td><span class="result">still_on_login=True</span></td>
+          <td class="screenshot"><a href="screenshots/screenshots/login/04b_after_wrong_email.png" target="_blank"><img src="screenshots/screenshots/login/04b_after_wrong_email.png" loading="lazy"/></a></td>
+        </tr>
+
+        <tr>
+          <td><code>L.new.06</code></td>
+          <td>Valid login</td>
+          <td><span class="result">is_app_view=True, auth_form_visible=True, token=absent</span></td>
+          <td class="screenshot"><a href="screenshots/screenshots/login/06_after_valid_login.png" target="_blank"><img src="screenshots/screenshots/login/06_after_valid_login.png" loading="lazy"/></a></td>
+        </tr>
+
+        <tr>
+          <td><code>L.new.07</code></td>
+          <td>Check user chip</td>
+          <td><span class="result">text=''</span></td>
+          <td class="screenshot"><a href="screenshots/screenshots/session/01_user_chip.png" target="_blank"><img src="screenshots/screenshots/session/01_user_chip.png" loading="lazy"/></a></td>
+        </tr>
+
+        <tr>
+          <td><code>L.new.08</code></td>
+          <td>Refresh page</td>
+          <td><span class="result">still_logged_in=True, auth_form_visible=True</span></td>
+          <td class="screenshot"><a href="screenshots/screenshots/session/02_after_refresh.png" target="_blank"><img src="screenshots/screenshots/session/02_after_refresh.png" loading="lazy"/></a></td>
+        </tr>
+
+        <tr>
+          <td><code>X.01</code></td>
+          <td>Open โรงเรียนรัก → EP1</td>
+          <td><span class="result">App navigation works</span></td>
+          <td class="screenshot"><a href="screenshots/screenshots/session/05_app_ep1.png" target="_blank"><img src="screenshots/screenshots/session/05_app_ep1.png" loading="lazy"/></a></td>
+        </tr></tbody>
+</table>
+
+<h2>📸 Screenshot Gallery</h2><div class='gallery'><div class="screenshot-item"><a href="screenshots/screenshots/login/01_fresh_login_page.png" target="_blank"><img src="screenshots/screenshots/login/01_fresh_login_page.png" loading="lazy"/><div class="caption">screenshots/login/01_fresh_login_page.png</div></a></div><div class="screenshot-item"><a href="screenshots/screenshots/login/02_after_empty_submit.png" target="_blank"><img src="screenshots/screenshots/login/02_after_empty_submit.png" loading="lazy"/><div class="caption">screenshots/login/02_after_empty_submit.png</div></a></div><div class="screenshot-item"><a href="screenshots/screenshots/login/03a_filled_wrong_password.png" target="_blank"><img src="screenshots/screenshots/login/03a_filled_wrong_password.png" loading="lazy"/><div class="caption">screenshots/login/03a_filled_wrong_password.png</div></a></div><div class="screenshot-item"><a href="screenshots/screenshots/login/03b_after_wrong_password.png" target="_blank"><img src="screenshots/screenshots/login/03b_after_wrong_password.png" loading="lazy"/><div class="caption">screenshots/login/03b_after_wrong_password.png</div></a></div><div class="screenshot-item"><a href="screenshots/screenshots/login/04a_filled_wrong_email.png" target="_blank"><img src="screenshots/screenshots/login/04a_filled_wrong_email.png" loading="lazy"/><div class="caption">screenshots/login/04a_filled_wrong_email.png</div></a></div><div class="screenshot-item"><a href="screenshots/screenshots/login/04b_after_wrong_email.png" target="_blank"><img src="screenshots/screenshots/login/04b_after_wrong_email.png" loading="lazy"/><div class="caption">screenshots/login/04b_after_wrong_email.png</div></a></div><div class="screenshot-item"><a href="screenshots/screenshots/login/05_filled_correct.png" target="_blank"><img src="screenshots/screenshots/login/05_filled_correct.png" loading="lazy"/><div class="caption">screenshots/login/05_filled_correct.png</div></a></div><div class="screenshot-item"><a href="screenshots/screenshots/login/06_after_valid_login.png" target="_blank"><img src="screenshots/screenshots/login/06_after_valid_login.png" loading="lazy"/><div class="caption">screenshots/login/06_after_valid_login.png</div></a></div><div class="screenshot-item"><a href="screenshots/screenshots/session/01_user_chip.png" target="_blank"><img src="screenshots/screenshots/session/01_user_chip.png" loading="lazy"/><div class="caption">screenshots/session/01_user_chip.png</div></a></div><div class="screenshot-item"><a href="screenshots/screenshots/session/02_after_refresh.png" target="_blank"><img src="screenshots/screenshots/session/02_after_refresh.png" loading="lazy"/><div class="caption">screenshots/session/02_after_refresh.png</div></a></div><div class="screenshot-item"><a href="screenshots/screenshots/session/03_after_logout.png" target="_blank"><img src="screenshots/screenshots/session/03_after_logout.png" loading="lazy"/><div class="caption">screenshots/session/03_after_logout.png</div></a></div><div class="screenshot-item"><a href="screenshots/screenshots/session/04_app_projects_view.png" target="_blank"><img src="screenshots/screenshots/session/04_app_projects_view.png" loading="lazy"/><div class="caption">screenshots/session/04_app_projects_view.png</div></a></div><div class="screenshot-item"><a href="screenshots/screenshots/session/05_app_ep1.png" target="_blank"><img src="screenshots/screenshots/session/05_app_ep1.png" loading="lazy"/><div class="caption">screenshots/session/05_app_ep1.png</div></a></div><div class="screenshot-item"><a href="screenshots/screenshots/session/06_final.png" target="_blank"><img src="screenshots/screenshots/session/06_final.png" loading="lazy"/><div class="caption">screenshots/session/06_final.png</div></a></div><div class="screenshot-item"><a href="screenshots/screenshots/signup/01_landing_login_tab.png" target="_blank"><img src="screenshots/screenshots/signup/01_landing_login_tab.png" loading="lazy"/><div class="caption">screenshots/signup/01_landing_login_tab.png</div></a></div><div class="screenshot-item"><a href="screenshots/screenshots/signup/02_after_click_signup_tab.png" target="_blank"><img src="screenshots/screenshots/signup/02_after_click_signup_tab.png" loading="lazy"/><div class="caption">screenshots/signup/02_after_click_signup_tab.png</div></a></div><div class="screenshot-item"><a href="screenshots/screenshots/signup/03_signup_empty_form.png" target="_blank"><img src="screenshots/screenshots/signup/03_signup_empty_form.png" loading="lazy"/><div class="caption">screenshots/signup/03_signup_empty_form.png</div></a></div><div class="screenshot-item"><a href="screenshots/screenshots/signup/04_before_empty_submit.png" target="_blank"><img src="screenshots/screenshots/signup/04_before_empty_submit.png" loading="lazy"/><div class="caption">screenshots/signup/04_before_empty_submit.png</div></a></div><div class="screenshot-item"><a href="screenshots/screenshots/signup/05_after_empty_submit.png" target="_blank"><img src="screenshots/screenshots/signup/05_after_empty_submit.png" loading="lazy"/><div class="caption">screenshots/signup/05_after_empty_submit.png</div></a></div><div class="screenshot-item"><a href="screenshots/screenshots/signup/06_filled_form.png" target="_blank"><img src="screenshots/screenshots/signup/06_filled_form.png" loading="lazy"/><div class="caption">screenshots/signup/06_filled_form.png</div></a></div><div class="screenshot-item"><a href="screenshots/screenshots/signup/07a_during_submit.png" target="_blank"><img src="screenshots/screenshots/signup/07a_during_submit.png" loading="lazy"/><div class="caption">screenshots/signup/07a_during_submit.png</div></a></div><div class="screenshot-item"><a href="screenshots/screenshots/signup/07b_after_submit.png" target="_blank"><img src="screenshots/screenshots/signup/07b_after_submit.png" loading="lazy"/><div class="caption">screenshots/signup/07b_after_submit.png</div></a></div></div>
+
+</div></body></html>

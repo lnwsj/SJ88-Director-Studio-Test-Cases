@@ -1,0 +1,407 @@
+{
+  "test": "TC-04 Refs Management (UI + API)",
+  "ts": "20260714_201825",
+  "duration_sec": 51.5,
+  "total": 40,
+  "passed": 38,
+  "failed": 2,
+  "pass_rate": "38/40 (95%)",
+  "url": "https://directorstudio.sj88ai.com",
+  "browser": "chromium-1223 (real)",
+  "projects_tested": 2,
+  "refs_per_project": 3,
+  "required_fields": [
+    "slot",
+    "url",
+    "display_name",
+    "description"
+  ],
+  "expected_slots": [
+    "ref1",
+    "ref2",
+    "ref3"
+  ],
+  "assertions": [
+    {
+      "step": 1,
+      "name": "JWT token in localStorage",
+      "expected": "truthy",
+      "actual": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2N2MwMzMxZDMxNjU0NTA0Iiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzg0MDYwMzA5LCJleHAiOjE3ODY2NTIzMDl9.FqaI_YEjYvaCfGGl-pJlQ_XuMvcPcmJTaSKrhFbbLj8",
+      "status": "PASS",
+      "screenshot": "screenshots/01b-after-login.png",
+      "notes": ""
+    },
+    {
+      "step": 2,
+      "name": "GET horror project",
+      "expected": 200,
+      "actual": "200",
+      "status": "PASS",
+      "screenshot": "",
+      "notes": ""
+    },
+    {
+      "step": 2,
+      "name": "Horror has 3 refs",
+      "expected": 3,
+      "actual": "3",
+      "status": "PASS",
+      "screenshot": "screenshots/01b-after-login.png",
+      "notes": ""
+    },
+    {
+      "step": 2,
+      "name": "Horror ref[0].slot populated",
+      "expected": "truthy",
+      "actual": "ref1",
+      "status": "PASS",
+      "screenshot": "screenshots/01b-after-login.png",
+      "notes": ""
+    },
+    {
+      "step": 2,
+      "name": "Horror ref[0].url populated",
+      "expected": "truthy",
+      "actual": "/opt/director-studio/refs/nam_ref.jpg",
+      "status": "PASS",
+      "screenshot": "screenshots/01b-after-login.png",
+      "notes": ""
+    },
+    {
+      "step": 2,
+      "name": "Horror ref[0].display_name populated",
+      "expected": "truthy",
+      "actual": "จันทรา (น้ำ)",
+      "status": "PASS",
+      "screenshot": "screenshots/01b-after-login.png",
+      "notes": ""
+    },
+    {
+      "step": 2,
+      "name": "Horror ref[0].description populated",
+      "expected": "truthy",
+      "actual": "Female Thai villager, 22, long black hair, white traditional dress [TC-04 test marker] [TC-04 test marker]",
+      "status": "PASS",
+      "screenshot": "screenshots/01b-after-login.png",
+      "notes": ""
+    },
+    {
+      "step": 2,
+      "name": "Horror ref[1].slot populated",
+      "expected": "truthy",
+      "actual": "ref2",
+      "status": "PASS",
+      "screenshot": "screenshots/01b-after-login.png",
+      "notes": ""
+    },
+    {
+      "step": 2,
+      "name": "Horror ref[1].url populated",
+      "expected": "truthy",
+      "actual": "/opt/director-studio/refs/jay_ref.jpg",
+      "status": "PASS",
+      "screenshot": "screenshots/01b-after-login.png",
+      "notes": ""
+    },
+    {
+      "step": 2,
+      "name": "Horror ref[1].display_name populated",
+      "expected": "truthy",
+      "actual": "เจ",
+      "status": "PASS",
+      "screenshot": "screenshots/01b-after-login.png",
+      "notes": ""
+    },
+    {
+      "step": 2,
+      "name": "Horror ref[1].description populated",
+      "expected": "truthy",
+      "actual": "Male Thai villager, 25, short black hair, dark shirt",
+      "status": "PASS",
+      "screenshot": "screenshots/01b-after-login.png",
+      "notes": ""
+    },
+    {
+      "step": 2,
+      "name": "Horror ref[2].slot populated",
+      "expected": "truthy",
+      "actual": "ref3",
+      "status": "PASS",
+      "screenshot": "screenshots/01b-after-login.png",
+      "notes": ""
+    },
+    {
+      "step": 2,
+      "name": "Horror ref[2].url populated",
+      "expected": "truthy",
+      "actual": "/opt/director-studio/refs/ghost_ref.jpg",
+      "status": "PASS",
+      "screenshot": "screenshots/01b-after-login.png",
+      "notes": ""
+    },
+    {
+      "step": 2,
+      "name": "Horror ref[2].display_name populated",
+      "expected": "truthy",
+      "actual": "ผี",
+      "status": "PASS",
+      "screenshot": "screenshots/01b-after-login.png",
+      "notes": ""
+    },
+    {
+      "step": 2,
+      "name": "Horror ref[2].description populated",
+      "expected": "truthy",
+      "actual": "Ghost entity, pale face, long white hair, dark aura",
+      "status": "PASS",
+      "screenshot": "screenshots/01b-after-login.png",
+      "notes": ""
+    },
+    {
+      "step": 2,
+      "name": "Horror has slot 'ref1'",
+      "expected": "contains 'ref1'",
+      "actual": "['ref1', 'ref2', 'ref3']",
+      "status": "PASS",
+      "screenshot": "screenshots/01b-after-login.png",
+      "notes": ""
+    },
+    {
+      "step": 2,
+      "name": "Horror has slot 'ref2'",
+      "expected": "contains 'ref2'",
+      "actual": "['ref1', 'ref2', 'ref3']",
+      "status": "PASS",
+      "screenshot": "screenshots/01b-after-login.png",
+      "notes": ""
+    },
+    {
+      "step": 2,
+      "name": "Horror has slot 'ref3'",
+      "expected": "contains 'ref3'",
+      "actual": "['ref1', 'ref2', 'ref3']",
+      "status": "PASS",
+      "screenshot": "screenshots/01b-after-login.png",
+      "notes": ""
+    },
+    {
+      "step": 3,
+      "name": "GET romance project",
+      "expected": 200,
+      "actual": "200",
+      "status": "PASS",
+      "screenshot": "",
+      "notes": ""
+    },
+    {
+      "step": 3,
+      "name": "Romance has 3 refs",
+      "expected": 3,
+      "actual": "3",
+      "status": "PASS",
+      "screenshot": "screenshots/01b-after-login.png",
+      "notes": ""
+    },
+    {
+      "step": 3,
+      "name": "Romance has slot 'ref1'",
+      "expected": "contains 'ref1'",
+      "actual": "['ref1', 'ref2', 'ref3']",
+      "status": "PASS",
+      "screenshot": "screenshots/01b-after-login.png",
+      "notes": ""
+    },
+    {
+      "step": 3,
+      "name": "Romance has slot 'ref2'",
+      "expected": "contains 'ref2'",
+      "actual": "['ref1', 'ref2', 'ref3']",
+      "status": "PASS",
+      "screenshot": "screenshots/01b-after-login.png",
+      "notes": ""
+    },
+    {
+      "step": 3,
+      "name": "Romance has slot 'ref3'",
+      "expected": "contains 'ref3'",
+      "actual": "['ref1', 'ref2', 'ref3']",
+      "status": "PASS",
+      "screenshot": "screenshots/01b-after-login.png",
+      "notes": ""
+    },
+    {
+      "step": 4,
+      "name": "Horror and romance have different ref names",
+      "expected": "truthy",
+      "actual": "True",
+      "status": "PASS",
+      "screenshot": "screenshots/01b-after-login.png",
+      "notes": ""
+    },
+    {
+      "step": 5,
+      "name": "Horror ref[0].url is valid path",
+      "expected": "truthy",
+      "actual": "True",
+      "status": "PASS",
+      "screenshot": "screenshots/01b-after-login.png",
+      "notes": ""
+    },
+    {
+      "step": 5,
+      "name": "Horror ref[1].url is valid path",
+      "expected": "truthy",
+      "actual": "True",
+      "status": "PASS",
+      "screenshot": "screenshots/01b-after-login.png",
+      "notes": ""
+    },
+    {
+      "step": 5,
+      "name": "Horror ref[2].url is valid path",
+      "expected": "truthy",
+      "actual": "True",
+      "status": "PASS",
+      "screenshot": "screenshots/01b-after-login.png",
+      "notes": ""
+    },
+    {
+      "step": 5,
+      "name": "Romance ref[0].url is valid path",
+      "expected": "truthy",
+      "actual": "True",
+      "status": "PASS",
+      "screenshot": "screenshots/01b-after-login.png",
+      "notes": ""
+    },
+    {
+      "step": 5,
+      "name": "Romance ref[1].url is valid path",
+      "expected": "truthy",
+      "actual": "True",
+      "status": "PASS",
+      "screenshot": "screenshots/01b-after-login.png",
+      "notes": ""
+    },
+    {
+      "step": 5,
+      "name": "Romance ref[2].url is valid path",
+      "expected": "truthy",
+      "actual": "True",
+      "status": "PASS",
+      "screenshot": "screenshots/01b-after-login.png",
+      "notes": ""
+    },
+    {
+      "step": 6,
+      "name": "PUT horror project (update ref desc)",
+      "expected": 200,
+      "actual": "200",
+      "status": "PASS",
+      "screenshot": "screenshots/01b-after-login.png",
+      "notes": ""
+    },
+    {
+      "step": 6,
+      "name": "GET horror project (verify update)",
+      "expected": 200,
+      "actual": "200",
+      "status": "PASS",
+      "screenshot": "screenshots/01b-after-login.png",
+      "notes": ""
+    },
+    {
+      "step": 6,
+      "name": "Ref[0] description has TC-04 marker",
+      "expected": "contains 'TC-04 test marker'",
+      "actual": "Female Thai villager, 22, long black hair, white traditional dress [TC-04 test marker] [TC-04 test marker] [TC-04 test marker]",
+      "status": "PASS",
+      "screenshot": "screenshots/01b-after-login.png",
+      "notes": ""
+    },
+    {
+      "step": 7,
+      "name": "Scene uses ref slot 'ref1'",
+      "expected": "contains 'ref'",
+      "actual": "ref1",
+      "status": "PASS",
+      "screenshot": "screenshots/01b-after-login.png",
+      "notes": ""
+    },
+    {
+      "step": 8,
+      "name": "POST /generate-veo-single",
+      "expected": 200,
+      "actual": "200",
+      "status": "PASS",
+      "screenshot": "screenshots/01b-after-login.png",
+      "notes": ""
+    },
+    {
+      "step": 8,
+      "name": "Veo prompt contains [ref1] slot",
+      "expected": "contains '[ref1]'",
+      "actual": "ECU shot, slow tilt up from hands to face, 35mm lens. [ref1] lies on a damp old teak floor of a pitch-dark wooden house by the river, drifting awake in confusion. Her trembling hand lifts to touch a m",
+      "status": "PASS",
+      "screenshot": "screenshots/01b-after-login.png",
+      "notes": ""
+    },
+    {
+      "step": 8,
+      "name": "reference_image has at least 1 slot",
+      "expected": "truthy",
+      "actual": "True",
+      "status": "PASS",
+      "screenshot": "screenshots/01b-after-login.png",
+      "notes": ""
+    },
+    {
+      "step": 9,
+      "name": "UI shows project title 'อยุธยา'",
+      "expected": "contains 'อยุธยา'",
+      "actual": "<!DOCTYPE html><html lang=\"th\"><head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>Director Studio · คืนซ่อนวิญญาณ</title>\n<meta name=\"descripti",
+      "status": "FAIL",
+      "screenshot": "screenshots/09-project-view.png",
+      "notes": ""
+    },
+    {
+      "step": 9,
+      "name": "UI shows EP1 title",
+      "expected": "contains 'เสียงเรียกจากความมืด'",
+      "actual": "<!DOCTYPE html><html lang=\"th\"><head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>Director Studio · คืนซ่อนวิญญาณ</title>\n<meta name=\"descripti",
+      "status": "FAIL",
+      "screenshot": "screenshots/09-project-view.png",
+      "notes": ""
+    },
+    {
+      "step": 11,
+      "name": "No-token GET returns 401",
+      "expected": 401,
+      "actual": "401",
+      "status": "PASS",
+      "screenshot": "screenshots/09-project-view.png",
+      "notes": ""
+    }
+  ],
+  "network_calls": 11,
+  "errors": [
+    {
+      "step": 9,
+      "name": "UI shows project title 'อยุธยา'",
+      "expected": "contains 'อยุธยา'",
+      "actual": "<!DOCTYPE html><html lang=\"th\"><head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>Director Studio · คืนซ่อนวิญญาณ</title>\n<meta name=\"descripti",
+      "status": "FAIL",
+      "screenshot": "screenshots/09-project-view.png",
+      "notes": ""
+    },
+    {
+      "step": 9,
+      "name": "UI shows EP1 title",
+      "expected": "contains 'เสียงเรียกจากความมืด'",
+      "actual": "<!DOCTYPE html><html lang=\"th\"><head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>Director Studio · คืนซ่อนวิญญาณ</title>\n<meta name=\"descripti",
+      "status": "FAIL",
+      "screenshot": "screenshots/09-project-view.png",
+      "notes": ""
+    }
+  ]
+}

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>TC-07 Jobs Async (UI + API + WS) — Results</title>
+<style>
+  body { font-family: -apple-system, sans-serif; background: #0a0a0a; color: #e5e5e5; padding: 32px; margin: 0; }
+  .container { max-width: 1400px; margin: 0 auto; }
+  h1 { color: #f59e0b; font-size: 36px; margin-bottom: 8px; }
+  h2 { color: #fbbf24; margin-top: 32px; }
+  .stats { display: flex; gap: 16px; margin: 24px 0; flex-wrap: wrap; }
+  .stat { background: #1a1a1a; padding: 16px 24px; border-radius: 12px; border: 1px solid #333; }
+  .stat .num { font-size: 32px; font-weight: 800; color: #f59e0b; }
+  .stat .label { font-size: 12px; color: #888; text-transform: uppercase; }
+  table { width: 100%; border-collapse: collapse; margin-top: 16px; background: #1a1a1a; border-radius: 8px; overflow: hidden; }
+  th { background: #262626; padding: 12px; text-align: left; color: #fbbf24; font-size: 12px; text-transform: uppercase; }
+  td { padding: 12px; border-top: 1px solid #2a2a2a; font-size: 14px; }
+  .expected, .actual { font-family: monospace; font-size: 12px; max-width: 300px; overflow: hidden; text-overflow: ellipsis; }
+  tr.pass { border-left: 4px solid #10b981; }
+  tr.fail { border-left: 4px solid #ef4444; background: #2a1a1a; }
+  .badge { padding: 4px 10px; border-radius: 100px; font-size: 11px; font-weight: 700; }
+  .badge-pass { background: #10b981; color: #000; }
+  .badge-fail { background: #ef4444; color: #fff; }
+  .screenshot a { color: #38bdf8; text-decoration: none; }
+  .screenshot a:hover { text-decoration: underline; }
+  .meta { color: #888; font-size: 13px; margin-top: 4px; }
+  pre { font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>TC-07 Jobs Async (UI + API + WS)</h1>
+  <p class="meta">Run: 20260713_213423 · Duration: 51.6s · Output: /workspace/director-studio-test-cases/07-jobs-async/runs/20260713_213423</p>
+  <div class="stats">
+    <div class="stat"><div class="num" style="color: #f59e0b">20/24</div><div class="label">Passed</div></div>
+    <div class="stat"><div class="num">83%</div><div class="label">Pass Rate</div></div>
+    <div class="stat"><div class="num">4</div><div class="label">Failed</div></div>
+    <div class="stat"><div class="num">51.6s</div><div class="label">Duration</div></div>
+    <div class="stat"><div class="num">2</div><div class="label">WS Events</div></div>
+  </div>
+  <h2>📋 All Assertions (24)</h2>
+  <table>
+    <thead>
+      <tr><th>Step</th><th>Name</th><th>Expected</th><th>Actual</th><th>Status</th><th>Screenshot</th></tr>
+    </thead>
+    <tbody>
+        <tr class="pass">
+          <td>1</td>
+          <td>Login OK (projects visible)</td>
+          <td class="expected">contains 'project'</td>
+          <td class="actual"><!doctype html><html lang="th"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>director studio · คืนซ่อนวิญญาณ</title>
+<meta name="descripti</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+          <td class="screenshot"><a href="screenshots/01_after_login.png">01_after_login.png</a></td>
+        </tr>
+
+        <tr class="pass">
+          <td>2</td>
+          <td>GET /api/jobs without token returns 401</td>
+          <td class="expected">401</td>
+          <td class="actual">401</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+          <td class="screenshot"></td>
+        </tr>
+
+        <tr class="pass">
+          <td>2</td>
+          <td>POST /api/jobs without token returns 401</td>
+          <td class="expected">401</td>
+          <td class="actual">401</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+          <td class="screenshot"></td>
+        </tr>
+
+        <tr class="pass">
+          <td>3</td>
+          <td>GET /api/jobs returns ok</td>
+          <td class="expected">True</td>
+          <td class="actual">True</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+          <td class="screenshot"></td>
+        </tr>
+
+        <tr class="pass">
+          <td>3</td>
+          <td>Has 'jobs' array</td>
+          <td class="expected">truthy</td>
+          <td class="actual">True</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+          <td class="screenshot"></td>
+        </tr>
+
+        <tr class="pass">
+          <td>4</td>
+          <td>POST /api/jobs returns ok</td>
+          <td class="expected">True</td>
+          <td class="actual">True</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+          <td class="screenshot"></td>
+        </tr>
+
+        <tr class="pass">
+          <td>4</td>
+          <td>job_id returned</td>
+          <td class="expected">truthy</td>
+          <td class="actual">63b5cf680f544335</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+          <td class="screenshot"></td>
+        </tr>
+
+        <tr class="pass">
+          <td>4</td>
+          <td>Initial status = queued</td>
+          <td class="expected">queued</td>
+          <td class="actual">queued</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+          <td class="screenshot"></td>
+        </tr>
+
+        <tr class="pass">
+          <td>5</td>
+          <td>Saw 'running' or terminal status</td>
+          <td class="expected">truthy</td>
+          <td class="actual">True</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+          <td class="screenshot"></td>
+        </tr>
+
+        <tr class="pass">
+          <td>6</td>
+          <td>Submit job for WS test</td>
+          <td class="expected">truthy</td>
+          <td class="actual">7e3826aa6e2a44c1</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+          <td class="screenshot"></td>
+        </tr>
+
+        <tr class="fail">
+          <td>6</td>
+          <td>WS received update event(s) for our job</td>
+          <td class="expected">truthy</td>
+          <td class="actual">False</td>
+          <td><span class="badge badge-fail">FAIL</span></td>
+          <td class="screenshot"></td>
+        </tr>
+
+        <tr class="fail">
+          <td>7</td>
+          <td>Final status = completed</td>
+          <td class="expected">completed</td>
+          <td class="actual">failed</td>
+          <td><span class="badge badge-fail">FAIL</span></td>
+          <td class="screenshot"></td>
+        </tr>
+
+        <tr class="fail">
+          <td>7</td>
+          <td>Progress = 100</td>
+          <td class="expected">100</td>
+          <td class="actual">75</td>
+          <td><span class="badge badge-fail">FAIL</span></td>
+          <td class="screenshot"></td>
+        </tr>
+
+        <tr class="fail">
+          <td>7</td>
+          <td>Result has script</td>
+          <td class="expected">truthy</td>
+          <td class="actual">False</td>
+          <td><span class="badge badge-fail">FAIL</span></td>
+          <td class="screenshot"></td>
+        </tr>
+
+        <tr class="pass">
+          <td>8</td>
+          <td>Submit job for cancel</td>
+          <td class="expected">truthy</td>
+          <td class="actual">853fad4b3a4f4884</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+          <td class="screenshot"></td>
+        </tr>
+
+        <tr class="pass">
+          <td>8</td>
+          <td>DELETE returns ok</td>
+          <td class="expected">True</td>
+          <td class="actual">True</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+          <td class="screenshot"></td>
+        </tr>
+
+        <tr class="pass">
+          <td>8</td>
+          <td>Status = cancelled</td>
+          <td class="expected">cancelled</td>
+          <td class="actual">cancelled</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+          <td class="screenshot"></td>
+        </tr>
+
+        <tr class="pass">
+          <td>8</td>
+          <td>Final status is terminal</td>
+          <td class="expected">truthy</td>
+          <td class="actual">True</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+          <td class="screenshot"></td>
+        </tr>
+
+        <tr class="pass">
+          <td>9</td>
+          <td>GET /api/jobs/{nonexistent} returns 404</td>
+          <td class="expected">404</td>
+          <td class="actual">404</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+          <td class="screenshot"></td>
+        </tr>
+
+        <tr class="pass">
+          <td>10</td>
+          <td>Cancel completed job returns 400</td>
+          <td class="expected">400</td>
+          <td class="actual">400</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+          <td class="screenshot"></td>
+        </tr>
+
+        <tr class="pass">
+          <td>11</td>
+          <td>Jobs tab loaded</td>
+          <td class="expected">contains 'Active'</td>
+          <td class="actual"><!DOCTYPE html><html lang="th"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Director Studio · คืนซ่อนวิญญาณ</title>
+<meta name="descripti</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+          <td class="screenshot"><a href="screenshots/11_jobs_tab.png">11_jobs_tab.png</a></td>
+        </tr>
+
+        <tr class="pass">
+          <td>11</td>
+          <td>Jobs tab shows counters</td>
+          <td class="expected">truthy</td>
+          <td class="actual">True</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+          <td class="screenshot"></td>
+        </tr>
+
+        <tr class="pass">
+          <td>12</td>
+          <td>Invalid job type returns 400</td>
+          <td class="expected">400</td>
+          <td class="actual">400</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+          <td class="screenshot"></td>
+        </tr>
+
+        <tr class="pass">
+          <td>13</td>
+          <td>Both test jobs in final list</td>
+          <td class="expected">truthy</td>
+          <td class="actual">True</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+          <td class="screenshot"></td>
+        </tr></tbody>
+  </table>
+  <h2>🔌 WebSocket Events</h2><pre style='background:#1a1a1a;padding:12px;border-radius:8px;overflow-x:auto;color:#e5e5e5;'>{"type": "snapshot", "jobs": [{"id": "7e3826aa6e2a44c1", "user_id": "67c0331d31654504", "project_id": "75a2d0cf09a64504", "type": "script_gen", "status": "running", "progress": 25, "message": "Calling LLM (~30s) with 3 ref(s)...", "input": {"prompt": "TC-07 ws test", "num_scenes": 3, "style": "horro
+{"type": "script_gen", "job_id": "7e3826aa6e2a44c1", "id": "7e3826aa6e2a44c1", "user_id": "67c0331d31654504", "project_id": "75a2d0cf09a64504", "status": "completed", "progress": 100, "message": "Done", "input": {"prompt": "TC-07 ws test", "num_scenes": 3, "style": "horror"}, "result": {"script": {"
+</pre>
+</div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "test": "TC-07 Jobs Async (UI + API + WS)",
+  "total": 26,
+  "passed": 24,
+  "failed": 2,
+  "pass_rate": 92.3076923076923,
+  "duration_sec": 90.40690922737122,
+  "timestamp": "20260714_204633",
+  "ws_events_count": 2
+}

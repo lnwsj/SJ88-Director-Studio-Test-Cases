@@ -1,0 +1,108 @@
+{
+  "id": "efa176ddae67466b",
+  "name": "TC-26 ผ้าแดง (UI Test)",
+  "kind": "episode",
+  "data": {
+    "episodes": [
+      {
+        "episode_title": "ตอนที่ 1: คืนแรก",
+        "episode_title_en": "EP1 — The First Night",
+        "episode_logline": "น้ำกลับมาที่หมู่บ้านเกิดหลังจาก 20 ปี และพบว่ามีบางอย่างรอเธออยู่",
+        "characters_in_ep": [
+          "nam",
+          "jay",
+          "ghost"
+        ],
+        "scenes": [
+          {
+            "id": "S01_01",
+            "title": "ทางเข้าหมู่บ้าน",
+            "location": "หมู่บ้านเกิด",
+            "characters": [
+              "nam"
+            ],
+            "action": "น้ำเดินเข้าหมู่บ้านตอนเย็น",
+            "dialogue": [
+              {
+                "speaker": "น้ำ",
+                "line": "กลับมาแล้ว"
+              }
+            ]
+          }
+        ],
+        "timeline": [
+          {
+            "id": "S01_01",
+            "t": "0.0-8",
+            "reference_image": [
+              "ref1"
+            ],
+            "prompt": "Wide establishing shot, slow dolly forward following the subject from behind, 24mm lens. [ref1] walks alone down the cracked concrete path leading into a forgotten Thai village at dusk, a weathered canvas backpack slung over one shoulder. Her silhouette moves past leaning wooden signposts, faded shopfronts with closed shutters, and overgrown weeds pushing through broken pavement. A pale, dying amber sunset bleeds into the horizon behind the distant tree line, while deep blue shadows pool under the eaves of roofless homes. Mist drifts low across the dirt road, settling like a held breath. Faint fireflies flicker at the edges of frame. VFX: subtle atmospheric haze overlay. Foreshadow: a single window shutter slowly creaks open in a far house, though no hand is seen. Tone: quiet dread of returning home, slow burn unease, lingering stillness.",
+            "camera": {
+              "move": "slow dolly forward",
+              "lens": "24mm"
+            },
+            "vo": "\"กลับมาแล้ว\"",
+            "audio_cue": "evening insects chirping, distant dog bark, soft wind through dry grass, faint creak of old wood"
+          }
+        ]
+      },
+      {
+        "episode_title": "ตอนที่ 2: เสียงในความมืด",
+        "episode_title_en": "EP2 — Voice in the Dark",
+        "episode_logline": "เจได้ยินเสียงเรียกชื่อตัวเองจากในป่า",
+        "characters_in_ep": [
+          "nam",
+          "jay",
+          "ghost"
+        ],
+        "scenes": [
+          {
+            "id": "S02_01",
+            "title": "เสียงเรียก",
+            "location": "ป่าหลังบ้าน",
+            "characters": [
+              "jay"
+            ],
+            "action": "เจหยุดฟังเสียง",
+            "dialogue": [
+              {
+                "speaker": "เจ",
+                "line": "ใครอยู่ตรงนั้น?"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "episode_title": "ตอนที่ 3: หน้าต่างเปิด",
+        "episode_title_en": "EP3 — The Open Window",
+        "episode_logline": "น้ำตื่นมาเจอหน้าต่างเปิด ทั้งที่ล็อกไว้",
+        "characters_in_ep": [
+          "nam",
+          "ghost"
+        ],
+        "scenes": [
+          {
+            "id": "S03_01",
+            "title": "หน้าต่าง",
+            "location": "บ้านน้ำ",
+            "characters": [
+              "nam",
+              "ghost"
+            ],
+            "action": "น้ำมองเห็นเงาที่หน้าต่าง",
+            "dialogue": [
+              {
+                "speaker": "น้ำ",
+                "line": "ใครเปิดหน้าต่าง"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "created_at": 1784113060.9552224,
+  "updated_at": 1784113189.347969
+}

@@ -1,0 +1,9 @@
+{
+  "test": "TC-10 Login Flow (UI + API)",
+  "total": 24,
+  "passed": 24,
+  "failed": 0,
+  "pass_rate": 100.0,
+  "duration_sec": 36.72284150123596,
+  "timestamp": "20260714_071714"
+}

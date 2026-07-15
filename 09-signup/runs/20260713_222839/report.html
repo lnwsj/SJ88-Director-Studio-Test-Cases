@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><title>TC-09 Signup Flow (UI + API)</title>
+<style>
+body{font-family:-apple-system,sans-serif;background:#0a0a0a;color:#e5e5e5;padding:32px;margin:0;}
+.container{max-width:1400px;margin:0 auto;}
+h1{color:#10b981;font-size:32px;}
+.stats{display:flex;gap:16px;margin:24px 0;flex-wrap:wrap;}
+.stat{background:#1a1a1a;padding:16px 24px;border-radius:12px;border:1px solid #333;}
+.stat .num{font-size:28px;font-weight:800;color:#10b981;}
+.stat .label{font-size:11px;color:#888;text-transform:uppercase;}
+table{width:100%;border-collapse:collapse;margin-top:16px;background:#1a1a1a;border-radius:8px;overflow:hidden;}
+th{background:#262626;padding:12px;text-align:left;color:#fbbf24;font-size:11px;text-transform:uppercase;}
+td{padding:12px;border-top:1px solid #2a2a2a;font-size:13px;}
+.expected,.actual{font-family:monospace;font-size:11px;max-width:300px;overflow:hidden;text-overflow:ellipsis;}
+tr.pass{border-left:3px solid #10b981;}
+tr.fail{border-left:3px solid #ef4444;background:#2a1a1a;}
+.badge{padding:3px 8px;border-radius:100px;font-size:10px;font-weight:700;}
+.badge-pass{background:#10b981;color:#000;}
+.badge-fail{background:#ef4444;color:#fff;}
+.meta{color:#888;font-size:13px;}
+</style></head><body>
+<div class="container">
+<h1>TC-09 Signup Flow (UI + API)</h1>
+<p class="meta">Run: 20260713_222839 · Duration: 25.4s · Test user: tc09_20b8dc2e@sj88ai.com</p>
+<div class="stats">
+<div class="stat"><div class="num">18/18</div><div class="label">Passed</div></div>
+<div class="stat"><div class="num">100%</div><div class="label">Pass Rate</div></div>
+<div class="stat"><div class="num">0</div><div class="label">Failed</div></div>
+<div class="stat"><div class="num">25.4s</div><div class="label">Duration</div></div>
+</div>
+<h2>Assertions</h2>
+<table><thead><tr><th>Step</th><th>Name</th><th>Expected</th><th>Actual</th><th>Status</th></tr></thead>
+<tbody>
+        <tr class="pass">
+          <td>1</td>
+          <td>POST /api/auth/signup returns 200</td>
+          <td class="expected">200</td>
+          <td class="actual">200</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+
+        <tr class="pass">
+          <td>1</td>
+          <td>Response has access_token</td>
+          <td class="expected">truthy</td>
+          <td class="actual">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxY2FmN2E1ZjU5MzM0N2I5Iiwicm9sZSI6InVzZXIiLCJpYXQiOjE3ODM5ODE3MTksImV4cCI6MTc4NjU3MzcxOX0.kzpqzcJ-mtLHNMx1Yo10sXFQ0cVAlFpIM6sfqicrSRo</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+
+        <tr class="pass">
+          <td>1</td>
+          <td>Response has user.email</td>
+          <td class="expected">tc09_20b8dc2e@sj88ai.com</td>
+          <td class="actual">tc09_20b8dc2e@sj88ai.com</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+
+        <tr class="pass">
+          <td>1</td>
+          <td>Response has user.display_name</td>
+          <td class="expected">TC-09 User</td>
+          <td class="actual">TC-09 User</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+
+        <tr class="pass">
+          <td>1</td>
+          <td>Response has user.role (admin or user)</td>
+          <td class="expected">truthy</td>
+          <td class="actual">True</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+
+        <tr class="pass">
+          <td>2</td>
+          <td>GET /api/auth/me with new token works</td>
+          <td class="expected">tc09_20b8dc2e@sj88ai.com</td>
+          <td class="actual">tc09_20b8dc2e@sj88ai.com</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+
+        <tr class="pass">
+          <td>3</td>
+          <td>Duplicate signup returns error</td>
+          <td class="expected">truthy</td>
+          <td class="actual">True</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+
+        <tr class="pass">
+          <td>3</td>
+          <td>Error mentions 'already registered'</td>
+          <td class="expected">contains 'already registered'</td>
+          <td class="actual">{"detail":"Email already registered"}</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+
+        <tr class="pass">
+          <td>4</td>
+          <td>Short password rejected</td>
+          <td class="expected">truthy</td>
+          <td class="actual">True</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+
+        <tr class="pass">
+          <td>5</td>
+          <td>Invalid email rejected (strict)</td>
+          <td class="expected">truthy</td>
+          <td class="actual">True</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+
+        <tr class="pass">
+          <td>6</td>
+          <td>Login tab default (display_name not visible)</td>
+          <td class="expected">False</td>
+          <td class="actual">False</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+
+        <tr class="pass">
+          <td>6</td>
+          <td>Signup tab shows display_name field (visible)</td>
+          <td class="expected">True</td>
+          <td class="actual">True</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+
+        <tr class="pass">
+          <td>7</td>
+          <td>Still on auth page after empty submit</td>
+          <td class="expected">contains 'directorstudio'</td>
+          <td class="actual">https://directorstudio.sj88ai.com/</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+
+        <tr class="pass">
+          <td>8</td>
+          <td>After signup, app view loaded</td>
+          <td class="expected">truthy</td>
+          <td class="actual">True</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+
+        <tr class="pass">
+          <td>8</td>
+          <td>Token stored in localStorage</td>
+          <td class="expected">truthy</td>
+          <td class="actual">True</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+
+        <tr class="pass">
+          <td>9</td>
+          <td>Logged-in user not shown auth form (password not visible)</td>
+          <td class="expected">False</td>
+          <td class="actual">False</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+
+        <tr class="pass">
+          <td>9</td>
+          <td>Logged-in user shown app view</td>
+          <td class="expected">truthy</td>
+          <td class="actual">True</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+
+        <tr class="pass">
+          <td>10</td>
+          <td>Token cleared after logout</td>
+          <td class="expected">None</td>
+          <td class="actual">None</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr></tbody></table>
+</div></body></html>

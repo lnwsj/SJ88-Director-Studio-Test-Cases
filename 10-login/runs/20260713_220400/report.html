@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><title>TC-10 Login Flow (UI + API)</title>
+<style>
+body{font-family:-apple-system,sans-serif;background:#0a0a0a;color:#e5e5e5;padding:32px;margin:0;}
+.container{max-width:1400px;margin:0 auto;}
+h1{color:#10b981;font-size:32px;}
+.stats{display:flex;gap:16px;margin:24px 0;flex-wrap:wrap;}
+.stat{background:#1a1a1a;padding:16px 24px;border-radius:12px;border:1px solid #333;}
+.stat .num{font-size:28px;font-weight:800;color:#10b981;}
+.stat .label{font-size:11px;color:#888;text-transform:uppercase;}
+table{width:100%;border-collapse:collapse;margin-top:16px;background:#1a1a1a;border-radius:8px;overflow:hidden;}
+th{background:#262626;padding:12px;text-align:left;color:#fbbf24;font-size:11px;text-transform:uppercase;}
+td{padding:12px;border-top:1px solid #2a2a2a;font-size:13px;}
+.expected,.actual{font-family:monospace;font-size:11px;max-width:300px;overflow:hidden;text-overflow:ellipsis;}
+tr.pass{border-left:3px solid #10b981;}
+tr.fail{border-left:3px solid #ef4444;background:#2a1a1a;}
+.badge{padding:3px 8px;border-radius:100px;font-size:10px;font-weight:700;}
+.badge-pass{background:#10b981;color:#000;}
+.badge-fail{background:#ef4444;color:#fff;}
+.meta{color:#888;font-size:13px;}
+</style></head><body>
+<div class="container">
+<h1>TC-10 Login Flow (UI + API)</h1>
+<p class="meta">Run: 20260713_220400 · Duration: 38.1s · Admin: admin@sj88ai.com</p>
+<div class="stats">
+<div class="stat"><div class="num">24/24</div><div class="label">Passed</div></div>
+<div class="stat"><div class="num">100%</div><div class="label">Pass Rate</div></div>
+<div class="stat"><div class="num">0</div><div class="label">Failed</div></div>
+<div class="stat"><div class="num">38.1s</div><div class="label">Duration</div></div>
+</div>
+<h2>Assertions</h2>
+<table><thead><tr><th>Step</th><th>Name</th><th>Expected</th><th>Actual</th><th>Status</th></tr></thead>
+<tbody>
+        <tr class="pass">
+          <td>0</td>
+          <td>Create test user (signup)</td>
+          <td class="expected">200</td>
+          <td class="actual">200</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+
+        <tr class="pass">
+          <td>1</td>
+          <td>POST /api/auth/login returns 200</td>
+          <td class="expected">200</td>
+          <td class="actual">200</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+
+        <tr class="pass">
+          <td>1</td>
+          <td>Response has access_token</td>
+          <td class="expected">truthy</td>
+          <td class="actual">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2N2MwMzMxZDMxNjU0NTA0Iiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzgzOTgwMjQxLCJleHAiOjE3ODY1NzIyNDF9.VDCL_Nqf2WGXpzeXgpa-i8aQ3O7py_0Q6QVROGV-tFY</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+
+        <tr class="pass">
+          <td>1</td>
+          <td>Response has user.email</td>
+          <td class="expected">admin@sj88ai.com</td>
+          <td class="actual">admin@sj88ai.com</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+
+        <tr class="pass">
+          <td>1</td>
+          <td>Response has user.role</td>
+          <td class="expected">admin</td>
+          <td class="actual">admin</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+
+        <tr class="pass">
+          <td>2</td>
+          <td>GET /api/auth/me works</td>
+          <td class="expected">200</td>
+          <td class="actual">200</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+
+        <tr class="pass">
+          <td>2</td>
+          <td>GET /api/auth/me returns correct email</td>
+          <td class="expected">admin@sj88ai.com</td>
+          <td class="actual">admin@sj88ai.com</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+
+        <tr class="pass">
+          <td>3</td>
+          <td>Wrong password returns 401</td>
+          <td class="expected">401</td>
+          <td class="actual">401</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+
+        <tr class="pass">
+          <td>4</td>
+          <td>Wrong email returns 401</td>
+          <td class="expected">401</td>
+          <td class="actual">401</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+
+        <tr class="pass">
+          <td>5</td>
+          <td>Empty body returns 4xx</td>
+          <td class="expected">truthy</td>
+          <td class="actual">True</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+
+        <tr class="pass">
+          <td>6</td>
+          <td>GET /api/auth/me with bad token returns 401</td>
+          <td class="expected">401</td>
+          <td class="actual">401</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+
+        <tr class="pass">
+          <td>7</td>
+          <td>GET /api/auth/me without token returns 401</td>
+          <td class="expected">401</td>
+          <td class="actual">401</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+
+        <tr class="pass">
+          <td>8</td>
+          <td>Login form visible (email + password)</td>
+          <td class="expected">truthy</td>
+          <td class="actual">True</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+
+        <tr class="pass">
+          <td>9</td>
+          <td>Still on auth page after empty submit</td>
+          <td class="expected">contains 'directorstudio'</td>
+          <td class="actual">https://directorstudio.sj88ai.com/</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+
+        <tr class="pass">
+          <td>10</td>
+          <td>Wrong password stays on login page</td>
+          <td class="expected">truthy</td>
+          <td class="actual">True</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+
+        <tr class="pass">
+          <td>11</td>
+          <td>After login, app view loaded</td>
+          <td class="expected">truthy</td>
+          <td class="actual">True</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+
+        <tr class="pass">
+          <td>11</td>
+          <td>Token stored in localStorage</td>
+          <td class="expected">truthy</td>
+          <td class="actual">True</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+
+        <tr class="pass">
+          <td>11</td>
+          <td>User chip shows email/display</td>
+          <td class="expected">contains 'admin'</td>
+          <td class="actual">admin</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+
+        <tr class="pass">
+          <td>12</td>
+          <td>Session persists after refresh</td>
+          <td class="expected">truthy</td>
+          <td class="actual">True</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+
+        <tr class="pass">
+          <td>13</td>
+          <td>Token cleared after logout</td>
+          <td class="expected">None</td>
+          <td class="actual">None</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+
+        <tr class="pass">
+          <td>13</td>
+          <td>Back on login page after logout</td>
+          <td class="expected">truthy</td>
+          <td class="actual">True</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+
+        <tr class="pass">
+          <td>14</td>
+          <td>Login as new user works</td>
+          <td class="expected">truthy</td>
+          <td class="actual">True</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+
+        <tr class="pass">
+          <td>14</td>
+          <td>Token stored for new user</td>
+          <td class="expected">truthy</td>
+          <td class="actual">True</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+
+        <tr class="pass">
+          <td>15</td>
+          <td>Tab switch reveals signup form</td>
+          <td class="expected">truthy</td>
+          <td class="actual">True</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr></tbody></table>
+</div></body></html>

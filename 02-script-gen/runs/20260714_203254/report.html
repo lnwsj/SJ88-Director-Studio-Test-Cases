@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>TC-02 Script Generation (UI)</title>
+<style>
+body { font-family: -apple-system, system-ui, sans-serif; max-width: 1200px; margin: 20px auto; padding: 20px; background: #0a0a0a; color: #e0e0e0; }
+h1 { color: #d4a574; border-bottom: 2px solid #d4a574; padding-bottom: 8px; }
+.summary { display: flex; gap: 16px; margin: 20px 0; }
+.stat { padding: 16px; background: #1a1a1a; border-radius: 8px; flex: 1; border-left: 4px solid #d4a574; }
+.stat .num { font-size: 32px; font-weight: bold; }
+.stat.passed .num { color: #4ade80; }
+.stat.failed .num { color: #f87171; }
+.step { margin: 16px 0; padding: 12px; background: #1a1a1a; border-radius: 8px; }
+.step h3 { color: #d4a574; margin: 0 0 8px 0; }
+table { width: 100%; border-collapse: collapse; margin: 8px 0; }
+th, td { text-align: left; padding: 8px; border-bottom: 1px solid #333; }
+th { background: #222; color: #d4a574; }
+tr.pass td { color: #4ade80; }
+tr.fail td { color: #f87171; }
+tr.fail { background: #2a1515; }
+.screenshot { max-width: 100%; border: 1px solid #333; border-radius: 4px; margin: 8px 0; }
+.tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; margin-right: 4px; }
+.tag.pass { background: #14532d; color: #4ade80; }
+.tag.fail { background: #7f1d1d; color: #fca5a5; }
+.notes { color: #888; font-size: 12px; font-style: italic; }
+.section { margin: 32px 0; padding: 16px; background: #111; border-radius: 8px; }
+</style></head><body>
+<h1>🎬 TC-02 Script Generation (UI)</h1>
+<p><strong>Timestamp:</strong> 20260714_203254 · <strong>URL:</strong> https://directorstudio.sj88ai.com · <strong>Duration:</strong> 50.4s</p>
+<div class="summary">
+    <div class="stat passed"><div class="num">42</div><div>Passed</div></div>
+    <div class="stat failed"><div class="num">0</div><div>Failed</div></div>
+    <div class="stat"><div class="num">42</div><div>Total</div></div>
+    <div class="stat"><div class="num">42/42 (100%)</div><div>Pass Rate</div></div>
+    <div class="stat"><div class="num">19</div><div>API calls</div></div>
+</div>
+<div class="section">
+<h2>📊 Test Coverage</h2>
+<ul>
+    <li><strong>Step 1-2:</strong> Login + projects list</li>
+    <li><strong>Step 3-4:</strong> API + UI: find horror project (genre=horror)</li>
+    <li><strong>Step 5:</strong> API: EP1 scene 1 has all 20 new director fields</li>
+    <li><strong>Step 6:</strong> UI: Script tab shows 7 meta-blocks (🎥💡🔊🎭📖🎬)</li>
+    <li><strong>Step 7:</strong> UI: Generate new episode (Stage 1 script gen)</li>
+    <li><strong>Step 8:</strong> API: new episode has 20 fields</li>
+    <li><strong>Step 9:</strong> UI: new episode shows all 7 meta-blocks</li>
+    <li><strong>Step 10:</strong> API: project meta (genre, language, aspect) controls gen</li>
+</ul>
+</div>
+<div class="section">
+<h2>🖼️ Screenshots</h2>
+
+<h3>Step 1: URL is base</h3>
+<img class="screenshot" src="screenshots/01-login.png" />
+<h3>Step 1: Token in localStorage</h3>
+<img class="screenshot" src="screenshots/01c-after-login.png" />
+<h3>Step 2: Projects list rendered</h3>
+<img class="screenshot" src="screenshots/02-projects-list.png" />
+<h3>Step 4: Episode modal visible (ตอนที่)</h3>
+<img class="screenshot" src="screenshots/04b-ep1-modal.png" />
+<h3>Step 6: Production Details section rendered</h3>
+<img class="screenshot" src="screenshots/06-script-tab.png" />
+<h3>Step 7: Script modal has #script-idea textarea</h3>
+<img class="screenshot" src="screenshots/07b-new-episode-form.png" />
+<h3>Step 7: Prompt contains test text</h3>
+<img class="screenshot" src="screenshots/07c-prompt-filled.png" />
+<h3>Step 8: New episode was created</h3>
+<img class="screenshot" src="screenshots/07e-after-gen.png" />
+<h3>Step 9: New EP shows '🎥'</h3>
+<img class="screenshot" src="screenshots/09-new-ep-meta.png" />
+</div><div class="section"><h2>📋 All Assertions</h2><table>
+<tr><th>#</th><th>Step</th><th>Name</th><th>Expected</th><th>Actual</th><th>Status</th><th>Notes</th></tr>
+<tr class="pass"><td>1</td><td>1</td><td>URL is base</td><td>https://directorstudio.sj88ai.com/</td><td>https://directorstudio.sj88ai.com/</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>2</td><td>1</td><td>Title</td><td>contains 'Director'</td><td>Director Studio · คืนซ่อนวิญญาณ</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>3</td><td>1</td><td>Page contains email input</td><td>contains 'type="email"'</td><td><!DOCTYPE html><html lang="th"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Director Studio · คืนซ่อนวิญญาณ</title>
+<meta name="descripti</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>4</td><td>1</td><td>Token in localStorage</td><td>truthy</td><td>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2N2MwMzMxZDMxNjU0NTA0Iiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzg0MDYxMTc4LCJleHAiOjE3ODY2NTMxNzh9.x7rsMe6VNianmoAT5baAhE904EZtKyA0W4rrpmTtkHw</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>5</td><td>2</td><td>Projects list rendered</td><td>truthy</td><td>True</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>6</td><td>3</td><td>GET /projects status</td><td>200</td><td>200</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>7</td><td>3</td><td>Horror project found</td><td>truthy</td><td>True</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>8</td><td>4</td><td>Episode modal visible (ตอนที่)</td><td>truthy</td><td>True</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>9</td><td>5</td><td>GET project status</td><td>200</td><td>200</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>10</td><td>5</td><td>Project has episodes</td><td>truthy</td><td>True</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>11</td><td>5</td><td>EP1 has scenes</td><td>truthy</td><td>True</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>12</td><td>5</td><td>All 20 new fields present in scene 1</td><td>20</td><td>20</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>13</td><td>5</td><td>shot_type has value</td><td>truthy</td><td>ECU</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>14</td><td>5</td><td>camera_move has value</td><td>truthy</td><td>slow tilt up from hands to face</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>15</td><td>5</td><td>lighting has value</td><td>truthy</td><td>แสงจันทร์ส่องผ่านช่องหน้าต่างไม้ ทอดเป็นเส้นบางๆ บนพื้น</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>16</td><td>5</td><td>director_note has value</td><td>truthy</td><td>ความเงียบคืออาวุธ ปล่อยให้ผู้ชมรู้สึกถึงความเปลี่ยวเปล่าก่อนเสียงใดๆ</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>17</td><td>5</td><td>props has list</td><td>truthy</td><td>True</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>18</td><td>5</td><td>tone_tags has list</td><td>truthy</td><td>True</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>19</td><td>5</td><td>characters_state has list</td><td>truthy</td><td>True</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>20</td><td>6</td><td>Production Details section rendered</td><td>truthy</td><td>True</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>21</td><td>6</td><td>Collapsible meta blocks exist</td><td>truthy</td><td>True</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>22</td><td>6</td><td>Meta block '🎥' present</td><td>contains '🎥'</td><td><!DOCTYPE html><html lang="th"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Director Studio · คืนซ่อนวิญญาณ</title>
+<meta name="descripti</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>23</td><td>6</td><td>Meta block '💡' present</td><td>contains '💡'</td><td><!DOCTYPE html><html lang="th"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Director Studio · คืนซ่อนวิญญาณ</title>
+<meta name="descripti</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>24</td><td>6</td><td>Meta block '🔊' present</td><td>contains '🔊'</td><td><!DOCTYPE html><html lang="th"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Director Studio · คืนซ่อนวิญญาณ</title>
+<meta name="descripti</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>25</td><td>6</td><td>Meta block '🎭' present</td><td>contains '🎭'</td><td><!DOCTYPE html><html lang="th"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Director Studio · คืนซ่อนวิญญาณ</title>
+<meta name="descripti</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>26</td><td>6</td><td>Meta block '📖' present</td><td>contains '📖'</td><td><!DOCTYPE html><html lang="th"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Director Studio · คืนซ่อนวิญญาณ</title>
+<meta name="descripti</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>27</td><td>6</td><td>Meta block '🎬' present</td><td>contains '🎬'</td><td><!DOCTYPE html><html lang="th"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Director Studio · คืนซ่อนวิญญาณ</title>
+<meta name="descripti</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>28</td><td>7</td><td>Script modal has #script-idea textarea</td><td>truthy</td><td>True</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>29</td><td>7</td><td>Prompt contains test text</td><td>contains 'น้ำตื่น'</td><td>น้ำตื่นขึ้นมาในห้องมืด ได้ยินเสียงเรียกชื่อตัวเองจากนอกหน้าต่าง มองเห็นเงาดำยืนอยู่หน้าประตูบ้าน</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>30</td><td>8</td><td>GET project status (after gen)</td><td>200</td><td>200</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>31</td><td>8</td><td>New episode was created</td><td>truthy</td><td>True</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>32</td><td>8</td><td>New EP scene 1 has 20 fields</td><td>20</td><td>20</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>33</td><td>9</td><td>New EP shows '🎥'</td><td>contains '🎥'</td><td><!DOCTYPE html><html lang="th"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Director Studio · คืนซ่อนวิญญาณ</title>
+<meta name="descripti</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>34</td><td>9</td><td>New EP shows '💡'</td><td>contains '💡'</td><td><!DOCTYPE html><html lang="th"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Director Studio · คืนซ่อนวิญญาณ</title>
+<meta name="descripti</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>35</td><td>9</td><td>New EP shows '🔊'</td><td>contains '🔊'</td><td><!DOCTYPE html><html lang="th"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Director Studio · คืนซ่อนวิญญาณ</title>
+<meta name="descripti</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>36</td><td>9</td><td>New EP shows '🎭'</td><td>contains '🎭'</td><td><!DOCTYPE html><html lang="th"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Director Studio · คืนซ่อนวิญญาณ</title>
+<meta name="descripti</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>37</td><td>9</td><td>New EP shows '📖'</td><td>contains '📖'</td><td><!DOCTYPE html><html lang="th"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Director Studio · คืนซ่อนวิญญาณ</title>
+<meta name="descripti</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>38</td><td>9</td><td>New EP shows '🎬'</td><td>contains '🎬'</td><td><!DOCTYPE html><html lang="th"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Director Studio · คืนซ่อนวิญญาณ</title>
+<meta name="descripti</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>39</td><td>9</td><td>New EP shows Production Details</td><td>truthy</td><td>True</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>40</td><td>10</td><td>Project has genre</td><td>contains 'horror'</td><td>{'title': 'อยุธยา · ย้อนยุค', 'genre': 'horror', 'language': 'th', 'aspect_ratio': '9:16', 'duration_sec': 8, 'style_guide': 'ยุคอยุธยา 200 ปีก่อน ตลิ่งริมน้ำ ไม้สักทอง โคมไฟ กลิ่นธูป'}</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>41</td><td>10</td><td>Project has language</td><td>contains 'th'</td><td>{'title': 'อยุธยา · ย้อนยุค', 'genre': 'horror', 'language': 'th', 'aspect_ratio': '9:16', 'duration_sec': 8, 'style_guide': 'ยุคอยุธยา 200 ปีก่อน ตลิ่งริมน้ำ ไม้สักทอง โคมไฟ กลิ่นธูป'}</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>42</td><td>10</td><td>Project has aspect_ratio</td><td>contains ':'</td><td>{'title': 'อยุธยา · ย้อนยุค', 'genre': 'horror', 'language': 'th', 'aspect_ratio': '9:16', 'duration_sec': 8, 'style_guide': 'ยุคอยุธยา 200 ปีก่อน ตลิ่งริมน้ำ ไม้สักทอง โคมไฟ กลิ่นธูป'}</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+</table></div></body></html>

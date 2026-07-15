@@ -1,0 +1,11 @@
+{
+  "test": "TC-08 Video Generation v2 (UI + Direct Veo API)",
+  "total": 5,
+  "passed": 5,
+  "failed": 0,
+  "pass_rate": 100.0,
+  "duration_sec": 16.25029706954956,
+  "timestamp": "20260714_205851",
+  "videos_downloaded": 0,
+  "jwt_provided": false
+}

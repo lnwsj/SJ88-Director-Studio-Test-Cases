@@ -1,0 +1,9 @@
+{
+  "test": "TC-05 Projects CRUD (UI + API)",
+  "total": 25,
+  "passed": 25,
+  "failed": 0,
+  "pass_rate": 100.0,
+  "duration_sec": 30.35511612892151,
+  "timestamp": "20260713_212729"
+}

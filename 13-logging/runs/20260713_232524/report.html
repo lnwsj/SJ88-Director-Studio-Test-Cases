@@ -1,0 +1,202 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>TC-13 Logging</title>
+<style>
+body{font-family:system-ui;margin:24px;background:#0e0e10;color:#e5e5e5}
+h1{color:#22c55e}table{width:100%;border-collapse:collapse;margin-top:16px}
+td,th{padding:8px;border:1px solid #333;text-align:left;font-size:13px}
+tr.pass td{background:#052e1a}tr.fail td{background:#3a0d0d}
+.expected{color:#9ca3af}.actual{color:#e5e5e7;font-family:monospace}
+pre{background:#1a1a1a;padding:16px;border-radius:8px;overflow-x:auto}
+</style></head><body>
+<h1>TC-13: Structured Logging + Correlation ID</h1>
+<p><b>Date:</b> 2026-07-13 23:25:31 · <b>Result:</b> 26/27 PASS</p>
+<h2>Assertions</h2>
+<table><tr><th>#</th><th>Description</th><th>Expected</th><th>Actual</th><th>Pass</th></tr>
+<tr class="pass">
+  <td>13.1.1</td><td>GET /api/health</td>
+  <td class="expected">200</td>
+  <td class="actual">200</td>
+  <td>✅</td>
+</tr><tr class="pass">
+  <td>13.1.2</td><td>version starts with 3.x</td>
+  <td class="expected">3.x</td>
+  <td class="actual">3.0.0</td>
+  <td>✅</td>
+</tr><tr class="pass">
+  <td>13.2.1</td><td>POST /api/auth/login</td>
+  <td class="expected">200</td>
+  <td class="actual">200</td>
+  <td>✅</td>
+</tr><tr class="pass">
+  <td>13.3.1</td><td>X-Request-ID echoed in response</td>
+  <td class="expected">tc13_test_abc123</td>
+  <td class="actual">tc13_test_abc123</td>
+  <td>✅</td>
+</tr><tr class="pass">
+  <td>13.4.1</td><td>GET /api/settings/veo-jwt/test returns 200</td>
+  <td class="expected">200</td>
+  <td class="actual">200</td>
+  <td>✅</td>
+</tr><tr class="pass">
+  <td>13.5.1</td><td>Logs are JSON</td>
+  <td class="expected">≥1 JSON line</td>
+  <td class="actual">155</td>
+  <td>✅</td>
+</tr><tr class="pass">
+  <td>13.5.2</td><td>Log has ts field</td>
+  <td class="expected">True</td>
+  <td class="actual">True</td>
+  <td>✅</td>
+</tr><tr class="pass">
+  <td>13.5.3</td><td>Log has level field</td>
+  <td class="expected">True</td>
+  <td class="actual">True</td>
+  <td>✅</td>
+</tr><tr class="pass">
+  <td>13.5.4</td><td>Log has logger field</td>
+  <td class="expected">True</td>
+  <td class="actual">True</td>
+  <td>✅</td>
+</tr><tr class="pass">
+  <td>13.5.5</td><td>Log has msg field</td>
+  <td class="expected">True</td>
+  <td class="actual">True</td>
+  <td>✅</td>
+</tr><tr class="pass">
+  <td>13.6.1</td><td>Found logs with our request_id</td>
+  <td class="expected">≥2</td>
+  <td class="actual">3</td>
+  <td>✅</td>
+</tr><tr class="pass">
+  <td>13.7.1</td><td>External API call logged</td>
+  <td class="expected">≥1</td>
+  <td class="actual">4</td>
+  <td>✅</td>
+</tr><tr class="pass">
+  <td>13.7.2</td><td>Log has provider=genaipro</td>
+  <td class="expected">genaipro</td>
+  <td class="actual">genaipro</td>
+  <td>✅</td>
+</tr><tr class="pass">
+  <td>13.7.3</td><td>Log has method=GET</td>
+  <td class="expected">GET</td>
+  <td class="actual">GET</td>
+  <td>✅</td>
+</tr><tr class="pass">
+  <td>13.7.4</td><td>Log has url ending /v2/me</td>
+  <td class="expected">/v2/me</td>
+  <td class="actual">i/v2/me</td>
+  <td>✅</td>
+</tr><tr class="pass">
+  <td>13.7.5</td><td>Log has status field</td>
+  <td class="expected">True</td>
+  <td class="actual">True</td>
+  <td>✅</td>
+</tr><tr class="pass">
+  <td>13.7.6</td><td>Log has duration_ms field</td>
+  <td class="expected">True</td>
+  <td class="actual">True</td>
+  <td>✅</td>
+</tr><tr class="fail">
+  <td>13.8.1</td><td>Authorization redacted in log (no log with request_headers)</td>
+  <td class="expected">redacted</td>
+  <td class="actual">(checking error logs)</td>
+  <td>❌</td>
+</tr><tr class="pass">
+  <td>13.9.1</td><td>Request lifecycle event logged</td>
+  <td class="expected">≥1</td>
+  <td class="actual">1</td>
+  <td>✅</td>
+</tr><tr class="pass">
+  <td>13.9.2</td><td>Request log has method=GET</td>
+  <td class="expected">GET</td>
+  <td class="actual">GET</td>
+  <td>✅</td>
+</tr><tr class="pass">
+  <td>13.9.3</td><td>Request log has path</td>
+  <td class="expected">/api/settings/veo-jwt/test</td>
+  <td class="actual">/api/settings/veo-jwt/test</td>
+  <td>✅</td>
+</tr><tr class="pass">
+  <td>13.9.4</td><td>Request log has status=200</td>
+  <td class="expected">200</td>
+  <td class="actual">200</td>
+  <td>✅</td>
+</tr><tr class="pass">
+  <td>13.9.5</td><td>Request log has duration_ms</td>
+  <td class="expected">True</td>
+  <td class="actual">True</td>
+  <td>✅</td>
+</tr><tr class="pass">
+  <td>13.9.6</td><td>Request log has client IP</td>
+  <td class="expected">True</td>
+  <td class="actual">True</td>
+  <td>✅</td>
+</tr><tr class="pass">
+  <td>13.10.1</td><td>veo_test_failed event logged</td>
+  <td class="expected">≥1</td>
+  <td class="actual">4</td>
+  <td>✅</td>
+</tr><tr class="pass">
+  <td>13.10.2</td><td>veo_test_failed has code=veo_jwt_invalid</td>
+  <td class="expected">veo_jwt_invalid</td>
+  <td class="actual">veo_jwt_invalid</td>
+  <td>✅</td>
+</tr><tr class="pass">
+  <td>13.10.3</td><td>veo_test_failed has fingerprint</td>
+  <td class="expected">True</td>
+  <td class="actual">True</td>
+  <td>✅</td>
+</tr></table>
+<h2>External API Log Sample (most recent 3)</h2>
+<pre>[
+  {
+    "ts": "2026-07-13T23:24:19.203Z",
+    "level": "ERROR",
+    "logger": "director-studio.transport",
+    "msg": "genaipro GET https://genaipro.io/api/v2/me FAILED: HTTPError: 401 Unauthorized",
+    "request_id": "tc13_1783985058",
+    "event": "external_api_error",
+    "provider": "genaipro",
+    "method": "GET",
+    "url": "https://genaipro.io/api/v2/me",
+    "error_type": "HTTPError",
+    "error_msg": "401 Unauthorized",
+    "duration_ms": 894.0,
+    "status": 401,
+    "body": "{\"code\":401,\"error\":\"invalid_token\",\"trace_id\":\"a5a61d0da214b22eec098e1dfd3871d6\"}"
+  },
+  {
+    "ts": "2026-07-13T23:25:03.733Z",
+    "level": "ERROR",
+    "logger": "director-studio.transport",
+    "msg": "genaipro GET https://genaipro.io/api/v2/me FAILED: HTTPError: 401 Unauthorized",
+    "request_id": "tc13_1783985102",
+    "event": "external_api_error",
+    "provider": "genaipro",
+    "method": "GET",
+    "url": "https://genaipro.io/api/v2/me",
+    "error_type": "HTTPError",
+    "error_msg": "401 Unauthorized",
+    "duration_ms": 946.1,
+    "status": 401,
+    "body": "{\"code\":401,\"error\":\"invalid_token\",\"trace_id\":\"2cc9db32ac1bb913f3b30a917c4c7f6b\"}"
+  },
+  {
+    "ts": "2026-07-13T23:25:26.528Z",
+    "level": "ERROR",
+    "logger": "director-studio.transport",
+    "msg": "genaipro GET https://genaipro.io/api/v2/me FAILED: HTTPError: 401 Unauthorized",
+    "request_id": "tc13_1783985125",
+    "event": "external_api_error",
+    "provider": "genaipro",
+    "method": "GET",
+    "url": "https://genaipro.io/api/v2/me",
+    "error_type": "HTTPError",
+    "error_msg": "401 Unauthorized",
+    "duration_ms": 901.5,
+    "status": 401,
+    "body": "{\"code\":401,\"error\":\"invalid_token\",\"trace_id\":\"d9e735f00413632a225b4424dd22f9a8\"}"
+  }
+]</pre>
+</body></html>

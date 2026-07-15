@@ -1,0 +1,94 @@
+{
+  "id": "32ada1ded1e24f63",
+  "name": "Ghost Cafe",
+  "kind": "episode",
+  "data": {
+    "meta": {
+      "genre": "horror",
+      "language": "th",
+      "aspect_ratio": "9:16"
+    },
+    "episodes": [
+      {
+        "episode_title": "EP1: เข้าร้าน",
+        "episode_title_en": "Entering the Cafe",
+        "episode_logline": "น้ำเข้าร้านกาแฟเที่ยงคืน เห็นเงาเด็กในกระจก",
+        "scenes": [
+          {
+            "id": "S01_01",
+            "title": "ประตูร้าน",
+            "action": "น้ำเดินเข้าร้านมืดๆ"
+          },
+          {
+            "id": "S01_02",
+            "title": "เคาน์เตอร์",
+            "action": "สั่งกาแฟกับบาริสต้า"
+          },
+          {
+            "id": "S01_03",
+            "title": "เงาในกระจก",
+            "action": "เห็นเงาเด็กยิ้ม"
+          }
+        ],
+        "timeline": [
+          {
+            "scene_id": "S01_01",
+            "t": 0,
+            "prompt": "ผู้หญิงเดินเข้าร้านกาแฟมืด ประตูไม้เก่า เสียงกระดิ่งดังเบาๆ cinematic horror"
+          },
+          {
+            "scene_id": "S01_02",
+            "t": 5,
+            "prompt": "close-up เคาน์เตอร์ไม้ บาริสต้าชราผูกผ้ากันเปื้อน หลอดไฟแก้วสั่น Thai horror atmosphere"
+          },
+          {
+            "scene_id": "S01_03",
+            "t": 10,
+            "prompt": "เงาเด็กผู้หญิงในกระจก ยิ้มก่อนตัวจริง slow motion supernatural"
+          }
+        ]
+      },
+      {
+        "episode_title": "EP2: สั่งกาแฟ",
+        "episode_title_en": "Order the Coffee",
+        "episode_logline": "บาริสต้าเตือนว่าไม่ควรอยู่ต่อ",
+        "scenes": [
+          {
+            "id": "S02_01",
+            "title": "กาแฟเย็น",
+            "action": "บาริสต้าทำกาแฟมือสั่น"
+          },
+          {
+            "id": "S02_02",
+            "title": "คำเตือน",
+            "action": "บาริสต้าบอกให้กลับ"
+          },
+          {
+            "id": "S02_03",
+            "title": "เงาขยับ",
+            "action": "เงาเด็กเดินออกจากกระจก"
+          }
+        ],
+        "timeline": [
+          {
+            "scene_id": "S02_01",
+            "t": 0,
+            "prompt": "มือบาริสต้าชราสั่น รินกาแฟลงแก้ว ของเหลวสีดำผิดปกติ extreme close-up"
+          },
+          {
+            "scene_id": "S02_02",
+            "t": 5,
+            "prompt": "บาริสต้ากระซิบ เตือนผู้หญิง ดวงตาหวาดกลัว Thai dialogue subtitles"
+          },
+          {
+            "scene_id": "S02_03",
+            "t": 10,
+            "prompt": "เงาเด็กค่อยๆ ก้าวออกจากกระจก ตัวจริงยังอยู่ที่เดิม body horror reveal"
+          }
+        ]
+      }
+    ]
+  },
+  "created_at": 1784060869.5157275,
+  "updated_at": 1784060869.8451016
+}

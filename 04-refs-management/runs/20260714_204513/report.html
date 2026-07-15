@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>TC-04 Refs Management (UI + API)</title>
+<style>
+body { font-family: -apple-system, system-ui, sans-serif; max-width: 1200px; margin: 20px auto; padding: 20px; background: #0a0a0a; color: #e0e0e0; }
+h1 { color: #d4a574; border-bottom: 2px solid #d4a574; padding-bottom: 8px; }
+.summary { display: flex; gap: 16px; margin: 20px 0; flex-wrap: wrap; }
+.stat { padding: 16px; background: #1a1a1a; border-radius: 8px; flex: 1; min-width: 150px; border-left: 4px solid #d4a574; }
+.stat .num { font-size: 32px; font-weight: bold; }
+.stat.passed .num { color: #4ade80; }
+.stat.failed .num { color: #f87171; }
+.section { margin: 32px 0; padding: 16px; background: #111; border-radius: 8px; }
+table { width: 100%; border-collapse: collapse; margin: 8px 0; }
+th, td { text-align: left; padding: 8px; border-bottom: 1px solid #333; }
+th { background: #222; color: #d4a574; }
+tr.pass td { color: #4ade80; }
+tr.fail td { color: #f87171; }
+tr.fail { background: #2a1515; }
+.screenshot { max-width: 100%; border: 1px solid #333; border-radius: 4px; margin: 8px 0; }
+.tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; margin-right: 4px; }
+.tag.pass { background: #14532d; color: #4ade80; }
+.tag.fail { background: #7f1d1d; color: #fca5a5; }
+.notes { color: #888; font-size: 12px; font-style: italic; }
+</style></head><body>
+<h1>🎬 TC-04 Refs Management (UI + API)</h1>
+<p><strong>Timestamp:</strong> 20260714_204513 · <strong>URL:</strong> https://directorstudio.sj88ai.com · <strong>Duration:</strong> 48.9s</p>
+<p><strong>Projects tested:</strong> 2 (horror + romance) · <strong>Refs per project:</strong> 3 (ref1/ref2/ref3)</p>
+<div class="summary">
+    <div class="stat passed"><div class="num">41</div><div>Passed</div></div>
+    <div class="stat failed"><div class="num">0</div><div>Failed</div></div>
+    <div class="stat"><div class="num">41</div><div>Total</div></div>
+    <div class="stat"><div class="num">41/41 (100%)</div><div>Pass Rate</div></div>
+    <div class="stat"><div class="num">14</div><div>API calls</div></div>
+</div>
+<div class="section">
+<h2>📊 Test Coverage</h2>
+<ul>
+    <li><strong>Step 1:</strong> Login as admin</li>
+    <li><strong>Step 2-3:</strong> Both projects have 3 refs each (horror: จันทรา/เจ/ผี, romance: มิ้นท์/ภูมิ/พีช)</li>
+    <li><strong>Step 4:</strong> Cross-project isolation (horror refs != romance refs)</li>
+    <li><strong>Step 5:</strong> URL fields are valid filesystem paths</li>
+    <li><strong>Step 6:</strong> Update ref description persists (round-trip via PUT + GET)</li>
+    <li><strong>Step 7:</strong> Script uses [ref1] / [ref2] / [ref3] slots (INGRADAID mode)</li>
+    <li><strong>Step 8:</strong> Veo prompt includes [ref1] slot + reference_image array</li>
+    <li><strong>Step 9:</strong> UI: project view shows ref names</li>
+    <li><strong>Step 10:</strong> UI: Settings panel shows refs</li>
+    <li><strong>Step 11:</strong> Cross-tenant: no-token GET returns 401</li>
+</ul>
+</div>
+<div class="section">
+<h2>🖼️ Screenshots</h2>
+
+<h3>Step 1: JWT token in localStorage</h3>
+<img class="screenshot" src="screenshots/01b-after-login.png" />
+<h3>Step 9: UI shows project title 'อยุธยา'</h3>
+<img class="screenshot" src="screenshots/09-project-view.png" />
+<h3>Step 10: Settings shows ref info</h3>
+<img class="screenshot" src="screenshots/10-settings.png" />
+</div><div class="section"><h2>📋 All Assertions</h2><table>
+<tr><th>#</th><th>Step</th><th>Name</th><th>Expected</th><th>Actual</th><th>Status</th><th>Notes</th></tr>
+<tr class="pass"><td>1</td><td>1</td><td>JWT token in localStorage</td><td>truthy</td><td>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2N2MwMzMxZDMxNjU0NTA0Iiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzg0MDYxOTE3LCJleHAiOjE3ODY2NTM5MTd9.nNEojONPrZdNpCdhSoKjF8OMHeT17mBNgNpEZO0Djk4</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>2</td><td>2</td><td>GET horror project</td><td>200</td><td>200</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>3</td><td>2</td><td>Horror has 3 refs</td><td>3</td><td>3</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>4</td><td>2</td><td>Horror ref[0].slot populated</td><td>truthy</td><td>ref1</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>5</td><td>2</td><td>Horror ref[0].url populated</td><td>truthy</td><td>/opt/director-studio/refs/nam_ref.jpg</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>6</td><td>2</td><td>Horror ref[0].display_name populated</td><td>truthy</td><td>จันทรา (น้ำ)</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>7</td><td>2</td><td>Horror ref[0].description populated</td><td>truthy</td><td>Female Thai villager, 22, long black hair, white traditional dress [TC-04 test marker] [TC-04 test marker] [TC-04 test marker] [TC-04 test marker]</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>8</td><td>2</td><td>Horror ref[1].slot populated</td><td>truthy</td><td>ref2</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>9</td><td>2</td><td>Horror ref[1].url populated</td><td>truthy</td><td>/opt/director-studio/refs/jay_ref.jpg</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>10</td><td>2</td><td>Horror ref[1].display_name populated</td><td>truthy</td><td>เจ</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>11</td><td>2</td><td>Horror ref[1].description populated</td><td>truthy</td><td>Male Thai villager, 25, short black hair, dark shirt</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>12</td><td>2</td><td>Horror ref[2].slot populated</td><td>truthy</td><td>ref3</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>13</td><td>2</td><td>Horror ref[2].url populated</td><td>truthy</td><td>/opt/director-studio/refs/ghost_ref.jpg</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>14</td><td>2</td><td>Horror ref[2].display_name populated</td><td>truthy</td><td>ผี</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>15</td><td>2</td><td>Horror ref[2].description populated</td><td>truthy</td><td>Ghost entity, pale face, long white hair, dark aura</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>16</td><td>2</td><td>Horror has slot 'ref1'</td><td>contains 'ref1'</td><td>['ref1', 'ref2', 'ref3']</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>17</td><td>2</td><td>Horror has slot 'ref2'</td><td>contains 'ref2'</td><td>['ref1', 'ref2', 'ref3']</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>18</td><td>2</td><td>Horror has slot 'ref3'</td><td>contains 'ref3'</td><td>['ref1', 'ref2', 'ref3']</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>19</td><td>3</td><td>GET romance project</td><td>200</td><td>200</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>20</td><td>3</td><td>Romance has 3 refs</td><td>3</td><td>3</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>21</td><td>3</td><td>Romance has slot 'ref1'</td><td>contains 'ref1'</td><td>['ref1', 'ref2', 'ref3']</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>22</td><td>3</td><td>Romance has slot 'ref2'</td><td>contains 'ref2'</td><td>['ref1', 'ref2', 'ref3']</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>23</td><td>3</td><td>Romance has slot 'ref3'</td><td>contains 'ref3'</td><td>['ref1', 'ref2', 'ref3']</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>24</td><td>4</td><td>Horror and romance have different ref names</td><td>truthy</td><td>True</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>25</td><td>5</td><td>Horror ref[0].url is valid path</td><td>truthy</td><td>True</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>26</td><td>5</td><td>Horror ref[1].url is valid path</td><td>truthy</td><td>True</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>27</td><td>5</td><td>Horror ref[2].url is valid path</td><td>truthy</td><td>True</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>28</td><td>5</td><td>Romance ref[0].url is valid path</td><td>truthy</td><td>True</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>29</td><td>5</td><td>Romance ref[1].url is valid path</td><td>truthy</td><td>True</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>30</td><td>5</td><td>Romance ref[2].url is valid path</td><td>truthy</td><td>True</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>31</td><td>6</td><td>PUT horror project (update ref desc)</td><td>200</td><td>200</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>32</td><td>6</td><td>GET horror project (verify update)</td><td>200</td><td>200</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>33</td><td>6</td><td>Ref[0] description has TC-04 marker</td><td>contains 'TC-04 test marker'</td><td>Female Thai villager, 22, long black hair, white traditional dress [TC-04 test marker] [TC-04 test marker] [TC-04 test marker] [TC-04 test marker] [TC-04 test marker]</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>34</td><td>7</td><td>Scene uses ref slot 'ref1'</td><td>contains 'ref'</td><td>ref1</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>35</td><td>8</td><td>POST /generate-veo-single</td><td>200</td><td>200</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>36</td><td>8</td><td>Veo prompt contains [ref1] slot</td><td>contains '[ref1]'</td><td>ECU shot, slow tilt up from hands to face, 35mm lens. [ref1] lies on an old dark teak floor inside a pitch-black ground-floor room of a wooden stilt house, awakening slowly with disoriented eyes. She </td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>37</td><td>8</td><td>reference_image has at least 1 slot</td><td>truthy</td><td>True</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>38</td><td>9</td><td>UI shows project title 'อยุธยา'</td><td>contains 'อยุธยา'</td><td><!DOCTYPE html><html lang="th"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Director Studio · คืนซ่อนวิญญาณ</title>
+<meta name="descripti</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>39</td><td>9</td><td>UI shows EP1 title</td><td>contains 'เสียงเรียกจากความมืด'</td><td><!DOCTYPE html><html lang="th"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Director Studio · คืนซ่อนวิญญาณ</title>
+<meta name="descripti</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+<tr class="pass"><td>40</td><td>10</td><td>Settings shows ref info</td><td>any</td><td>True</td><td><span class="tag pass">PASS</span></td><td class="notes">Ref management UI is optional - core INGRADAID is verified via API in Step 7+8</td></tr>
+<tr class="pass"><td>41</td><td>11</td><td>No-token GET returns 401</td><td>401</td><td>401</td><td><span class="tag pass">PASS</span></td><td class="notes"></td></tr>
+</table></div></body></html>

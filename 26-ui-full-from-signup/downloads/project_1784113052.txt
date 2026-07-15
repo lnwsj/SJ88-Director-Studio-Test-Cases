@@ -1,0 +1,24 @@
+# TC-26 ผ้าแดง (UI Test)
+# Project ID: efa176ddae67466b
+# Exported: 2026-07-15T11:04:47.735Z
+
+# ===== EP1: ตอนที่ 1: คืนแรก =====
+# ตอนที่ 1: คืนแรก
+# น้ำกลับมาที่หมู่บ้านเกิดหลังจาก 20 ปี และพบว่ามีบางอย่างรอเธออยู่
+# Exported: 2026-07-15T11:04:47.736Z
+
+EP1_S01: Wide establishing shot, slow dolly forward following the subject from behind, 24mm lens. [ref1] walks alone down the cracked concrete path leading into a forgotten Thai village at dusk, a weathered canvas backpack slung over one shoulder. Her silhouette moves past leaning wooden signposts, faded shopfronts with closed shutters, and overgrown weeds pushing through broken pavement. A pale, dying amber sunset bleeds into the horizon behind the distant tree line, while deep blue shadows pool under the eaves of roofless homes. Mist drifts low across the dirt road, settling like a held breath. Faint fireflies flicker at the edges of frame. VFX: subtle atmospheric haze overlay. Foreshadow: a single window shutter slowly creaks open in a far house, though no hand is seen. Tone: quiet dread of returning home, slow burn unease, lingering stillness.
+
+# ===== EP2: ตอนที่ 2: เสียงในความมืด =====
+# ตอนที่ 2: เสียงในความมืด
+# เจได้ยินเสียงเรียกชื่อตัวเองจากในป่า
+# Exported: 2026-07-15T11:04:47.736Z
+
+EP2_S02_01: เจหยุดฟังเสียง
+
+# ===== EP3: ตอนที่ 3: หน้าต่างเปิด =====
+# ตอนที่ 3: หน้าต่างเปิด
+# น้ำตื่นมาเจอหน้าต่างเปิด ทั้งที่ล็อกไว้
+# Exported: 2026-07-15T11:04:47.736Z
+
+EP3_S03_01: น้ำมองเห็นเงาที่หน้าต่าง

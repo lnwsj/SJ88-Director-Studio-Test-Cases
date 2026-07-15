@@ -1,0 +1,540 @@
+{
+  "test": "TC-03 Veo Single-Scene (UI)",
+  "ts": "20260714_203345",
+  "duration_sec": 58.9,
+  "total": 57,
+  "passed": 56,
+  "failed": 1,
+  "pass_rate": "56/57 (98%)",
+  "url": "https://directorstudio.sj88ai.com",
+  "browser": "chromium-1223 (real)",
+  "max_chars_cap": 1500,
+  "veo_single_api_calls": 6,
+  "assertions": [
+    {
+      "step": 1,
+      "name": "JWT token in localStorage",
+      "expected": "truthy",
+      "actual": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2N2MwMzMxZDMxNjU0NTA0Iiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzg0MDYxMjI5LCJleHAiOjE3ODY2NTMyMjl9.VQxAU90fIF_X6dm0VrP-VS0LqiZBLq-K_C1r9gxHr1g",
+      "status": "PASS",
+      "screenshot": "screenshots/01b-after-login.png",
+      "notes": ""
+    },
+    {
+      "step": 2,
+      "name": "GET horror project",
+      "expected": 200,
+      "actual": "200",
+      "status": "PASS",
+      "screenshot": "",
+      "notes": ""
+    },
+    {
+      "step": 2,
+      "name": "Horror project has refs",
+      "expected": "truthy",
+      "actual": "True",
+      "status": "PASS",
+      "screenshot": "",
+      "notes": ""
+    },
+    {
+      "step": 2,
+      "name": "Horror project genre",
+      "expected": "contains 'horror'",
+      "actual": "{'title': 'อยุธยา · ย้อนยุค', 'genre': 'horror', 'language': 'th', 'aspect_ratio': '9:16', 'duration_sec': 8, 'style_guide': 'ยุคอยุธยา 200 ปีก่อน ตลิ่งริมน้ำ ไม้สักทอง โคมไฟ กลิ่นธูป'}",
+      "status": "PASS",
+      "screenshot": "",
+      "notes": ""
+    },
+    {
+      "step": 3,
+      "name": "Horror has episodes",
+      "expected": "truthy",
+      "actual": "True",
+      "status": "PASS",
+      "screenshot": "",
+      "notes": ""
+    },
+    {
+      "step": 3,
+      "name": "EP1 has scenes",
+      "expected": "truthy",
+      "actual": "True",
+      "status": "PASS",
+      "screenshot": "",
+      "notes": ""
+    },
+    {
+      "step": 3,
+      "name": "Scene 1 has all 20 director fields",
+      "expected": 20,
+      "actual": "20",
+      "status": "PASS",
+      "screenshot": "screenshots/03-ep1-loaded.png",
+      "notes": ""
+    },
+    {
+      "step": 3,
+      "name": "Field 'shot_type' populated",
+      "expected": "truthy",
+      "actual": "ECU",
+      "status": "PASS",
+      "screenshot": "screenshots/03-ep1-loaded.png",
+      "notes": ""
+    },
+    {
+      "step": 3,
+      "name": "Field 'camera_move' populated",
+      "expected": "truthy",
+      "actual": "slow tilt up from hands to face",
+      "status": "PASS",
+      "screenshot": "screenshots/03-ep1-loaded.png",
+      "notes": ""
+    },
+    {
+      "step": 3,
+      "name": "Field 'lens' populated",
+      "expected": "truthy",
+      "actual": "35mm",
+      "status": "PASS",
+      "screenshot": "screenshots/03-ep1-loaded.png",
+      "notes": ""
+    },
+    {
+      "step": 3,
+      "name": "Field 'duration_sec' populated",
+      "expected": "truthy",
+      "actual": "8",
+      "status": "PASS",
+      "screenshot": "screenshots/03-ep1-loaded.png",
+      "notes": ""
+    },
+    {
+      "step": 3,
+      "name": "Field 'lighting' populated",
+      "expected": "truthy",
+      "actual": "แสงจันทร์ส่องผ่านช่องหน้าต่างไม้ ทอดเป็นเส้นบางๆ บนพื้น",
+      "status": "PASS",
+      "screenshot": "screenshots/03-ep1-loaded.png",
+      "notes": ""
+    },
+    {
+      "step": 3,
+      "name": "Field 'mood_color' populated",
+      "expected": "truthy",
+      "actual": "น้ำเงินเข้ม + เงาดำ",
+      "status": "PASS",
+      "screenshot": "screenshots/03-ep1-loaded.png",
+      "notes": ""
+    },
+    {
+      "step": 3,
+      "name": "Field 'time_of_day' populated",
+      "expected": "truthy",
+      "actual": "02:13",
+      "status": "PASS",
+      "screenshot": "screenshots/03-ep1-loaded.png",
+      "notes": ""
+    },
+    {
+      "step": 3,
+      "name": "Field 'weather' populated",
+      "expected": "truthy",
+      "actual": "ฝนพรำเบาๆ กลางคืน",
+      "status": "PASS",
+      "screenshot": "screenshots/03-ep1-loaded.png",
+      "notes": ""
+    },
+    {
+      "step": 3,
+      "name": "Field 'ambient' populated",
+      "expected": "truthy",
+      "actual": "['เสียงน้ำกระทบไม้', 'เสียงจิ้งหรีดห่างไกล', 'เสียงลมพัดผ่านใต้ถุนบ้าน']",
+      "status": "PASS",
+      "screenshot": "screenshots/03-ep1-loaded.png",
+      "notes": ""
+    },
+    {
+      "step": 3,
+      "name": "Field 'sfx' populated",
+      "expected": "truthy",
+      "actual": "['เสียงพื้นไม้เก่าส่าย', 'เสียงหายใจเบาๆ']",
+      "status": "PASS",
+      "screenshot": "screenshots/03-ep1-loaded.png",
+      "notes": ""
+    },
+    {
+      "step": 3,
+      "name": "Field 'characters_state' populated",
+      "expected": "truthy",
+      "actual": "[{'name': '[ref1]', 'emotion': 'fear+disorientation', 'intensity': 6, 'pose': 'นั่งบนพื้น มือแตะผนัง ตากวาดมองรอบห้อง'}]",
+      "status": "PASS",
+      "screenshot": "screenshots/03-ep1-loaded.png",
+      "notes": ""
+    },
+    {
+      "step": 3,
+      "name": "Field 'plot_advances' populated",
+      "expected": "truthy",
+      "actual": "['[ref1] ค้นพบว่าตนเองอยู่ในบ้านริมน้ำที่ไม่รู้จัก', 'เริ่มได้ยินเสียงเรียก']",
+      "status": "PASS",
+      "screenshot": "screenshots/03-ep1-loaded.png",
+      "notes": ""
+    },
+    {
+      "step": 3,
+      "name": "Field 'foreshadowing' populated",
+      "expected": "truthy",
+      "actual": "['เงาที่เคลื่อนไหวในมุมห้อง', 'เสียงเรียกชื่อที่จะดังขึ้นในฉากถัดไป']",
+      "status": "PASS",
+      "screenshot": "screenshots/03-ep1-loaded.png",
+      "notes": ""
+    },
+    {
+      "step": 3,
+      "name": "Field 'props' populated",
+      "expected": "truthy",
+      "actual": "['พื้นไม้เก่า', 'หมอนผ้าฝ้ายขาด', 'ช่องหน้าต่างไม้']",
+      "status": "PASS",
+      "screenshot": "screenshots/03-ep1-loaded.png",
+      "notes": ""
+    },
+    {
+      "step": 3,
+      "name": "Field 'vfx_notes' populated",
+      "expected": "truthy",
+      "actual": "เพิ่มหมอกบางๆ เคลื่อนผ่านพื้น แสงจันทร์กระทบฝุ่นลอย",
+      "status": "PASS",
+      "screenshot": "screenshots/03-ep1-loaded.png",
+      "notes": ""
+    },
+    {
+      "step": 3,
+      "name": "Field 'transition_in' populated",
+      "expected": "truthy",
+      "actual": "fade in from black, 2s",
+      "status": "PASS",
+      "screenshot": "screenshots/03-ep1-loaded.png",
+      "notes": ""
+    },
+    {
+      "step": 3,
+      "name": "Field 'transition_out' populated",
+      "expected": "truthy",
+      "actual": "smash cut",
+      "status": "PASS",
+      "screenshot": "screenshots/03-ep1-loaded.png",
+      "notes": ""
+    },
+    {
+      "step": 3,
+      "name": "Field 'director_note' populated",
+      "expected": "truthy",
+      "actual": "ความเงียบคืออาวุธ ปล่อยให้ผู้ชมรู้สึกถึงความเปลี่ยวเปล่าก่อนเสียงใดๆ",
+      "status": "PASS",
+      "screenshot": "screenshots/03-ep1-loaded.png",
+      "notes": ""
+    },
+    {
+      "step": 3,
+      "name": "Field 'pacing' populated",
+      "expected": "truthy",
+      "actual": "slow burn",
+      "status": "PASS",
+      "screenshot": "screenshots/03-ep1-loaded.png",
+      "notes": ""
+    },
+    {
+      "step": 3,
+      "name": "Field 'tone_tags' populated",
+      "expected": "truthy",
+      "actual": "['eerie', 'isolated', 'foggy']",
+      "status": "PASS",
+      "screenshot": "screenshots/03-ep1-loaded.png",
+      "notes": ""
+    },
+    {
+      "step": 4,
+      "name": "POST /generate-veo-single status",
+      "expected": 200,
+      "actual": "200",
+      "status": "PASS",
+      "screenshot": "screenshots/04-api-call.png",
+      "notes": ""
+    },
+    {
+      "step": 4,
+      "name": "Result has 'ok' flag",
+      "expected": "truthy",
+      "actual": "True",
+      "status": "PASS",
+      "screenshot": "screenshots/04-api-call.png",
+      "notes": ""
+    },
+    {
+      "step": 4,
+      "name": "Result has 1 timeline clip (not batched)",
+      "expected": "truthy",
+      "actual": "True",
+      "status": "PASS",
+      "screenshot": "screenshots/04-api-call.png",
+      "notes": "Got 1 clips (expected exactly 1)"
+    },
+    {
+      "step": 4,
+      "name": "Prompt <= max_chars (1500)",
+      "expected": "<= 1500",
+      "actual": "963",
+      "status": "PASS",
+      "screenshot": "screenshots/04-api-call.png",
+      "notes": ""
+    },
+    {
+      "step": 4,
+      "name": "Prompt is non-empty",
+      "expected": "truthy",
+      "actual": "True",
+      "status": "PASS",
+      "screenshot": "screenshots/04-api-call.png",
+      "notes": ""
+    },
+    {
+      "step": 4,
+      "name": "vo field present",
+      "expected": "truthy",
+      "actual": "\"นี่...ที่ไหน...เสียงน้ำไหล\"",
+      "status": "PASS",
+      "screenshot": "screenshots/04-api-call.png",
+      "notes": ""
+    },
+    {
+      "step": 4,
+      "name": "audio_cue field present",
+      "expected": "truthy",
+      "actual": "rain tapping wood, distant crickets, wind under floorboards, old teak creaking, shallow breathing",
+      "status": "PASS",
+      "screenshot": "screenshots/04-api-call.png",
+      "notes": ""
+    },
+    {
+      "step": 4,
+      "name": "camera.move from script",
+      "expected": "truthy",
+      "actual": "slow tilt up from hands to face",
+      "status": "PASS",
+      "screenshot": "screenshots/04-api-call.png",
+      "notes": ""
+    },
+    {
+      "step": 4,
+      "name": "Prompt uses shot_type (ECU)",
+      "expected": "contains 'ECU'",
+      "actual": "ECU shot, slow tilt up from hands to face, 35mm lens. [ref1] lies groggily on the weathered teak floor of a pitch-black lower room, lifting one trembling hand to press against a damp, mold-stained woo",
+      "status": "PASS",
+      "screenshot": "screenshots/04-api-call.png",
+      "notes": ""
+    },
+    {
+      "step": 4,
+      "name": "Prompt uses camera_move",
+      "expected": "contains 'slow tilt'",
+      "actual": "ECU shot, slow tilt up from hands to face, 35mm lens. [ref1] lies groggily on the weathered teak floor of a pitch-black lower room, lifting one trembling hand to press against a damp, mold-stained woo",
+      "status": "PASS",
+      "screenshot": "screenshots/04-api-call.png",
+      "notes": ""
+    },
+    {
+      "step": 4,
+      "name": "Prompt uses lens (35mm)",
+      "expected": "contains '35mm'",
+      "actual": "ECU shot, slow tilt up from hands to face, 35mm lens. [ref1] lies groggily on the weathered teak floor of a pitch-black lower room, lifting one trembling hand to press against a damp, mold-stained woo",
+      "status": "PASS",
+      "screenshot": "screenshots/04-api-call.png",
+      "notes": ""
+    },
+    {
+      "step": 5,
+      "name": "Per-scene buttons == 3 (one per scene)",
+      "expected": 3,
+      "actual": "3",
+      "status": "PASS",
+      "screenshot": "screenshots/05-ep1-modal.png",
+      "notes": ""
+    },
+    {
+      "step": 5,
+      "name": "Button text mentions 'max 1500'",
+      "expected": "contains '1500'",
+      "actual": "🎬 Generate Veo Prompt (1 scene, max 1500 chars)",
+      "status": "PASS",
+      "screenshot": "screenshots/05-ep1-modal.png",
+      "notes": ""
+    },
+    {
+      "step": 6,
+      "name": "Badge shows 'chars'",
+      "expected": "contains 'chars'",
+      "actual": "✓ 755 chars",
+      "status": "PASS",
+      "screenshot": "screenshots/06-scene1-result.png",
+      "notes": ""
+    },
+    {
+      "step": 6,
+      "name": "UI badge chars <= 1500",
+      "expected": "<= 1500",
+      "actual": "755",
+      "status": "PASS",
+      "screenshot": "screenshots/06-scene1-result.png",
+      "notes": ""
+    },
+    {
+      "step": 6,
+      "name": "UI prompt text <= 1500",
+      "expected": "<= 1500",
+      "actual": "755",
+      "status": "PASS",
+      "screenshot": "screenshots/06-scene1-result.png",
+      "notes": ""
+    },
+    {
+      "step": 6,
+      "name": "UI prompt has > 200 chars (rich content)",
+      "expected": "truthy",
+      "actual": "True",
+      "status": "PASS",
+      "screenshot": "screenshots/06-scene1-result.png",
+      "notes": ""
+    },
+    {
+      "step": 7,
+      "name": "Scene 2 badge has 'chars'",
+      "expected": "contains 'chars'",
+      "actual": "✨ fresh",
+      "status": "FAIL",
+      "screenshot": "screenshots/07-scene2-result.png",
+      "notes": ""
+    },
+    {
+      "step": 8,
+      "name": "Scene 3 badge has 'chars'",
+      "expected": "contains 'chars'",
+      "actual": "✓ 1137 chars",
+      "status": "PASS",
+      "screenshot": "screenshots/08-scene3-result.png",
+      "notes": ""
+    },
+    {
+      "step": 9,
+      "name": "ep.timeline has 3 prompts",
+      "expected": "truthy",
+      "actual": "True",
+      "status": "PASS",
+      "screenshot": "screenshots/08-scene3-result.png",
+      "notes": ""
+    },
+    {
+      "step": 9,
+      "name": "Clip 1 prompt <= 1500",
+      "expected": "<= 1500",
+      "actual": "755",
+      "status": "PASS",
+      "screenshot": "screenshots/08-scene3-result.png",
+      "notes": ""
+    },
+    {
+      "step": 9,
+      "name": "Clip 2 prompt <= 1500",
+      "expected": "<= 1500",
+      "actual": "1137",
+      "status": "PASS",
+      "screenshot": "screenshots/08-scene3-result.png",
+      "notes": ""
+    },
+    {
+      "step": 9,
+      "name": "Clip 3 prompt <= 1500",
+      "expected": "<= 1500",
+      "actual": "1097",
+      "status": "PASS",
+      "screenshot": "screenshots/08-scene3-result.png",
+      "notes": ""
+    },
+    {
+      "step": 10,
+      "name": "GET romance project",
+      "expected": 200,
+      "actual": "200",
+      "status": "PASS",
+      "screenshot": "",
+      "notes": ""
+    },
+    {
+      "step": 10,
+      "name": "Romance /generate-veo-single status",
+      "expected": 200,
+      "actual": "200",
+      "status": "PASS",
+      "screenshot": "screenshots/08-scene3-result.png",
+      "notes": ""
+    },
+    {
+      "step": 10,
+      "name": "Romance: 1 timeline clip",
+      "expected": "truthy",
+      "actual": "True",
+      "status": "PASS",
+      "screenshot": "screenshots/08-scene3-result.png",
+      "notes": ""
+    },
+    {
+      "step": 10,
+      "name": "Romance prompt <= 1500",
+      "expected": "<= 1500",
+      "actual": "1144",
+      "status": "PASS",
+      "screenshot": "screenshots/08-scene3-result.png",
+      "notes": ""
+    },
+    {
+      "step": 10,
+      "name": "Romance prompt has [ref1] slot",
+      "expected": "contains '[ref1]'",
+      "actual": "Wide tracking shot, slow dolly forward, 35mm lens. [ref1], a Thai high school girl in a crisp white shirt and navy pleated skirt, walks through a sunlit school gate clutching a pastel mint-green canva",
+      "status": "PASS",
+      "screenshot": "screenshots/08-scene3-result.png",
+      "notes": ""
+    },
+    {
+      "step": 11,
+      "name": "POST max_chars=500 status",
+      "expected": 200,
+      "actual": "200",
+      "status": "PASS",
+      "screenshot": "screenshots/08-scene3-result.png",
+      "notes": ""
+    },
+    {
+      "step": 11,
+      "name": "Prompt <= 500 when max_chars=500",
+      "expected": "<= 500",
+      "actual": "488",
+      "status": "PASS",
+      "screenshot": "screenshots/08-scene3-result.png",
+      "notes": ""
+    }
+  ],
+  "network_calls": 18,
+  "errors": [
+    {
+      "step": 7,
+      "name": "Scene 2 badge has 'chars'",
+      "expected": "contains 'chars'",
+      "actual": "✨ fresh",
+      "status": "FAIL",
+      "screenshot": "screenshots/07-scene2-result.png",
+      "notes": ""
+    }
+  ]
+}

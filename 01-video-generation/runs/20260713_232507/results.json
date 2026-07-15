@@ -1,0 +1,138 @@
+{
+  "test": "TC-01 Video Generation (UI)",
+  "started": "2026-07-13T23:25:07.240033",
+  "elapsed_sec": 17.57021689414978,
+  "results": [
+    {
+      "step": 1,
+      "action": "เปิดหน้า Login",
+      "expected": "เห็น form email + password",
+      "actual": "URL=https://directorstudio.sj88ai.com/",
+      "status": "PASS",
+      "screenshots": [
+        "screenshots/01-login-page.png"
+      ],
+      "network": [],
+      "notes": "",
+      "ts": "2026-07-13T23:25:08.932104"
+    },
+    {
+      "step": 2,
+      "action": "Submit login form",
+      "expected": "เข้าหน้า projects",
+      "actual": "URL=https://directorstudio.sj88ai.com/",
+      "status": "PASS",
+      "screenshots": [
+        "screenshots/02a-filled-form.png",
+        "screenshots/02b-after-submit.png"
+      ],
+      "network": [],
+      "notes": "",
+      "ts": "2026-07-13T23:25:12.178591"
+    },
+    {
+      "step": 3,
+      "action": "คลิก โรงเรียนรัก",
+      "expected": "เห็น EP1 card",
+      "actual": "EP1 visible=True",
+      "status": "PASS",
+      "screenshots": [
+        "screenshots/03-project-opened.png"
+      ],
+      "network": [],
+      "notes": "",
+      "ts": "2026-07-13T23:25:15.229411"
+    },
+    {
+      "step": 4,
+      "action": "เปิด EP1 + Veo tab",
+      "expected": "10 prompts shown",
+      "actual": "'Veo Prompts (10)' in DOM=True",
+      "status": "PASS",
+      "screenshots": [
+        "screenshots/04a-ep1-script-tab.png",
+        "screenshots/04b-ep1-veo-tab.png"
+      ],
+      "network": [],
+      "notes": "",
+      "ts": "2026-07-13T23:25:20.422600"
+    },
+    {
+      "step": 5,
+      "action": "กด Generate Video + รอจบ",
+      "expected": "✅ completed + video player + 8s clip",
+      "actual": "final=failed, video_src=None",
+      "status": "FAIL",
+      "screenshots": [
+        "screenshots/05b-after-click.png",
+        "05d-final"
+      ],
+      "network": [
+        {
+          "method": "POST",
+          "url": "https://directorstudio.sj88ai.com/api/jobs",
+          "status": 200,
+          "ts": 13.285538911819458
+        },
+        {
+          "method": "GET",
+          "url": "https://directorstudio.sj88ai.com/api/jobs/190e2c7de1984c33",
+          "status": 200,
+          "ts": 13.290297508239746
+        },
+        {
+          "method": "GET",
+          "url": "https://directorstudio.sj88ai.com/api/jobs/190e2c7de1984c33",
+          "status": 200,
+          "ts": 15.318711519241333
+        }
+      ],
+      "notes": "Polled 3 new network calls",
+      "ts": "2026-07-13T23:25:24.662964"
+    }
+  ],
+  "network": [
+    {
+      "method": "POST",
+      "url": "https://directorstudio.sj88ai.com/api/auth/login",
+      "status": 200,
+      "ts": 2.1101863384246826
+    },
+    {
+      "method": "GET",
+      "url": "https://directorstudio.sj88ai.com/api/auth/me",
+      "status": 200,
+      "ts": 2.115039110183716
+    },
+    {
+      "method": "GET",
+      "url": "https://directorstudio.sj88ai.com/api/projects",
+      "status": 200,
+      "ts": 2.1260905265808105
+    },
+    {
+      "method": "GET",
+      "url": "https://directorstudio.sj88ai.com/api/projects/8c495498e41d41b1",
+      "status": 200,
+      "ts": 4.966418266296387
+    },
+    {
+      "method": "POST",
+      "url": "https://directorstudio.sj88ai.com/api/jobs",
+      "status": 200,
+      "ts": 13.285538911819458
+    },
+    {
+      "method": "GET",
+      "url": "https://directorstudio.sj88ai.com/api/jobs/190e2c7de1984c33",
+      "status": 200,
+      "ts": 13.290297508239746
+    },
+    {
+      "method": "GET",
+      "url": "https://directorstudio.sj88ai.com/api/jobs/190e2c7de1984c33",
+      "status": 200,
+      "ts": 15.318711519241333
+    }
+  ]
+}

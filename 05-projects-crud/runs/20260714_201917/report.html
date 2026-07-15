@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>TC-05 Projects CRUD (UI + API) — Results</title>
+<style>
+  body { font-family: -apple-system, sans-serif; background: #0a0a0a; color: #e5e5e5; padding: 32px; margin: 0; }
+  .container { max-width: 1400px; margin: 0 auto; }
+  h1 { color: #f59e0b; font-size: 36px; margin-bottom: 8px; }
+  h2 { color: #fbbf24; margin-top: 32px; }
+  .stats { display: flex; gap: 16px; margin: 24px 0; flex-wrap: wrap; }
+  .stat { background: #1a1a1a; padding: 16px 24px; border-radius: 12px; border: 1px solid #333; }
+  .stat .num { font-size: 32px; font-weight: 800; color: #f59e0b; }
+  .stat .label { font-size: 12px; color: #888; text-transform: uppercase; }
+  table { width: 100%; border-collapse: collapse; margin-top: 16px; background: #1a1a1a; border-radius: 8px; overflow: hidden; }
+  th { background: #262626; padding: 12px; text-align: left; color: #fbbf24; font-size: 12px; text-transform: uppercase; }
+  td { padding: 12px; border-top: 1px solid #2a2a2a; font-size: 14px; }
+  .expected, .actual { font-family: monospace; font-size: 12px; max-width: 300px; overflow: hidden; text-overflow: ellipsis; }
+  tr.pass { border-left: 4px solid #10b981; }
+  tr.fail { border-left: 4px solid #ef4444; background: #2a1a1a; }
+  .badge { padding: 4px 10px; border-radius: 100px; font-size: 11px; font-weight: 700; }
+  .badge-pass { background: #10b981; color: #000; }
+  .badge-fail { background: #ef4444; color: #fff; }
+  .screenshot a { color: #38bdf8; text-decoration: none; }
+  .screenshot a:hover { text-decoration: underline; }
+  .meta { color: #888; font-size: 13px; margin-top: 4px; }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>TC-05 Projects CRUD (UI + API)</h1>
+  <p class="meta">Run: 20260714_201917 · Duration: 67.0s · Output: /workspace/director-studio-test-cases/05-projects-crud/runs/20260714_201917</p>
+  <div class="stats">
+    <div class="stat"><div class="num" style="color: #f59e0b">22/24</div><div class="label">Passed</div></div>
+    <div class="stat"><div class="num">92%</div><div class="label">Pass Rate</div></div>
+    <div class="stat"><div class="num">2</div><div class="label">Failed</div></div>
+    <div class="stat"><div class="num">67.0s</div><div class="label">Duration</div></div>
+  </div>
+  <h2>📋 All Assertions (24)</h2>
+  <table>
+    <thead>
+      <tr><th>Step</th><th>Name</th><th>Expected</th><th>Actual</th><th>Status</th><th>Screenshot</th></tr>
+    </thead>
+    <tbody>
+        <tr class="pass">
+          <td>1</td>
+          <td>Login OK (projects visible)</td>
+          <td class="expected">contains 'project'</td>
+          <td class="actual"><!doctype html><html lang="th"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>director studio · คืนซ่อนวิญญาณ</title>
+<meta name="descripti</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+          <td class="screenshot"><a href="screenshots/01_after_login.png">01_after_login.png</a></td>
+        </tr>
+
+        <tr class="pass">
+          <td>2</td>
+          <td>GET /api/projects returns array</td>
+          <td class="expected">truthy</td>
+          <td class="actual">[{'id': '75a2d0cf09a64504', 'name': 'อยุธยา', 'kind': 'episode', 'data': {'characters': ['chandra', 'ghost', 'ying'], 'refs': [{'slot': 'ref1', 'url': '/opt/director-studio/refs/nam_ref.jpg', 'display</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+          <td class="screenshot"><a href="screenshots/02_baseline_list.png">02_baseline_list.png</a></td>
+        </tr>
+
+        <tr class="pass">
+          <td>2</td>
+          <td>Baseline has >= 2 projects (อยุธยา + โรงเรียนรัก)</td>
+          <td class="expected">truthy</td>
+          <td class="actual">True</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+          <td class="screenshot"><a href="screenshots/02_baseline_list.png">02_baseline_list.png</a></td>
+        </tr>
+
+        <tr class="pass">
+          <td>3</td>
+          <td>POST /api/projects returns 200</td>
+          <td class="expected">truthy</td>
+          <td class="actual">True</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+          <td class="screenshot"></td>
+        </tr>
+
+        <tr class="pass">
+          <td>3</td>
+          <td>New project has id</td>
+          <td class="expected">truthy</td>
+          <td class="actual">True</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+          <td class="screenshot"></td>
+        </tr>
+
+        <tr class="pass">
+          <td>3</td>
+          <td>Name matches</td>
+          <td class="expected">TC-05 Test 1784060366</td>
+          <td class="actual">TC-05 Test 1784060366</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+          <td class="screenshot"></td>
+        </tr>
+
+        <tr class="pass">
+          <td>3</td>
+          <td>Kind matches</td>
+          <td class="expected">episode</td>
+          <td class="actual">episode</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+          <td class="screenshot"></td>
+        </tr>
+
+        <tr class="pass">
+          <td>3</td>
+          <td>Data persisted (genre=horror)</td>
+          <td class="expected">horror</td>
+          <td class="actual">horror</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+          <td class="screenshot"></td>
+        </tr>
+
+        <tr class="pass">
+          <td>4</td>
+          <td>GET /api/projects/{pid} returns same name</td>
+          <td class="expected">TC-05 Test 1784060366</td>
+          <td class="actual">TC-05 Test 1784060366</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+          <td class="screenshot"></td>
+        </tr>
+
+        <tr class="pass">
+          <td>4</td>
+          <td>Same data after read</td>
+          <td class="expected">horror</td>
+          <td class="actual">horror</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+          <td class="screenshot"></td>
+        </tr>
+
+        <tr class="pass">
+          <td>5</td>
+          <td>PUT returns updated name</td>
+          <td class="expected">TC-05 Test 1784060366 (renamed)</td>
+          <td class="actual">TC-05 Test 1784060366 (renamed)</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+          <td class="screenshot"></td>
+        </tr>
+
+        <tr class="pass">
+          <td>5</td>
+          <td>Genre changed to comedy</td>
+          <td class="expected">comedy</td>
+          <td class="actual">comedy</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+          <td class="screenshot"></td>
+        </tr>
+
+        <tr class="pass">
+          <td>5</td>
+          <td>Round-trip read shows new name</td>
+          <td class="expected">TC-05 Test 1784060366 (renamed)</td>
+          <td class="actual">TC-05 Test 1784060366 (renamed)</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+          <td class="screenshot"></td>
+        </tr>
+
+        <tr class="pass">
+          <td>6</td>
+          <td>PUT with episodes succeeds</td>
+          <td class="expected">True</td>
+          <td class="actual">True</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+          <td class="screenshot"></td>
+        </tr>
+
+        <tr class="pass">
+          <td>6</td>
+          <td>Episodes count = 1</td>
+          <td class="expected">1</td>
+          <td class="actual">1</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+          <td class="screenshot"></td>
+        </tr>
+
+        <tr class="fail">
+          <td>7</td>
+          <td>New project name in UI</td>
+          <td class="expected">contains 'TC-05 Test 1784060366'</td>
+          <td class="actual"><!DOCTYPE html><html lang="th"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Director Studio · คืนซ่อนวิญญาณ</title>
+<meta name="descripti</td>
+          <td><span class="badge badge-fail">FAIL</span></td>
+          <td class="screenshot"><a href="screenshots/07_new_project_in_list.png">07_new_project_in_list.png</a></td>
+        </tr>
+
+        <tr class="pass">
+          <td>9</td>
+          <td>GET non-existent project returns 404</td>
+          <td class="expected">404</td>
+          <td class="actual">404</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+          <td class="screenshot"></td>
+        </tr>
+
+        <tr class="pass">
+          <td>10</td>
+          <td>GET /api/projects without token returns 401</td>
+          <td class="expected">401</td>
+          <td class="actual">401</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+          <td class="screenshot"></td>
+        </tr>
+
+        <tr class="pass">
+          <td>10</td>
+          <td>GET /api/projects/{pid} without token returns 401</td>
+          <td class="expected">401</td>
+          <td class="actual">401</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+          <td class="screenshot"></td>
+        </tr>
+
+        <tr class="pass">
+          <td>11</td>
+          <td>DELETE returns ok=True</td>
+          <td class="expected">True</td>
+          <td class="actual">True</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+          <td class="screenshot"></td>
+        </tr>
+
+        <tr class="pass">
+          <td>11</td>
+          <td>GET deleted project returns 404</td>
+          <td class="expected">404</td>
+          <td class="actual">404</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+          <td class="screenshot"></td>
+        </tr>
+
+        <tr class="pass">
+          <td>12</td>
+          <td>DELETE without token returns 401</td>
+          <td class="expected">401</td>
+          <td class="actual">401</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+          <td class="screenshot"></td>
+        </tr>
+
+        <tr class="fail">
+          <td>13</td>
+          <td>New project visible after reload</td>
+          <td class="expected">contains 'UI Delete Test TC05'</td>
+          <td class="actual"><!DOCTYPE html><html lang="th"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Director Studio · คืนซ่อนวิญญาณ</title>
+<meta name="descripti</td>
+          <td><span class="badge badge-fail">FAIL</span></td>
+          <td class="screenshot"><a href="screenshots/13a_before_delete.png">13a_before_delete.png</a></td>
+        </tr>
+
+        <tr class="pass">
+          <td>14</td>
+          <td>Final count == baseline</td>
+          <td class="expected">2</td>
+          <td class="actual">2</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+          <td class="screenshot"></td>
+        </tr></tbody>
+  </table>
+</div>
+</body>
+</html>

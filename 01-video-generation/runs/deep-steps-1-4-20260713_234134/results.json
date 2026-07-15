@@ -1,0 +1,536 @@
+{
+  "test": "TC-01a Steps 1-4 Deep",
+  "started": "2026-07-13T23:41:34.678049",
+  "elapsed_sec": 15.11869215965271,
+  "total_assertions": 50,
+  "passed": 48,
+  "failed": 2,
+  "assertions": [
+    {
+      "step": 1,
+      "substep": 1,
+      "name": "URL",
+      "expected": "https://directorstudio.sj88ai.com/",
+      "actual": "https://directorstudio.sj88ai.com/",
+      "status": "PASS",
+      "screenshot": "screenshots/01-login-initial.png",
+      "notes": ""
+    },
+    {
+      "step": 1,
+      "substep": 1,
+      "name": "Title",
+      "expected": "contains 'Director Studio'",
+      "actual": "Director Studio · คืนซ่อนวิญญาณ",
+      "status": "PASS",
+      "screenshot": "screenshots/01-login-initial.png",
+      "notes": ""
+    },
+    {
+      "step": 1,
+      "substep": 1,
+      "name": "Email input visible",
+      "expected": "True",
+      "actual": "True",
+      "status": "PASS",
+      "screenshot": "screenshots/01-login-initial.png",
+      "notes": ""
+    },
+    {
+      "step": 1,
+      "substep": 1,
+      "name": "Email input type",
+      "expected": "email",
+      "actual": "email",
+      "status": "PASS",
+      "screenshot": "screenshots/01-login-initial.png",
+      "notes": ""
+    },
+    {
+      "step": 1,
+      "substep": 1,
+      "name": "Password input visible",
+      "expected": "True",
+      "actual": "True",
+      "status": "PASS",
+      "screenshot": "screenshots/01-login-initial.png",
+      "notes": ""
+    },
+    {
+      "step": 1,
+      "substep": 1,
+      "name": "Password input type",
+      "expected": "password",
+      "actual": "password",
+      "status": "PASS",
+      "screenshot": "screenshots/01-login-initial.png",
+      "notes": ""
+    },
+    {
+      "step": 1,
+      "substep": 1,
+      "name": "Submit button visible",
+      "expected": "True",
+      "actual": "True",
+      "status": "PASS",
+      "screenshot": "screenshots/01-login-initial.png",
+      "notes": ""
+    },
+    {
+      "step": 1,
+      "substep": 2,
+      "name": "Email field accepts text",
+      "expected": "admin@sj88ai.com",
+      "actual": "admin@sj88ai.com",
+      "status": "PASS",
+      "screenshot": "screenshots/01-login-filled.png",
+      "notes": ""
+    },
+    {
+      "step": 1,
+      "substep": 2,
+      "name": "Password field accepts text",
+      "expected": "admin1234",
+      "actual": "admin1234",
+      "status": "PASS",
+      "screenshot": "screenshots/01-login-filled.png",
+      "notes": ""
+    },
+    {
+      "step": 2,
+      "substep": 1,
+      "name": "POST /api/auth/login status",
+      "expected": "200",
+      "actual": "200",
+      "status": "PASS",
+      "screenshot": "screenshots/02-after-submit.png",
+      "notes": ""
+    },
+    {
+      "step": 2,
+      "substep": 1,
+      "name": "GET /api/auth/me status",
+      "expected": "200",
+      "actual": "200",
+      "status": "PASS",
+      "screenshot": "screenshots/02-after-submit.png",
+      "notes": ""
+    },
+    {
+      "step": 2,
+      "substep": 1,
+      "name": "GET /api/projects status",
+      "expected": "200",
+      "actual": "200",
+      "status": "PASS",
+      "screenshot": "screenshots/02-after-submit.png",
+      "notes": ""
+    },
+    {
+      "step": 2,
+      "substep": 2,
+      "name": "Admin badge visible",
+      "expected": "True",
+      "actual": "True",
+      "status": "PASS",
+      "screenshot": "screenshots/02-projects-list.png",
+      "notes": ""
+    },
+    {
+      "step": 2,
+      "substep": 2,
+      "name": "Email form hidden",
+      "expected": "True",
+      "actual": "True",
+      "status": "PASS",
+      "screenshot": "screenshots/02-projects-list.png",
+      "notes": ""
+    },
+    {
+      "step": 2,
+      "substep": 2,
+      "name": "Project cards present",
+      "expected": "True",
+      "actual": "True",
+      "status": "PASS",
+      "screenshot": "screenshots/02-projects-list.png",
+      "notes": ""
+    },
+    {
+      "step": 2,
+      "substep": 2,
+      "name": "โรงเรียนรัก in project list",
+      "expected": "contains 'โรงเรียนรัก'",
+      "actual": "['โรงเรียนรัก']",
+      "status": "PASS",
+      "screenshot": "screenshots/02-projects-list.png",
+      "notes": ""
+    },
+    {
+      "step": 3,
+      "substep": 1,
+      "name": "โรงเรียนรัก card visible",
+      "expected": "True",
+      "actual": "True",
+      "status": "PASS",
+      "screenshot": "screenshots/03a-before-click.png",
+      "notes": ""
+    },
+    {
+      "step": 3,
+      "substep": 2,
+      "name": "โรงเรียนรัก shown on page",
+      "expected": "contains 'โรงเรียนรัก'",
+      "actual": "\n\n\n\n  \n    \n      ◈\n      DIRECTOR STUDIO\n      คืนซ่อนวิญญาณ · multi-tenant v2\n    \n    \n      เข้าสู่ระบบ\n      สมัครสมาชิก\n    \n    \n      \n        ชื่อที่แสดง\n        \n      \n      \n        อีเมล\n",
+      "status": "PASS",
+      "screenshot": "screenshots/03b-project-view.png",
+      "notes": ""
+    },
+    {
+      "step": 3,
+      "substep": 2,
+      "name": "Back link visible",
+      "expected": "True",
+      "actual": "True",
+      "status": "PASS",
+      "screenshot": "screenshots/03b-project-view.png",
+      "notes": ""
+    },
+    {
+      "step": 3,
+      "substep": 2,
+      "name": "EP1 visible",
+      "expected": "True",
+      "actual": "True",
+      "status": "PASS",
+      "screenshot": "screenshots/03b-project-view.png",
+      "notes": ""
+    },
+    {
+      "step": 3,
+      "substep": 2,
+      "name": "+ Episode ใหม่ button",
+      "expected": "True",
+      "actual": "True",
+      "status": "PASS",
+      "screenshot": "screenshots/03b-project-view.png",
+      "notes": ""
+    },
+    {
+      "step": 3,
+      "substep": 2,
+      "name": "✨ Generate Episode (AI) button",
+      "expected": "True",
+      "actual": "True",
+      "status": "PASS",
+      "screenshot": "screenshots/03b-project-view.png",
+      "notes": ""
+    },
+    {
+      "step": 3,
+      "substep": 2,
+      "name": "Seed EP1-3 button removed",
+      "expected": "False",
+      "actual": "False",
+      "status": "PASS",
+      "screenshot": "screenshots/03b-project-view.png",
+      "notes": "Confirmed removed"
+    },
+    {
+      "step": 4,
+      "substep": 1,
+      "name": "Modal title",
+      "expected": "contains 'วันแรกที่โรงเรียน'",
+      "actual": "\n\n\n\n  \n    \n      ◈\n      DIRECTOR STUDIO\n      คืนซ่อนวิญญาณ · multi-tenant v2\n    \n    \n      เข้าสู่ระบบ\n      สมัครสมาชิก\n    \n    \n      \n        ชื่อที่แสดง\n        \n      \n      \n        อีเมล\n",
+      "status": "PASS",
+      "screenshot": "screenshots/04a-modal-script.png",
+      "notes": ""
+    },
+    {
+      "step": 4,
+      "substep": 1,
+      "name": "บท tab visible",
+      "expected": "True",
+      "actual": "True",
+      "status": "PASS",
+      "screenshot": "screenshots/04a-modal-script.png",
+      "notes": ""
+    },
+    {
+      "step": 4,
+      "substep": 1,
+      "name": "Veo tab visible",
+      "expected": "True",
+      "actual": "True",
+      "status": "PASS",
+      "screenshot": "screenshots/04a-modal-script.png",
+      "notes": ""
+    },
+    {
+      "step": 4,
+      "substep": 1,
+      "name": "วิดีโอ tab visible",
+      "expected": "True",
+      "actual": "True",
+      "status": "PASS",
+      "screenshot": "screenshots/04a-modal-script.png",
+      "notes": ""
+    },
+    {
+      "step": 4,
+      "substep": 2,
+      "name": "EP1 has 10 scenes",
+      "expected": "10",
+      "actual": "10",
+      "status": "PASS",
+      "screenshot": "screenshots/04b-script-default.png",
+      "notes": ""
+    },
+    {
+      "step": 4,
+      "substep": 2,
+      "name": "EP1 has logline",
+      "expected": "contains 'มิ้นท์'",
+      "actual": "มิ้นท์ นักเรียนหญิง ม.6 ย้ายมาใหม่ วันแรกเธอทำกระเป๋าตกหน้าห้องเรียน รุ่นพี่หน้าตาดีหยิบขึ้นมาส่ง จุดเริ่มต้นของมิตรภาพที่ค่อยๆ กลายเป็นความรู้สึกดีๆ",
+      "status": "PASS",
+      "screenshot": "screenshots/04b-script-default.png",
+      "notes": ""
+    },
+    {
+      "step": 4,
+      "substep": 2,
+      "name": "EP1 chars: mint,phom,peach",
+      "expected": "True",
+      "actual": "True",
+      "status": "PASS",
+      "screenshot": "screenshots/04b-script-default.png",
+      "notes": ""
+    },
+    {
+      "step": 4,
+      "substep": 2,
+      "name": "Thai dialogue in scenes",
+      "expected": "True",
+      "actual": "True",
+      "status": "PASS",
+      "screenshot": "screenshots/04b-script-default.png",
+      "notes": ""
+    },
+    {
+      "step": 4,
+      "substep": 2,
+      "name": "All scenes have emotional_beat",
+      "expected": "True",
+      "actual": "True",
+      "status": "PASS",
+      "screenshot": "screenshots/04b-script-default.png",
+      "notes": ""
+    },
+    {
+      "step": 4,
+      "substep": 3,
+      "name": "Veo Prompts (10) header",
+      "expected": "True",
+      "actual": "True",
+      "status": "PASS",
+      "screenshot": "screenshots/04c-veo-tab.png",
+      "notes": ""
+    },
+    {
+      "step": 4,
+      "substep": 3,
+      "name": "Duration 0.0-8 shown",
+      "expected": "True",
+      "actual": "True",
+      "status": "PASS",
+      "screenshot": "screenshots/04c-veo-tab.png",
+      "notes": ""
+    },
+    {
+      "step": 4,
+      "substep": 3,
+      "name": "veo_config.duration = 8s",
+      "expected": "8s",
+      "actual": "8s",
+      "status": "PASS",
+      "screenshot": "screenshots/04c-veo-tab.png",
+      "notes": ""
+    },
+    {
+      "step": 4,
+      "substep": 3,
+      "name": "veo_config.aspect = 9:16",
+      "expected": "9:16",
+      "actual": "9:16",
+      "status": "PASS",
+      "screenshot": "screenshots/04c-veo-tab.png",
+      "notes": ""
+    },
+    {
+      "step": 4,
+      "substep": 4,
+      "name": "timeline has 10 entries",
+      "expected": "10",
+      "actual": "10",
+      "status": "PASS",
+      "screenshot": "screenshots/04c-veo-tab.png",
+      "notes": ""
+    },
+    {
+      "step": 4,
+      "substep": 4,
+      "name": "S01_01 has t",
+      "expected": "0.0-8",
+      "actual": "0.0-8",
+      "status": "PASS",
+      "screenshot": "screenshots/04c-veo-tab.png",
+      "notes": ""
+    },
+    {
+      "step": 4,
+      "substep": 4,
+      "name": "S01_01 has refs",
+      "expected": "True",
+      "actual": "True",
+      "status": "PASS",
+      "screenshot": "screenshots/04c-veo-tab.png",
+      "notes": ""
+    },
+    {
+      "step": 4,
+      "substep": 4,
+      "name": "S01_01 has prompt (long)",
+      "expected": "True",
+      "actual": "True",
+      "status": "PASS",
+      "screenshot": "screenshots/04c-veo-tab.png",
+      "notes": ""
+    },
+    {
+      "step": 4,
+      "substep": 4,
+      "name": "S01_01 has vo (Thai)",
+      "expected": "True",
+      "actual": "True",
+      "status": "PASS",
+      "screenshot": "screenshots/04c-veo-tab.png",
+      "notes": ""
+    },
+    {
+      "step": 4,
+      "substep": 4,
+      "name": "S01_01 has audio_cue",
+      "expected": "True",
+      "actual": "True",
+      "status": "PASS",
+      "screenshot": "screenshots/04c-veo-tab.png",
+      "notes": ""
+    },
+    {
+      "step": 4,
+      "substep": 4,
+      "name": "Thai VO in all 10 clips",
+      "expected": "10",
+      "actual": "10",
+      "status": "PASS",
+      "screenshot": "screenshots/04c-veo-tab.png",
+      "notes": ""
+    },
+    {
+      "step": 4,
+      "substep": 4,
+      "name": "Scene 1 VO rendered",
+      "expected": "contains 'มิ้นท์'",
+      "actual": "",
+      "status": "FAIL",
+      "screenshot": "screenshots/04d-veo-scene-1.png",
+      "notes": ""
+    },
+    {
+      "step": 4,
+      "substep": 4,
+      "name": "Scene 1 Audio rendered",
+      "expected": "contains 'morning'",
+      "actual": "",
+      "status": "FAIL",
+      "screenshot": "screenshots/04d-veo-scene-1.png",
+      "notes": ""
+    },
+    {
+      "step": 4,
+      "substep": 4,
+      "name": "Generate Video button visible",
+      "expected": "True",
+      "actual": "True",
+      "status": "PASS",
+      "screenshot": "screenshots/04d-veo-scene-1.png",
+      "notes": ""
+    },
+    {
+      "step": 4,
+      "substep": 5,
+      "name": "Project has 3 refs",
+      "expected": "3",
+      "actual": "3",
+      "status": "PASS",
+      "screenshot": "screenshots/04c-veo-tab.png",
+      "notes": ""
+    },
+    {
+      "step": 4,
+      "substep": 5,
+      "name": "Ref slots: ref1, ref2, ref3",
+      "expected": "True",
+      "actual": "True",
+      "status": "PASS",
+      "screenshot": "screenshots/04c-veo-tab.png",
+      "notes": ""
+    },
+    {
+      "step": 4,
+      "substep": 5,
+      "name": "All ref files exist on disk",
+      "expected": "True",
+      "actual": "True",
+      "status": "PASS",
+      "screenshot": "screenshots/04c-veo-tab.png",
+      "notes": ""
+    },
+    {
+      "step": 4,
+      "substep": 5,
+      "name": "veo_assets has 3 refs",
+      "expected": "3",
+      "actual": "3",
+      "status": "PASS",
+      "screenshot": "screenshots/04c-veo-tab.png",
+      "notes": ""
+    }
+  ],
+  "network": [
+    {
+      "ts": 2.6160407066345215,
+      "method": "POST",
+      "url": "https://directorstudio.sj88ai.com/api/auth/login",
+      "status": 200
+    },
+    {
+      "ts": 2.6202352046966553,
+      "method": "GET",
+      "url": "https://directorstudio.sj88ai.com/api/auth/me",
+      "status": 200
+    },
+    {
+      "ts": 2.62888503074646,
+      "method": "GET",
+      "url": "https://directorstudio.sj88ai.com/api/projects",
+      "status": 200
+    },
+    {
+      "ts": 5.607609272003174,
+      "method": "GET",
+      "url": "https://directorstudio.sj88ai.com/api/projects/8c495498e41d41b1",
+      "status": 200
+    }
+  ]
+}

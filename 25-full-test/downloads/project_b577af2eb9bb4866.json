@@ -1,0 +1,155 @@
+{
+  "id": "b577af2eb9bb4866",
+  "name": "TC-25 Full Test",
+  "kind": "episode",
+  "data": {
+    "episodes": [
+      {
+        "episode_title": "S1 EP1",
+        "episode_logline": "สาวจีนในชุดเชียงเชียนแดงกลับมาที่บ้านเก่าในต่างจังหวัด เธอเห็นเงาของตัวเองในกระจก แต่เงายิ้มก่อนเธอ",
+        "scenes": [
+          {
+            "id": "S01_01",
+            "title": "กลับมา",
+            "location": "ทางเดินหน้าบ้านไม้เก่า ต่างจังหวัด",
+            "time_marker": "23:42",
+            "characters": [
+              "ref1"
+            ],
+            "action": "[ref1] in a red cheongsam stands before an old wooden house at night, holding a lantern, looking up at the dark windows with unease.",
+            "dialogue": [
+              {
+                "speaker": "[ref1]",
+                "line": "ทำไมบ้านนี้... มันเงียบจนน่ากลัว"
+              }
+            ],
+            "emotional_beat": "ความคุ้นเคยปะทะความหวาดกลัว ความทรงจำเก่ากลับมาหลอกหลอน",
+            "shot_type": "WS",
+            "camera_move": "slow dolly in toward the house facade",
+            "lens": "35mm",
+            "duration_sec": 8,
+            "lighting": "low-key moonlight, lantern casting warm amber glow on [ref1]'s face",
+            "mood_color": "deep navy blue + amber",
+            "time_of_day": "23:42",
+            "weather": "light mist",
+            "ambient": [
+              "crickets",
+              "wind through leaves",
+              "distant dog bark"
+            ],
+            "sfx": [
+              "footsteps on gravel",
+              "old wooden door creak"
+            ],
+            "characters_state": [
+              {
+                "name": "[ref1]",
+                "emotion": "unease + nostalgia",
+                "intensity": 5,
+                "pose": "standing still, lantern raised, eyes scanning windows"
+              }
+            ],
+            "plot_advances": [
+              "[ref1] returns to the old family home"
+            ],
+            "foreshadowing": [
+              "a faint silhouette will be seen in the window above in next scene"
+            ],
+            "props": [
+              "paper lantern",
+              "old wooden door",
+              "worn travel bag"
+            ],
+            "vfx_notes": "subtle fog drifts across the ground, lantern flame flickers realistically",
+            "transition_in": "fade from black, 2s",
+            "transition_out": "cut to black, 0.5s",
+            "director_note": "Establish isolation. The house should feel like it has been waiting. Hold on silence after the dialogue line.",
+            "pacing": "slow burn",
+            "tone_tags": [
+              "eerie",
+              "nostalgic",
+              "isolated"
+            ]
+          },
+          {
+            "id": "S01_02",
+            "title": "เงาที่ยิ้มก่อน",
+            "location": "ห้องนอนเก่า ชั้นสองของบ้านไม้",
+            "time_marker": "23:51",
+            "characters": [
+              "ref1"
+            ],
+            "action": "[ref1] approaches an antique mirror on the wall. Her reflection stands still, then slowly smiles before she does. The smile lingers on the reflection as [ref1]'s own face remains neutral, then frightened.",
+            "dialogue": [
+              {
+                "speaker": "[ref1]",
+                "line": "...เงาฉัน... ยิ้มทำไม?"
+              }
+            ],
+            "emotional_beat": "หวาดกลัวสุดขีด ความจริงถูกทำลาย ตัวตนเริ่มไม่มั่นคง",
+            "shot_type": "MS",
+            "camera_move": "slow push in toward the mirror",
+            "lens": "50mm",
+            "duration_sec": 8,
+            "lighting": "low-key single candle from side, deep shadows on half of [ref1]'s face, moonlight rim light on hair",
+            "mood_color": "crimson red + cold silver + deep black",
+            "time_of_day": "23:51",
+            "weather": "light rain begins",
+            "ambient": [
+              "rain tapping on wooden roof",
+              "candle hiss",
+              "suspenseful silence"
+            ],
+            "sfx": [
+              "heartbeat pulse",
+              "subtle glass hum"
+            ],
+            "characters_state": [
+              {
+                "name": "[ref1]",
+                "emotion": "terror + disbelief",
+                "intensity": 9,
+                "pose": "standing frozen in front of mirror, hand half-raised"
+              }
+            ],
+            "plot_advances": [
+              "the supernatural presence is revealed to be linked to [ref1]'s reflection"
+            ],
+            "foreshadowing": [
+              "the reflection's smile lingers one frame after [ref1] looks away — a clue to be paid off in Episode 2"
+            ],
+            "props": [
+              "antique standing mirror",
+              "candle",
+              "cheongsam fabric visible in reflection"
+            ],
+            "vfx_notes": "the reflection's smile begins 0.5s before [ref1]'s mouth moves; subtle desaturation on reflection layer; soft red mist pulses behind the mirror frame",
+            "transition_in": "cut from S01_01",
+            "transition_out": "hard cut to black with low rumble, 1s",
+            "director_note": "The horror is in the timing. The reflection breaks causality. Hold the smile for 2 full seconds of silence before the dialogue line lands.",
+            "pacing": "slow burn → jump-scare beat",
+            "tone_tags": [
+              "dread",
+              "unsettling",
+              "supernatural"
+            ]
+          }
+        ],
+        "timeline": [
+          {
+            "scene_id": "S01_01",
+            "prompt": "[ref1] [ref1] in a red cheongsam stands before an old wooden house at night, holding a lantern, looking up ",
+            "t": 0
+          }
+        ]
+      }
+    ],
+    "meta": {
+      "genre": "horror",
+      "language": "th",
+      "aspect_ratio": "9:16"
+    }
+  },
+  "created_at": 1784067271.8261843,
+  "updated_at": 1784067284.7078445
+}
