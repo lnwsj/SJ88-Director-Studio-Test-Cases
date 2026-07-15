@@ -1,0 +1,15 @@
+# suggest UI Actions
+
+[14:33:21] Type display_name: 'V33 Full 1784125995'
+[14:33:21] Type email: 'v33full_1784125995@test.local'
+[14:33:21] Type password: '**** (6+ chars)'
+[14:33:21] Click: '#auth-submit (สมัคร)'
+[14:33:25] Type project name: 'v3.3 Features Demo'
+[14:33:25] Click: '#project-save'
+[14:33:30] Type script idea: '5-scene story'
+[14:33:30] Type num scenes: '5'
+[14:33:30] Click: '#script-generate'
+[14:34:15] Click: '#script-save (save as EP1)'
+[14:34:22] Click: '.ep-card (open EP1)'
+[14:34:25] Click: ".ep-tab[data-ep-tab='veo']"
+[14:34:27] Click: '#ai-suggest-next-btn (NEW v3.3)'
