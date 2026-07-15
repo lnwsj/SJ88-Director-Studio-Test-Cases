@@ -1,0 +1,195 @@
+{
+  "steps": [
+    {
+      "step": "Login",
+      "status": "RUN",
+      "detail": "As uitest_tc27_1784116658@test.local"
+    },
+    {
+      "step": "Login",
+      "status": "PASS",
+      "detail": "URL=https://directorstudio.sj88ai.com/"
+    },
+    {
+      "step": "Open project",
+      "status": "RUN",
+      "detail": ""
+    },
+    {
+      "step": "Open project",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "step": "Open EP1",
+      "status": "RUN",
+      "detail": ""
+    },
+    {
+      "step": "Click Veo tab",
+      "status": "RUN",
+      "detail": ""
+    },
+    {
+      "step": "Click Veo tab",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "step": "Count scenes",
+      "status": "PASS",
+      "detail": "7 veo items"
+    },
+    {
+      "step": "Scene 1/7 - Click Generate Video",
+      "status": "RUN",
+      "detail": ""
+    },
+    {
+      "step": "Scene 1",
+      "status": "PASS",
+      "detail": "Job submitted, waiting for video"
+    },
+    {
+      "step": "Scene 1 video",
+      "status": "PASS",
+      "detail": "Ready in 85s, URL=https://files.genaipro.io/video_db2b4d5f-7acd-4de3-b868-b705..."
+    },
+    {
+      "step": "Scene 2/7 - Click Generate Video",
+      "status": "RUN",
+      "detail": ""
+    },
+    {
+      "step": "Scene 2",
+      "status": "PASS",
+      "detail": "Job submitted, waiting for video"
+    },
+    {
+      "step": "Scene 2 video",
+      "status": "PASS",
+      "detail": "Ready in 110s, URL=https://files.genaipro.io/video_17f3c6fa-81cc-4295-b0bd-bb96..."
+    },
+    {
+      "step": "Scene 3/7 - Click Generate Video",
+      "status": "RUN",
+      "detail": ""
+    },
+    {
+      "step": "Scene 3",
+      "status": "PASS",
+      "detail": "Job submitted, waiting for video"
+    },
+    {
+      "step": "Scene 3 video",
+      "status": "PASS",
+      "detail": "Ready in 95s, URL=https://files.genaipro.io/video_b4000216-e910-46de-9399-c6e2..."
+    },
+    {
+      "step": "Scene 4/7 - Click Generate Video",
+      "status": "RUN",
+      "detail": ""
+    },
+    {
+      "step": "Scene 4",
+      "status": "PASS",
+      "detail": "Job submitted, waiting for video"
+    },
+    {
+      "step": "Scene 4 video",
+      "status": "PASS",
+      "detail": "Ready in 80s, URL=https://files.genaipro.io/video_6af4b67a-c8d4-4769-a2ac-1926..."
+    },
+    {
+      "step": "Scene 5/7 - Click Generate Video",
+      "status": "RUN",
+      "detail": ""
+    },
+    {
+      "step": "Scene 5",
+      "status": "PASS",
+      "detail": "Job submitted, waiting for video"
+    },
+    {
+      "step": "Scene 5 video",
+      "status": "PASS",
+      "detail": "Ready in 95s, URL=https://files.genaipro.io/video_b7034053-b34b-4951-ad46-3942..."
+    },
+    {
+      "step": "Scene 6/7 - Click Generate Video",
+      "status": "RUN",
+      "detail": ""
+    },
+    {
+      "step": "Scene 6",
+      "status": "PASS",
+      "detail": "Job submitted, waiting for video"
+    },
+    {
+      "step": "Scene 6 video",
+      "status": "PASS",
+      "detail": "Ready in 120s, URL=https://files.genaipro.io/video_480c11c8-9304-476e-8025-5e69..."
+    },
+    {
+      "step": "Scene 7/7 - Click Generate Video",
+      "status": "RUN",
+      "detail": ""
+    },
+    {
+      "step": "Scene 7",
+      "status": "PASS",
+      "detail": "Job submitted, waiting for video"
+    },
+    {
+      "step": "Scene 7 video",
+      "status": "PASS",
+      "detail": "Ready in 110s, URL=https://files.genaipro.io/video_ca499525-3539-4377-924d-da04..."
+    },
+    {
+      "step": "JS errors",
+      "status": "PASS",
+      "detail": "Clean console"
+    }
+  ],
+  "videos": [
+    {
+      "scene": 1,
+      "elapsed_s": 85,
+      "url": "https://files.genaipro.io/video_db2b4d5f-7acd-4de3-b868-b705fa508dee.mp4"
+    },
+    {
+      "scene": 2,
+      "elapsed_s": 110,
+      "url": "https://files.genaipro.io/video_17f3c6fa-81cc-4295-b0bd-bb96f782d2f4.mp4"
+    },
+    {
+      "scene": 3,
+      "elapsed_s": 95,
+      "url": "https://files.genaipro.io/video_b4000216-e910-46de-9399-c6e287bae1cb.mp4"
+    },
+    {
+      "scene": 4,
+      "elapsed_s": 80,
+      "url": "https://files.genaipro.io/video_6af4b67a-c8d4-4769-a2ac-1926ee60593c.mp4"
+    },
+    {
+      "scene": 5,
+      "elapsed_s": 95,
+      "url": "https://files.genaipro.io/video_b7034053-b34b-4951-ad46-39423e1590be.mp4"
+    },
+    {
+      "scene": 6,
+      "elapsed_s": 120,
+      "url": "https://files.genaipro.io/video_480c11c8-9304-476e-8025-5e69ca5fe818.mp4"
+    },
+    {
+      "scene": 7,
+      "elapsed_s": 110,
+      "url": "https://files.genaipro.io/video_ca499525-3539-4377-924d-da04a7f79de0.mp4"
+    }
+  ],
+  "passed": 19,
+  "failed": 11,
+  "duration_s": 725,
+  "video_count": 7
+}
