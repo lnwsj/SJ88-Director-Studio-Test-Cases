@@ -81,3 +81,4 @@
 | 13 | [Logging](./13-logging/TC-13-logging.md) | ✅ **27/28** | 2026-07-14 18:30 | [Script](./13-logging/test_logging.py) |
 
 **Cumulative: 15 TCs, 161/166 PASS (97%)**
+| 27 | [Story Continuity (10 scenes)](./27-story-continuity/UI_RESULTS.md) | ✅ **10/13** | 2026-07-15 12:02 | [Script](./27-story-continuity/scripts/test_tc27_continuity.py) 7 scenes + 2 videos |
