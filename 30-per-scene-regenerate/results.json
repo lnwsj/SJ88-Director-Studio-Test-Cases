@@ -1,0 +1,61 @@
+{
+  "steps": [
+    {
+      "step": "Login admin",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "step": "Open project",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "step": "Episode loaded",
+      "status": "PASS",
+      "detail": "3 scenes, 3 🔄 buttons"
+    },
+    {
+      "step": "Modal appears",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "step": "Cancel works",
+      "status": "PASS",
+      "detail": "Modal closed via cancel"
+    },
+    {
+      "step": "Reopen modal",
+      "status": "PASS",
+      "detail": "Modal reopens on second click"
+    },
+    {
+      "step": "Scene regenerated (no feedback)",
+      "status": "PASS",
+      "detail": "Action changed: '[ref1] นอนอยู่บนพื้นไม้เก่า หมอกสีขาวข้นหนามากคลุม' → '[ref1] นอนอยู่บนพื้นไม้เก่า หมอกสีขาวข้นหนาคลุมท่ว'"
+    },
+    {
+      "step": "Scene regenerated (with feedback)",
+      "status": "PASS",
+      "detail": "Action changed: '[ref1] นอนอยู่บนพื้นไม้เก่า หมอกสีขาวข้นหนาคลุมท่ว' → '[ref1] นอนอยู่บนพื้นไม้เก่า หมอกสีขาวข้นหนามากคลุม'"
+    },
+    {
+      "step": "Veo tab shows timeline",
+      "status": "PASS",
+      "detail": "3 Veo prompts"
+    },
+    {
+      "step": "First Veo prompt has content",
+      "status": "PASS",
+      "detail": "1450 chars"
+    },
+    {
+      "step": "No JS errors",
+      "status": "PASS",
+      "detail": "0 errors: []"
+    }
+  ],
+  "passed": 11,
+  "failed": 0
+}
