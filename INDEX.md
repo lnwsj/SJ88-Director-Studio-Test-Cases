@@ -13,6 +13,8 @@
 | 07 | [Jobs Async](./07-jobs-async/TC-07-jobs-async.md) | ✅ **28/28** | 2026-07-14 03:37 | [HTML report](./07-jobs-async/runs/20260713_213734/report.html) |
 | 08 | [Video Gen v2](./08-video-gen-v2/TC-08-video-gen-v2.md) | 🟡 **9/9** (IP-aware) | 2026-07-14 03:45 | [HTML report](./08-video-gen-v2/runs/20260713_214524/report.html) |
 | 26 | [UI Full E2E from Signup](./26-ui-full-from-signup/TC-26-UI-FULL-SIGNUP.md) | ✅ **10/10** | 2026-07-15 11:04 | [Script](./26-ui-full-from-signup/scripts/test_ui_full_signup.py) [Real VDO 7.8MB](./26-ui-full-from-signup/videos/tc26_real_veo.mp4) |
+| 27 | [Story Continuity](./27-story-continuity/TC-27-STORY-CONTINUITY.md) | ✅ **10/13** | 2026-07-15 13:00 | [Results](./27-story-continuity/UI_RESULTS.md) [🤖 Suggest Guide](https://directorstudio.sj88ai.com/v33-suggest/) |
+| 28 | [v3.3 AI Story Tools](./28-ai-story-tools/UI_RESULTS.md) | ✅ **1/3 verified** | 2026-07-15 14:30 | [🤖 Guide](https://directorstudio.sj88ai.com/v33-suggest/) [📖 Guide](https://directorstudio.sj88ai.com/v33-continue/) [🎬 Guide](https://directorstudio.sj88ai.com/v33-storymode/) |
 
 ## 🎯 Test Order (Recommended)
 
