@@ -14,7 +14,7 @@
 | 08 | [Video Gen v2](./08-video-gen-v2/TC-08-video-gen-v2.md) | 🟡 **9/9** (IP-aware) | 2026-07-14 03:45 | [HTML report](./08-video-gen-v2/runs/20260713_214524/report.html) |
 | 26 | [UI Full E2E from Signup](./26-ui-full-from-signup/TC-26-UI-FULL-SIGNUP.md) | ✅ **10/10** | 2026-07-15 11:04 | [Script](./26-ui-full-from-signup/scripts/test_ui_full_signup.py) [Real VDO 7.8MB](./26-ui-full-from-signup/videos/tc26_real_veo.mp4) |
 | 27 | [Story Continuity](./27-story-continuity/TC-27-STORY-CONTINUITY.md) | ✅ **8/8 videos** | 2026-07-15 18:43 | [v2 Report](./27-story-continuity/v2/README.md) (33.5 MB videos) |
-| 28 | [v3.3 AI Story Tools](./28-ai-story-tools/UI_RESULTS.md) | ✅ **1/3 verified** | 2026-07-15 14:30 | [🤖 Guide](https://directorstudio.sj88ai.com/v33-suggest/) [📖 Guide](https://directorstudio.sj88ai.com/v33-continue/) [🎬 Guide](https://directorstudio.sj88ai.com/v33-storymode/) |
+| 28 | [v3.3 AI Story Tools](./28-ai-story-tools/V33_VERIFY_RESULTS.md) | ✅ **3/3 PASS** | 2026-07-16 08:50 | [🤖 F1](./28-ai-story-tools/screenshots_v33_verify/F1_01_suggestion_modal.png) [📖 F2](./28-ai-story-tools/screenshots_v33_verify/F2_03_done.png) [🎬 F3](./28-ai-story-tools/screenshots_v33_verify/F3_03_done.png) |
 | 29 | [Refs Cascade v3.3.0.1](./29-refs-cascade/TC-29-Report.md) | ✅ **PASS** | 2026-07-15 15:30 | AI reads refs from project + IDEA (no forced SHARED_REFS) |
 | 30 | [v3.4 Per-Scene Regenerate](./30-per-scene-regenerate/TC-30-Report.md) | ✅ **11/11** | 2026-07-15 16:50 | 🔄 Per-scene regen with optional feedback (real UI test) |
 | 31 | [Post-Deployment Verify](./31-deployment-verification/report.md) | ✅ **14/15** | 2026-07-16 13:46 | After deploying v3.4.0, all 8 🔄 buttons + APIs work |
