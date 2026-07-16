@@ -1,0 +1,601 @@
+{
+  "episode_title": "น้ำ",
+  "episode_title_en": "Nam",
+  "episode_logline": "น้ำ สาวจีนผู้สวมแว่นกลมกลับมายังบ้านเกิดที่เงียบเหงา และค้นพบจดหมายลึกลับจากยายที่นำพาเธอสู่ความจริงอันน่าสะพรึงเกี่ยวกับมรดกสามรุ่นในครอบครัว",
+  "characters_in_ep": [
+    "ref1",
+    "ref2",
+    "ref3"
+  ],
+  "scenes": [
+    {
+      "id": "S01_01",
+      "title": "ทางเข้าหมู่บ้าน",
+      "location": "ทางเข้าหมู่บ้านจีนโบราณ",
+      "time_marker": "00:00",
+      "characters": [
+        "ref1"
+      ],
+      "action": "[ref1] เดินเข้าหมู่บ้านตอนเย็น ถือกระเป๋าเก่า มองไปรอบๆ ด้วยสายตาเหงาและแปลกใจ",
+      "dialogue": [
+        {
+          "speaker": "[ref1]",
+          "line": "ทำไมเงียบขนาดนี้..."
+        }
+      ],
+      "emotional_beat": "ความเหงาและความไม่สบายใจ",
+      "shot_type": "WS",
+      "camera_move": "slow dolly in",
+      "lens": "35mm",
+      "duration_sec": 8,
+      "lighting": "แสงตะวันตกดิ่งสีส้มแกมแดง ตัดเงายาว",
+      "mood_color": "ส้ม-แดง-น้ำเงินเข้ม",
+      "time_of_day": "17:42",
+      "weather": "อากาศแห้ง ลมเบาๆ",
+      "ambient": [
+        "เสียงกระเป๋าลากพื้น",
+        "นกกลางคืนร้องไกลๆ",
+        "กิ่งไม้แห้งเสียดสี"
+      ],
+      "sfx": [
+        "เสียงรองเท้าบนกรวด",
+        "ลมพัดเบาๆ"
+      ],
+      "characters_state": [
+        {
+          "name": "[ref1]",
+          "emotion": "เหงา+สงสัย",
+          "intensity": 5,
+          "pose": "เดินช้าๆ มองรอบทิศ"
+        }
+      ],
+      "plot_advances": [
+        "แนะนำ [ref1] และสถานที่"
+      ],
+      "foreshadowing": [
+        "ภาพยายเดินอยู่ในหมู่บ้านตอนเย็นเห็นในภายหลัง"
+      ],
+      "props": [
+        "กระเป๋าเก่า",
+        "แว่นกลม"
+      ],
+      "vfx_notes": "แสงแดดสุดท้ายย้อมผ้าแดงเชียงเชียนให้ดูโดดเด่น",
+      "transition_in": "fade in from black",
+      "transition_out": "cut to black, หน้าจอมืดสนิท",
+      "director_note": "จัดเฟรมให้ [ref1] เล็กมากเมื่อเทียบกับประตูหมู่บ้าน สร้างความรู้สึกโดดเดี่ยว",
+      "pacing": "slow burn",
+      "tone_tags": [
+        "melancholic",
+        "eerie"
+      ]
+    },
+    {
+      "id": "S01_02",
+      "title": "จดหมายจากยาย",
+      "location": "ห้องนั่งเล่นบ้านไม้เก่าของยาย",
+      "time_marker": "00:08",
+      "characters": [
+        "ref1",
+        "ref2"
+      ],
+      "action": "[ref1] เปิดประตูบ้านไม้เก่าที่อับชื้น ถล่มเข้าไปในห้องนั่งเล่นที่มีฝุ่นเกาะ พบซองจดหมายเก่าวางอยู่บนโต๊ะไม้ [ref2] ภาพถ่ายเก่าของยายในกรอบไม้มองจ้องมาที่ [ref1]",
+      "dialogue": [
+        {
+          "speaker": "[ref1]",
+          "line": "ยายเขียนถึงฉัน... แต่ยายเสียไปสามปีแล้วนี่"
+        }
+      ],
+      "emotional_beat": "ความหวาดกลัวเริ่มก่อตัว",
+      "shot_type": "MS",
+      "camera_move": "slow push in",
+      "lens": "50mm",
+      "duration_sec": 8,
+      "lighting": "แสงธรรมชาติจางจากหน้าต่าง ตัดเงาลึก ไม่มีแสงไฟ",
+      "mood_color": "น้ำตาล-น้ำเงินเข้ม-ดำ",
+      "time_of_day": "18:10",
+      "weather": "ฝนเริ่มพรำ",
+      "ambient": [
+        "ฝนตกเบาๆ บนหลังคาไม้",
+        "เสียงหยดน้ำ",
+        "ลมหวีดผ่านช่องไม้"
+      ],
+      "sfx": [
+        "ประตูบ้านส่าย ส่งเสียง",
+        "ซองกระดาษกรอบแกรบในมือ"
+      ],
+      "characters_state": [
+        {
+          "name": "[ref1]",
+          "emotion": "กลัว+ตกใจ",
+          "intensity": 7,
+          "pose": "ยืนนิ่ง มองซองจดหมาย มือสั่นเล็กน้อย"
+        }
+      ],
+      "plot_advances": [
+        "พบจดหมายลึกลับจากยาย",
+        "เรียนรู้ว่ายายเสียแล้ว"
+      ],
+      "foreshadowing": [
+        "ลายเซ็นยายที่จะปรากฏอีกครั้งบนผ้าแดงในซีนถัดไป"
+      ],
+      "props": [
+        "ซองจดหมายเก่า",
+        "กรอบรูปภาพยาย",
+        "โต๊ะไม้ฝุ่นจับ"
+      ],
+      "vfx_notes": "ผงฝุ่นลอยในแสงแดดที่ลอดเข้ามา สร้างบรรยากาศอับชื้น",
+      "transition_in": "cut จากภาพหน้าจอดำ",
+      "transition_out": "fade out ช้าๆ",
+      "director_note": "ให้กล้องค่อยๆ ซูมเข้าหาซองจดหมาย เน้นความลึกลับของลายเซ็น",
+      "pacing": "slow burn",
+      "tone_tags": [
+        "creepy",
+        "mysterious"
+      ]
+    },
+    {
+      "id": "S01_03",
+      "title": "กล่องไม้เก่า",
+      "location": "ห้องนอนชั้นบนของยาย",
+      "time_marker": "00:16",
+      "characters": [
+        "ref1"
+      ],
+      "action": "[ref1] เปิดซองจดหมาย พบกุญแจเล็กๆ ใช้เปิดกล่องไม้เก่าที่ซ่อนอยู่ใต้เตียงยาย เมื่อเปิดฝากล่องออก พบผืนผ้าแดงสดพับเรียบร้อย",
+      "dialogue": [
+        {
+          "speaker": "[ref1]",
+          "line": "นี่มัน... ผ้าเชียงเชียนของยาย"
+        }
+      ],
+      "emotional_beat": "ความสงสัยปะทะความกลัว",
+      "shot_type": "CU",
+      "camera_move": "static + micro shake",
+      "lens": "85mm",
+      "duration_sec": 8,
+      "lighting": "แสงเทียนไขตั้งบนข้างเตียง แสงเด้งไปมาเบาๆ",
+      "mood_color": "ดำ-แดง-อำพัน",
+      "time_of_day": "19:30",
+      "weather": "ฝนยังตก",
+      "ambient": [
+        "ฝนตกหนักขึ้น",
+        "หวีดเสียงลม",
+        "ไม้เก่าส่ายครืนครึม"
+      ],
+      "sfx": [
+        "เสียงกุญแจใส่ลงรู",
+        "บานพับไม้ส่งเสียง 'ป๊อก'",
+        "ลมหายใจของ [ref1]"
+      ],
+      "characters_state": [
+        {
+          "name": "[ref1]",
+          "emotion": "ตื่นเต้น+กังวล",
+          "intensity": 6,
+          "pose": "คุกเข่า มือจับฝากล่อง มองลงไป"
+        }
+      ],
+      "plot_advances": [
+        "เปิดกล่องพบผ้าแดง"
+      ],
+      "foreshadowing": [
+        "ผ้าแดงในกล่องจะเรืองแสงในซีนถัดไป"
+      ],
+      "props": [
+        "กุญแจเล็ก",
+        "กล่องไม้เก่า",
+        "ผ้าเชียงเชียนแดง",
+        "เทียนไข"
+      ],
+      "vfx_notes": "เงาแสงเทียนเด้งไปมา ผ้าแดงดูมีชีวิตชีวาแม้อยู่ในที่มืด",
+      "transition_in": "cut จากการซูมเข้ามือ [ref1] ฉีกซอง",
+      "transition_out": "ปิดเฟรมที่ฝากล่อง แล้วตัดดำ",
+      "director_note": "ใช้เสียงบรรยากาศเงียบเป็นพิเศษ ก่อนเสียง 'ป๊อก' ของฝากล่อง",
+      "pacing": "slow burn",
+      "tone_tags": [
+        "mysterious",
+        "eerie"
+      ]
+    },
+    {
+      "id": "S01_04",
+      "title": "ผ้าแดงเรืองแสง",
+      "location": "ห้องนอนชั้นบนของยาย",
+      "time_marker": "00:24",
+      "characters": [
+        "ref1",
+        "ref3"
+      ],
+      "action": "[ref1] แตะผ้าแดงเบาๆ ผ้าเรืองแสงสีแดงอ่อน ภาพหลอนของยายตอนสาว [ref3] เดินอยู่ในห้องนี้เมื่อ 50 ปีก่อน ปรากฏเป็นภาพซ้อนทับบนตัว [ref1] ที่ยืนนิ่ง",
+      "dialogue": [
+        {
+          "speaker": "[ref1]",
+          "line": "ยาย... เห็นอะไรในผ้าผืนนี้"
+        }
+      ],
+      "emotional_beat": "ความหวาดกลัวและความเศร้าปะปนกัน",
+      "shot_type": "CU",
+      "camera_move": "slow zoom in",
+      "lens": "50mm",
+      "duration_sec": 8,
+      "lighting": "แสงสีแดงเรืองจากผ้าเป็นแหล่งกำเนิดแสงหลัก เงาทอดยาวจากผนัง",
+      "mood_color": "แดง-ดำ-อำพันอ่อน",
+      "time_of_day": "19:38",
+      "weather": "ฝนหยุด อากาศนิ่ง",
+      "ambient": [
+        "เสียงเงียบสนิท",
+        "เสียงหัวใจ [ref1] เต้น",
+        "เสียงกระซิบแผ่วเบา"
+      ],
+      "sfx": [
+        "เสียงผ้ากระทบนิ้ว",
+        "เสียงฮัมเพลงจีนโบราณแผ่ว",
+        "เสียงระฆังเล็กๆ"
+      ],
+      "characters_state": [
+        {
+          "name": "[ref1]",
+          "emotion": "กลัว+เศร้า",
+          "intensity": 9,
+          "pose": "ยืนนิ่ง แขนข้างหนึ่งยกแตะผ้า สายตาจับภาพหลอน"
+        },
+        {
+          "name": "[ref3]",
+          "emotion": "ไร้อารมณ์",
+          "intensity": 0,
+          "pose": "เดินช้าๆ ภาพโปร่งใส มองไม่เห็น [ref1]"
+        }
+      ],
+      "plot_advances": [
+        "เห็นภาพอดีต",
+        "เริ่มเข้าใจว่าผ้ามีพลัง"
+      ],
+      "foreshadowing": [
+        "ตัวเลข '3 รุ่น' ที่จะเปิดเผยในซีนสุดท้าย"
+      ],
+      "props": [
+        "ผ้าเชียงเชียนแดง",
+        "แว่นกลม",
+        "ปลอกแขนเชียงเชียน"
+      ],
+      "vfx_notes": "ภาพซ้อนทับแบบ double exposure ระหว่าง [ref1] กับ [ref3] ผ้าแดงปล่อยแสง particle เบาๆ",
+      "transition_in": "match cut จากเฟรมผ้าแดงพับ",
+      "transition_out": "ภาพเบลอแล้วดับ",
+      "director_note": "สร้างความขัดแย้งระหว่างความกลัวกับความเศร้า ผ่านการเคลื่อนไหวช้าของ [ref3]",
+      "pacing": "slow burn",
+      "tone_tags": [
+        "melancholic",
+        "supernatural"
+      ]
+    },
+    {
+      "id": "S01_05",
+      "title": "มรดกสามรุ่น",
+      "location": "ระเบียงบ้านไม้เก่าของยาย",
+      "time_marker": "00:32",
+      "characters": [
+        "ref1",
+        "ref2",
+        "ref3"
+      ],
+      "action": "[ref1] นั่งบนเก้าอี้ไม้บนระเบียง กอดผ้าแดงไว้แนบอก กล้องเคลื่อนถอยหลังช้าๆ เผยให้เห็นรูปถ่ายสามรูปบนผนัง: [ref3] ยายสาว [ref2] ยายตอนแก่ และกรอบรูปเปล่าที่เหมาะสำหรับ [ref1] [ref1] เข้าใจแล้วว่าเธอเป็นผู้สืบทอดผ้าผืนนี้",
+      "dialogue": [
+        {
+          "speaker": "[ref1]",
+          "line": "ยายคะ... หนูสืบต่อแล้วนะ"
+        }
+      ],
+      "emotional_beat": "ความเข้าใจ ความยอมรับ และความเศร้าเงียบ",
+      "shot_type": "WS",
+      "camera_move": "slow dolly out",
+      "lens": "35mm",
+      "duration_sec": 8,
+      "lighting": "แสงจันทร์เย็นสาดเข้ามา ผสมกับแสงเทียนไขที่ยังติดอยู่ในห้อง",
+      "mood_color": "เงิน-น้ำเงิน-แดง",
+      "time_of_day": "20:15",
+      "weather": "ท้องฟ้าเปิด เห็นดาว",
+      "ambient": [
+        "เสียงแมลงกลางคืน",
+        "ลมเย็น",
+        "เสียงน้ำหยดจากชายคา"
+      ],
+      "sfx": [
+        "เสียงเทียนฮิส",
+        "เสียงกล้องถ่ายรูปคลิก (จากความทรงจำ)",
+        "ลมพัดเบาๆ"
+      ],
+      "characters_state": [
+        {
+          "name": "[ref1]",
+          "emotion": "เข้าใจ+เศร้า+สงบ",
+          "intensity": 6,
+          "pose": "นั่งเก้าอี้ กอดผ้าแดง มองรูปถ่ายบนผนัง"
+        },
+        {
+          "name": "[ref2]",
+          "emotion": "ไร้อารมณ์",
+          "intensity": 0,
+          "pose": "อยู่ในกรอบรูปตอนแก่ มองยิ้ม"
+        },
+        {
+          "name": "[ref3]",
+          "emotion": "ไร้อารมณ์",
+          "intensity": 0,
+          "pose": "อยู่ในกรอปภาพ มองตรง"
+        }
+      ],
+      "plot_advances": [
+        "[ref1] เข้าใจว่าเป็นมรดก 3 รุ่น",
+        "ยุติ arc ของ ep1"
+      ],
+      "foreshadowing": [
+        "กรอบรูปเปล่าที่เหมาะกับ [ref1] สำหรับ ep ถัดไป"
+      ],
+      "props": [
+        "ผ้าเชียงเชียนแดง",
+        "รูปถ่ายสามรูปบนผนัง",
+        "เก้าอี้ไม้",
+        "เทียนไข"
+      ],
+      "vfx_notes": "กรอบรูป [ref2] และ [ref3] ขยับเล็กน้อยเมื่อกล้องถอยห่าง ตาเหลือบมอง [ref1]",
+      "transition_in": "cut จากเฟรมภาพเบลอของ [ref1]",
+      "transition_out": "fade to black, หน้าจอเข้าสู่ความมืดสนิท",
+      "director_note": "จัดเฟรมให้เห็นวงศ์ตระกูลทั้งสามรุ่นในเฟรมเดียว สื่อถึงความต่อเนื่องของสายเลือด",
+      "pacing": "slow burn",
+      "tone_tags": [
+        "melancholic",
+        "accepting"
+      ]
+    },
+    {
+      "id": "S01_06",
+      "title": "เสียงหัวเราะเด็ก",
+      "location": "ทางเดินแคบๆ ในบ้านไม้เก่า มืดสนิท",
+      "time_marker": "02:08",
+      "characters": [
+        "ref1"
+      ],
+      "action": "[ref1] เดินเข้าไปในทางเดินแคบๆ ถือผ้าแดงแนบอก จู่ๆ เสียงหัวเราะเด็กดังขึ้นจากปลายทางเดิน เธอหยุดเดิน หันมองเข้าไปในความมืด เห็นเงาเล็กๆ ของเด็กผู้หญิงยืนอยู่ห่างออกไป เงานั้นยิ้มแล้วหายไป เหลือเพียงเสียงกระซิบเรียก 'น้ำ... น้ำ...'",
+      "dialogue": [
+        {
+          "speaker": "[ref1]",
+          "line": "ใครอยู่ตรงนั้น...?"
+        }
+      ],
+      "emotional_beat": "หวาดกลัวผสมกับความอยากรู้ เริ่มสัมผัสได้ถึงสิ่งที่มองไม่เห็นในบ้านหลังนี้",
+      "shot_type": "MS",
+      "camera_move": "slow dolly in ตามตัวละคร",
+      "lens": "35mm",
+      "duration_sec": 8,
+      "lighting": "low-key, เงาดำปกคลุม มีแสงจันทร์เล็กน้อยลอดผ่านช่องไม้",
+      "mood_color": "น้ำเงินเข้ม + แดงหม่น",
+      "time_of_day": "01:15",
+      "weather": "ฝนตกปรอยๆ ข้างนอก",
+      "ambient": [
+        "เสียงฝนตกบนหลังคาไม้",
+        "เสียงพื้นไม้เก่าเอื้อน",
+        "เสียงลมหวีดผ่านช่องแคบ"
+      ],
+      "sfx": [
+        "เสียงหัวเราะเด็กเบาๆ",
+        "เสียงกระซิบเรียกชื่อ",
+        "เสียงพื้นไม้กรอดเมื่อเงาปรากฏ"
+      ],
+      "characters_state": [
+        {
+          "name": "[ref1]",
+          "emotion": "fear+curiosity",
+          "intensity": 8,
+          "pose": "ยืนนิ่ง กอดผ้าแดงแนบอก หันมองปลายทางเดิน"
+        }
+      ],
+      "plot_advances": [
+        "พบเงาลึกลับของเด็กผู้หญิง",
+        "เสียงเรียกชื่อตัวละครบ่งบอกว่ามีสิ่งศักดิ์สิทธิ์อยู่ในบ้าน",
+        "ย้ำถึงความเชื่อมโยงของมรดกสามรุ่น"
+      ],
+      "foreshadowing": [
+        "เด็กผู้หญิงในเงาอาจเป็นยายตอนเด็ก หรือญาติผู้หญิงรุ่นก่อนหน้า"
+      ],
+      "props": [
+        "ผ้าแดง",
+        "กุญแจเล็ก (อยู่ในกระเป๋า)"
+      ],
+      "vfx_notes": "เงาเด็กผู้หญิงมีควันแดงเบาๆ ลอยรอบตัว เสียงกระซิบมี echo reverb เล็กน้อย",
+      "transition_in": "match cut จากภาพรูปถ่ายสามรูปใน S01_05 เข้าสู่ภาพมืดในทางเดิน",
+      "transition_out": "fade to black เมื่อเงาหายไป ค้างไว้ 2 วินาที",
+      "director_note": "ความเงียบก่อนเสียงหัวเราะดังขึ้นคือหัวใจของฉาก ปล่อยให้ผู้ชมรู้สึกไม่สบายใจก่อนเสียงเด็กดังขึ้น แสงจันทร์เปลี่ยนเป็นแสงแดงหม่นเมื่อเงาปรากฏ",
+      "pacing": "slow burn เข้าสู่ jump-scare moment ตอนเสียงหัวเราะ",
+      "tone_tags": [
+        "eerie",
+        "childlike dread",
+        "mysterious",
+        "supernatural"
+      ],
+      "why_now": "Continues from 'มรดกสามรุ่น' — advances the plot by introducing a new development while keeping the same [ref1] character state and the 'ผ้าแดง' (red cloth) through-line."
+    },
+    {
+      "id": "S1_07",
+      "title": "ประตูห้องยาย",
+      "location": "ปลายทางเดินแคบ หน้าห้องนอนยาย (ชั้นบนบ้านไม้เก่า)",
+      "time_marker": "00:46",
+      "characters": [
+        "ref1",
+        "ref3"
+      ],
+      "action": "[ref1] เดินเข้ามาใกล้ประตูห้องยายที่ปลายทางเดิน มือข้างหนึ่งกอดผ้าแดงแนบอก อีกข้างค่อยๆ แตะลูกบิดประตู เสียงหัวเราะเด็กเงียบลงจนเหลือเพียงเสียงลมหายใจแผ่วเบา เงาของ [ref3] ปรากฏเลือนรางอยู่หลังกระจกฝ้าบานเล็กของประตู ริมฝีปากขยับพูดบางอย่างที่ [ref1] มองไม่ทัน",
+      "dialogue": [
+        {
+          "speaker": "[ref1]",
+          "line": "ยาย... หนูมาหาแล้วค่ะ"
+        },
+        {
+          "speaker": "[ref3]",
+          "line": "เปิดเข้ามา... อย่ากลัว"
+        }
+      ],
+      "emotional_beat": "ความกลัวเริ่มเปลี่ยนเป็นความอยากรู้ หัวใจเต้นเร็วแต่เท้าไม่ยอมถอย",
+      "shot_type": "OTS",
+      "camera_move": "slow push in behind shoulder",
+      "lens": "35mm",
+      "duration_sec": 8,
+      "lighting": "low-key moonlight from corridor window, deep shadows on door, faint red glow leaking from under door crack",
+      "mood_color": "cold blue + crimson underglow",
+      "time_of_day": "00:12",
+      "weather": "light rain continues, distant",
+      "ambient": [
+        "rain on tin roof",
+        "wind through cracked window",
+        "old wood settling"
+      ],
+      "sfx": [
+        "heartbeat",
+        "latch click",
+        "distant child whisper"
+      ],
+      "characters_state": [
+        {
+          "name": "[ref1]",
+          "emotion": "fear+longing",
+          "intensity": 8,
+          "pose": "hand on doorknob, leaning slightly forward"
+        },
+        {
+          "name": "[ref3]",
+          "emotion": "sorrowful+hopeful",
+          "intensity": 6,
+          "pose": "translucent figure behind frosted glass, lips moving"
+        }
+      ],
+      "plot_advances": [
+        "[ref1] ถึงห้องยายและได้ยินเสียงยายเรียก",
+        "เผยให้เห็นว่าผียายสื่อสารได้ ไม่ใช่แค่ปรากฏตัว",
+        "ผ้าแดงเริ่มตอบสนองต่อความใกล้ชิดของยาย"
+      ],
+      "foreshadowing": [
+        "แสงแดงใต้ประตูจะนำไปสู่การเปิดเผยความจริงเรื่องมรดกในฉากถัดไป",
+        "ยายพูดว่า 'อย่ากลัว' ซึ่งจะสวนทางกับสิ่งที่ [ref1] เห็นเมื่อเปิดประตู"
+      ],
+      "props": [
+        "ผ้าแดงเรืองแสง",
+        "ลูกบิดประตูทองเหลืองเก่า",
+        "กระจกฝ้าบานเล็ก",
+        "จดหมายยายในกระเป๋าเสื้อ"
+      ],
+      "vfx_notes": "เพิ่ม translucent glow ให้ [ref3] หลังกระจกฝ้า, ลูกบิดประตูมี condensation เป็นหยดน้ำ, แสงแดงรั่วใต้ประตูมี particle smoke ลอยเบาๆ",
+      "transition_in": "match cut on the child laughter fading into silence",
+      "transition_out": "cut to black on door latch clicking open, hold 1.2s",
+      "director_note": "จังหวะสำคัญ: เสียงหัวเราะเด็กเงียบลงทันทีที่ [ref1] แตะลูกบิด ใช้ความเงียบเป็นอาวุธหลัก ไม่มี jump scare แต่ให้ผู้ชมรู้สึกว่ามีบางอย่างกำลังรออยู่หลังประตู น้ำเสียงของ [ref3] ต้องแผ่วและอบอุ่น ไม่น่ากลัว เพื่อสร้างความขัดแย้งกับสิ่งที่จะเกิดขึ้นในฉากถัดไป",
+      "pacing": "slow burn",
+      "tone_tags": [
+        "eerie",
+        "haunting",
+        "tender",
+        "mysterious"
+      ]
+    }
+  ],
+  "timeline": [
+    {
+      "id": "S01_01",
+      "t": "0.0-8",
+      "reference_image": [
+        "ref1"
+      ],
+      "prompt": "WS shot, slow dolly in, 35mm lens. [ref1], a young Chinese woman wearing round wire-frame glasses, walks slowly into an ancient Chinese village at dusk, pulling a worn leather suitcase behind her. Her gaze drifts left and right with quiet loneliness and curiosity. The towering old village gate looms enormous in the frame, dwarfing her small figure and emphasizing her isolation. The last rays of the setting sun pour in deep orange and red, slicing long blue-black shadows across the stone path and weathered wooden doors. The fabric of her faded Chiang Khan red cotton dress catches the dying light, glowing vividly against the dim surroundings. The air is dry with a gentle breeze. Dry branches creak softly overhead, night birds call from far away, gravel crunches beneath her shoes, and the suitcase wheels drag across stone. VFX: golden hour light tinting the red Chiang Khan fabric to glow. A barely visible distant silhouette of an elderly woman walking in the village flickers once in deep shadow. Tone: melancholic, eerie slow burn, framing her smallness against the silent village.",
+      "camera": {
+        "move": "slow dolly in",
+        "lens": "35mm"
+      },
+      "vo": "\"ทำไมเงียบขนาดนี้...\"",
+      "audio_cue": "เสียงกระเป๋าลากพื้น, รองเท้าบนกรวด, นกกลางคืนร้องไกลๆ, กิ่งไม้แห้งเสียดสี, ลมพัดเบาๆ"
+    },
+    {
+      "id": "S01_02",
+      "t": "0.0-8",
+      "reference_image": [
+        "ref1",
+        "ref2"
+      ],
+      "prompt": "MS shot, slow push in, 50mm lens. [ref1], a young Chinese woman wearing round glasses, pushes open the warped wooden door of her grandmother's old, musty house and stumbles into a dust-laden living room. She stands frozen, hands trembling slightly, staring down at an old yellowed letter envelope resting on a heavy dust-coated wooden table. A faded framed black-and-white photograph of her grandmother sits beside it, the glass catching the dim light, [ref2] grandmother's piercing gaze fixed unsettlingly on [ref1]. Faint natural twilight bleeds through grimy windowpanes at 18:10, casting deep brown, deep navy, and pitch-black shadows across the room with no electric light at all. Light drizzle taps the wooden roof, raindrops patter through the cracks, and wind whistles eerily through the wood-paneled seams. VFX: floating dust motes drift slowly through the thin shafts of dying daylight, thickening the damp, suffocating atmosphere. The envelope crackles softly in her trembling fingers as she reads the impossible signature. Subtle foreshadow: the old, elegant handwriting at the bottom of the letter seems to shimmer faintly, as if freshly pressed by an unseen hand. Tone: slow burn creeping dread, lingering on the mystery of a dead woman's hand.",
+      "camera": {
+        "move": "slow push in",
+        "lens": "50mm"
+      },
+      "vo": "\"ยายเขียนถึงฉัน... แต่ยายเสียไปสามปีแล้วนี่\"",
+      "audio_cue": "Light rain on wooden roof, water droplets dripping, wind whistling through wood gaps, old door creaking, paper envelope crinkling in trembling hands"
+    },
+    {
+      "id": "S01_03",
+      "t": "0.0-8",
+      "reference_image": [
+        "ref1"
+      ],
+      "prompt": "CU shot, static with subtle micro shake, 85mm lens. [ref1] kneels on the dusty floor of a pitch-dark grandmother's upstairs bedroom, gripping the dusty lid of an antique wooden box pulled from beneath the heavy old teak bed. Her trembling hand slowly lifts the lid, revealing a small brass key slipping into a rusted lock, a soft metallic click, then a wooden creak as the lid pops open with a faint 'pok'. Inside, perfectly folded, lies a vivid crimson Chiang Hsian silk cloth that seems to breathe with life even in the darkness. A single beeswax candle sits on the bedside table, its flame gently flickering and dancing, casting black, red, and amber tones across her round glasses and worried face as shadows leap along the cracked plaster walls. Rain hammers the wooden roof harder, wind howls through gaps in the old wood, the ancient house groans and sways. VFX: candle-light shadows flick, the red silk seems to pulse with quiet vitality. Foreshadow: the crimson fabric holds an eerie, otherworldly glow waiting to awaken. Tone: mysterious, eerie, slow burn dread amplified by near-silence before the lid opens.",
+      "camera": {
+        "move": "static + micro shake",
+        "lens": "85mm"
+      },
+      "vo": "\"นี่มัน... ผ้าเชียงเชียนของยาย\"",
+      "audio_cue": "Heavy rain on wood, wind whistling through gaps, old timber groaning, metallic key sliding into lock, wooden lid creaking 'pok', [ref1]'s shaky breath"
+    },
+    {
+      "id": "S01_04",
+      "t": "0.0-8",
+      "reference_image": [
+        "ref1",
+        "ref3"
+      ],
+      "prompt": "CU shot, slow zoom in, 50mm lens. [ref1] stands frozen in the dust-heavy upstairs bedroom of her grandmother's old wooden house, one arm raised, fingers gently touching a luminous red Chiang-shan ceremonial cloth draped over a wooden stand; faint red particles drift upward from the fabric, casting long velvet shadows across the paneled walls. Through a translucent double-exposure overlay, [ref3], her grandmother as a young woman, glides slowly across the same room in pale Chiang-shan sleeve cuffs, expressionless, gazing past [ref1] as if she does not exist. The still post-rain air carries deep crimson, black, and soft amber tones, moonlight filtering weakly through paper-lattice windows. Her round glasses catch the cloth's glow. VFX: layered double-exposure ghost, soft red particle aura around cloth. Foreshadow: a faint tally mark '三' briefly visible woven into the hem, hinting three generations. Audio: [ref1]'s heartbeat, a whisper of ancient Chinese humming, distant small bell chime, and the soft brush of cloth under fingertips. Tone: melancholic slow burn, sorrow braided with supernatural dread.",
+      "camera": {
+        "move": "slow zoom in",
+        "lens": "50mm"
+      },
+      "vo": "\"ยาย... เห็นอะไรในผ้าผืนนี้\"",
+      "audio_cue": "absolute silence layered with [ref1]'s heartbeat, faint whisper of ancient Chinese humming, small bell chime in distance, soft brush of cloth under fingertips"
+    },
+    {
+      "id": "S01_05_มรดกสามรุ่น",
+      "t": "0.0-8",
+      "reference_image": [
+        "ref1"
+      ],
+      "prompt": "WS shot, slow dolly out, 35mm lens. [ref1] sits on a weathered teak wooden chair on the old porch of grandmother's wooden house, hugging a folded crimson Chiang Mai textile cloth tightly to her chest, her round glasses catching the flicker of a half-burned candle still glowing inside the dusty doorway behind her. The slow dolly out reveals three framed photographs lined along the dark wooden wall: [ref3] grandmother as a young woman in black-and-white, [ref2] grandmother in old age smiling gently, and between them an empty ornate frame sized perfectly as if waiting for [ref1]. Cool moonlight pours across the open porch in silver, deep blue and muted red tones across her collar and the cloth, while the warm amber candle glow softens the shadows behind her. Clear night sky, faint stars visible above the mossy roof tiles. Night insects chirp softly, a cool breeze drifts, and water drips slowly from the eaves onto aged wood. VFX: as the camera pulls back, the eyes in [ref2]'s and [ref3]'s old photographs shift subtly, glancing toward [ref1]. A faint camera shutter click echoes from a buried memory. Subtle foreshadow: the empty frame waits silently for the next generation. Tone: melancholic, accepting, slow burn family lineage in a single frame, lingering pace.",
+      "camera": {
+        "move": "slow dolly out",
+        "lens": "35mm"
+      },
+      "vo": "\"ยายคะ... หนูสืบต่อแล้วนะ\"",
+      "audio_cue": "เสียงแมลงกลางคืน ลมเย็นพัดเบาๆ น้ำหยดจากชายคา เทียนฮิสแผ่วๆ เสียงกล้องถ่ายรูปคลิกจากความทรงจำ"
+    },
+    {
+      "id": "S01_06",
+      "t": "0.0-8",
+      "reference_image": [
+        "ref1"
+      ],
+      "prompt": "MS shot, slow dolly in tracking the character, 35mm lens. [ref1] steps cautiously into a narrow, pitch-black wooden corridor of her grandmother's old house, clutching the glowing red cloth tightly against her chest, the small brass key hidden in her pocket. She freezes mid-step. At the far end of the corridor, a small shadow of a young girl stands in the darkness, surrounded by wisps of faint red smoke. The girl smiles, then vanishes into thin air, leaving only an echoing whisper calling her name. Thin slivers of cold moonlight pierce through cracked wooden slats overhead, casting deep blue and murky red tones across the warped floorboards. Outside, light drizzle taps the old shingle roof, wind whistles through the narrow gaps, and aged wood groans softly beneath her feet. VFX: red smoke aura around the shadow girl, soft reverb on the whisper. Subtle foreshadow: the child shadow may be the grandmother as a child, hinting at the three-generation bloodline secret. Tone: eerie childlike dread, slow burn unraveling into sudden supernatural chill.",
+      "camera": {
+        "move": "slow dolly in ตามตัวละคร",
+        "lens": "35mm"
+      },
+      "vo": "\"ใครอยู่ตรงนั้น...?\"",
+      "audio_cue": "เสียงฝนตกบนหลังคาไม้, เสียงพื้นไม้เก่าเอื้อน, เสียงลมหวีดผ่านช่องแคบ, เสียงหัวเราะเด็กเบาๆ, เสียงกระซิบเรียกชื่อ, เสียงพื้นไม้กรอดเมื่อเงาปรากฏ"
+    },
+    {
+      "id": "S1_07",
+      "t": "0.0-8",
+      "reference_image": [
+        "ref1",
+        "ref3"
+      ],
+      "prompt": "OTS shot, slow push in behind shoulder, 35mm lens. [ref1] steps to the end of a narrow teak hallway, clutching the faintly glowing red cloth to her chest, her free hand reaching toward an old brass doorknob beaded with condensation droplets. The corridor is swallowed in deep blue moonlight from a cracked window, shadows pooling along warped wooden planks. A thin crimson underglow leaks from beneath the closed door, sending wispy red particle smoke curling along the floor. Through a small frosted glass pane, the translucent silhouette of [ref3] drifts into view, her lips moving in slow, tender whispers that [ref1] cannot quite catch. Light rain taps the tin roof far above. VFX: translucent ghost glow on [ref3], condensation on brass knob, drifting red smoke particles. Foreshadow: the crimson light beneath the door pulses faintly, promising a revelation that will contradict [ref3]'s gentle reassurance. Audio: rain on tin roof, wind through cracked window, old wood settling, heartbeat, latch click, distant child whisper. Tone: silence as weapon, slow burn dread wrapped in eerie tenderness.",
+      "camera": {
+        "move": "slow push in behind shoulder",
+        "lens": "35mm"
+      },
+      "vo": "[ref1]: \"ยาย... หนูมาหาแล้วค่ะ\" [ref3]: \"เปิดเข้ามา... อย่ากลัว\"",
+      "audio_cue": "rain on tin roof, wind through cracked window, old wood settling, heartbeat, latch click, distant child whisper"
+    }
+  ]
+}
