@@ -20,6 +20,7 @@
 | 31 | [Post-Deployment Verify](./31-deployment-verification/report.md) | ✅ **14/15** | 2026-07-16 13:46 | After deploying v3.4.0, all 8 🔄 buttons + APIs work |
 | 32 | [VDO Gallery](./32-vdo-gallery/screenshots/) | ✅ **14/14** | 2026-07-16 13:56 | [Live](https://directorstudio.sj88ai.com/vdo-gallery/) 8 TC-27 v2 videos |
 | 33 | [v3.3 Endpoints](./33-v33-endpoints/results.json) | ✅ **4/4 endpoints** | 2026-07-16 14:01 | Implemented 4 missing AI Story Tools endpoints |
+| 34 | [Character Bible v3.5](./34-character-bible/TC-34_RESULTS.md) | ✅ **PASS** | 2026-07-16 10:45 | 3-layer cascade (default/explicit/ep) + locked specs honored by LLM |
 
 ## 🎯 Test Order (Recommended)
 
