@@ -1,0 +1,86 @@
+{
+  "steps": [
+    {
+      "step": "Page load",
+      "status": "PASS",
+      "detail": "Status 200, loaded in 0.4s"
+    },
+    {
+      "step": "Video elements",
+      "status": "PASS",
+      "detail": "Found 8 <video> elements (expected 8)"
+    },
+    {
+      "step": "Scene 1 video",
+      "status": "PASS",
+      "detail": "readyState=4, src=...de3-b868-b705fa508dee.mp4"
+    },
+    {
+      "step": "Scene 2 video",
+      "status": "PASS",
+      "detail": "readyState=4, src=...295-b0bd-bb96f782d2f4.mp4"
+    },
+    {
+      "step": "Scene 3 video",
+      "status": "PASS",
+      "detail": "readyState=4, src=...6de-9399-c6e287bae1cb.mp4"
+    },
+    {
+      "step": "Scene 4 video",
+      "status": "PASS",
+      "detail": "readyState=4, src=...769-a2ac-1926ee60593c.mp4"
+    },
+    {
+      "step": "Scene 5 video",
+      "status": "PASS",
+      "detail": "readyState=4, src=...951-ad46-39423e1590be.mp4"
+    },
+    {
+      "step": "Scene 6 video",
+      "status": "PASS",
+      "detail": "readyState=4, src=...76e-8025-5e69ca5fe818.mp4"
+    },
+    {
+      "step": "Scene 7 video",
+      "status": "PASS",
+      "detail": "readyState=4, src=...377-924d-da04a7f79de0.mp4"
+    },
+    {
+      "step": "Scene 8 video",
+      "status": "PASS",
+      "detail": "readyState=4, src=...25c-ae60-f5239647cf2f.mp4"
+    },
+    {
+      "step": "Video 1 plays",
+      "status": "PASS",
+      "detail": "playing=True, currentTime=1.6s"
+    },
+    {
+      "step": "Mobile responsive",
+      "status": "PASS",
+      "detail": "390×844 rendered"
+    },
+    {
+      "step": "All video loads",
+      "status": "PASS",
+      "detail": "0 failures (8 unique URLs)"
+    },
+    {
+      "step": "No JS errors",
+      "status": "PASS",
+      "detail": "clean"
+    }
+  ],
+  "passed": 14,
+  "failed": 0,
+  "video_statuses": {
+    "video_b4000216-e910-": 206,
+    "video_6af4b67a-c8d4-": 206,
+    "video_480c11c8-9304-": 206,
+    "video_b7034053-b34b-": 206,
+    "video_17f3c6fa-81cc-": 206,
+    "video_db2b4d5f-7acd-": 206,
+    "video_1e4a2dc5-8330-": 206,
+    "video_ca499525-3539-": 206
+  }
+}
