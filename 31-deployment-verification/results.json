@@ -1,0 +1,81 @@
+{
+  "steps": [
+    {
+      "step": "Health check",
+      "status": "PASS",
+      "detail": "version=3.4.0"
+    },
+    {
+      "step": "API login",
+      "status": "PASS",
+      "detail": "Got JWT"
+    },
+    {
+      "step": "Find project",
+      "status": "PASS",
+      "detail": "8 scenes, 8 timeline"
+    },
+    {
+      "step": "v3.4 regenerate-scene API",
+      "status": "PASS",
+      "detail": "elapsed=18.5s, scene keys=28, feedback_applied=True"
+    },
+    {
+      "step": "v3.4 regenerate-scene + Veo",
+      "status": "PASS",
+      "detail": "elapsed=31.8s, veo prompt=1382 chars"
+    },
+    {
+      "step": "UI Login",
+      "status": "PASS",
+      "detail": "URL=https://directorstudio.sj88ai.com/"
+    },
+    {
+      "step": "Project cards visible",
+      "status": "PASS",
+      "detail": "1 cards"
+    },
+    {
+      "step": "EP cards visible",
+      "status": "PASS",
+      "detail": "1 eps"
+    },
+    {
+      "step": "Scenes in modal",
+      "status": "PASS",
+      "detail": "8 scenes (expected ≥8)"
+    },
+    {
+      "step": "🔄 buttons",
+      "status": "PASS",
+      "detail": "8 buttons for 8 scenes"
+    },
+    {
+      "step": "Regen modal",
+      "status": "PASS",
+      "detail": "Modal appears on click"
+    },
+    {
+      "step": "Modal cancel",
+      "status": "PASS",
+      "detail": "Modal closes on cancel"
+    },
+    {
+      "step": "Veo tab",
+      "status": "PASS",
+      "detail": "8 veo items"
+    },
+    {
+      "step": "Videos in Veo tab",
+      "status": "WARN",
+      "detail": "0 <video> elements visible"
+    },
+    {
+      "step": "JS errors",
+      "status": "PASS",
+      "detail": "Clean console"
+    }
+  ],
+  "passed": 14,
+  "failed": 1
+}
