@@ -17,6 +17,7 @@
 | 28 | [v3.3 AI Story Tools](./28-ai-story-tools/UI_RESULTS.md) | ✅ **1/3 verified** | 2026-07-15 14:30 | [🤖 Guide](https://directorstudio.sj88ai.com/v33-suggest/) [📖 Guide](https://directorstudio.sj88ai.com/v33-continue/) [🎬 Guide](https://directorstudio.sj88ai.com/v33-storymode/) |
 | 29 | [Refs Cascade v3.3.0.1](./29-refs-cascade/TC-29-Report.md) | ✅ **PASS** | 2026-07-15 15:30 | AI reads refs from project + IDEA (no forced SHARED_REFS) |
 | 30 | [v3.4 Per-Scene Regenerate](./30-per-scene-regenerate/TC-30-Report.md) | ✅ **11/11** | 2026-07-15 16:50 | 🔄 Per-scene regen with optional feedback (real UI test) |
+| 31 | [Post-Deployment Verify](./31-deployment-verification/report.md) | ✅ **14/15** | 2026-07-16 13:46 | After deploying v3.4.0, all 8 🔄 buttons + APIs work |
 
 ## 🎯 Test Order (Recommended)
 
