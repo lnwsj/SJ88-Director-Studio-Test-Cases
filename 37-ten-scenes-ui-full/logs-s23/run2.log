@@ -1,0 +1,79 @@
+[13:32:11] STEP: 1. Login
+[13:32:18] 📸: 01_logged_in
+[13:32:18] 📊 Scenes ready: 6
+[13:32:18] STEP: 2. Open project → EP1
+[13:32:23] 📸: 02_ep1_open
+[13:32:23] STEP: 3. Stage 2 - Veo prompts
+[13:32:25] 📸: 03_script_tab
+[13:32:25] DIALOG: Generate Veo prompts for all 6 scenes?
+
+(sequentia
+[13:32:25] ⏳ Stage 2 started: polling API...
+[13:32:29]   poll1: timeline=0
+[13:32:32]   poll2: timeline=0
+[13:32:35]   poll3: timeline=0
+[13:32:38]   poll4: timeline=0
+[13:32:42]   poll5: timeline=0
+[13:32:45]   poll6: timeline=0
+[13:32:48]   poll7: timeline=0
+[13:32:51]   poll8: timeline=0
+[13:32:54]   poll9: timeline=0
+[13:32:58]   poll10: timeline=0
+[13:33:01]   poll11: timeline=0
+[13:33:04]   poll12: timeline=0
+[13:33:07]   poll13: timeline=0
+[13:33:11]   poll14: timeline=0
+[13:33:14]   poll15: timeline=0
+[13:33:17]   poll16: timeline=0
+[13:33:20]   poll17: timeline=0
+[13:33:23]   poll18: timeline=0
+[13:33:27]   poll19: timeline=0
+[13:33:30]   poll20: timeline=0
+[13:33:33]   poll21: timeline=0
+[13:33:36]   poll22: timeline=0
+[13:33:39]   poll23: timeline=0
+[13:33:43]   poll24: timeline=0
+[13:33:46]   poll25: timeline=0
+[13:33:49]   poll26: timeline=0
+[13:33:52]   poll27: timeline=0
+[13:33:56]   poll28: timeline=0
+[13:33:59]   poll29: timeline=0
+[13:34:02]   poll30: timeline=0
+[13:34:02] ⚠️ Stage 2 timeout: 
+[13:34:04] 📸: 04_veo_done
+[13:34:04] ✅ Stage 2 final: 99s
+[13:34:04] 📊 Veo count: 0
+[13:34:04] STEP: 4. Stage 3 - Videos
+[13:34:10]   veo-tab#1: btns=0
+[13:34:13]   veo-tab#2: btns=0
+[13:34:16]   veo-tab#3: btns=0
+[13:34:19]   veo-tab#4: btns=0
+[13:34:22]   veo-tab#5: btns=0
+[13:34:22] 📸: 05_veo_tab
+[13:34:22] 📊 Video buttons: 0
+[13:34:22] ⏳ Stage 3 polling: wait for 0 videos via API...
+[13:34:53] 📊 poll#1: 0/6 videos (30s)
+[13:34:53] ✅ Stage 3 done: 
+[13:34:55] 📸: 06_videos_done
+[13:34:55] ✅ Stage 3 final: 30s
+[13:34:55] 💾 final.json: 
+
+============================================================
+TC-37 STAGE 2+3 RESULT
+{
+  "project": "TC-37 น้ำหนาว 10 ฉาก",
+  "scenes": 6,
+  "veo": 0,
+  "videos": 0,
+  "scene_titles": [
+    "ลูกค้าคนสุดท้าย",
+    "สั่งเมนูลึกลับ",
+    "หม้อน้ำเดือด",
+    "ถ้วยแตก",
+    "แม่ค้าชราปรากฏ",
+    "บ่อน้ำต้องสาป"
+  ],
+  "stage2_dur": 98.6,
+  "stage3_dur": 30.2
+}
+============================================================

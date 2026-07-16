@@ -1,0 +1,21 @@
+[13:16:41] STEP: 1. Signup
+[13:16:45] 📸 Screenshot: 01_landing
+[13:16:46] 📸 Screenshot: 02_signup_filled
+[13:16:49] 📸 Screenshot: 03_after_signup
+[13:16:49] ✅ Signed up: tc37_1784207800@test.local
+[13:16:49] STEP: 2. Create project
+[13:16:49] 📸 Screenshot: 04_project_form
+[13:16:52] 📸 Screenshot: 05_project_created
+[13:16:52] ✅ Project created: TC-37 น้ำหนาว 10 ฉาก
+[13:16:52] STEP: 3. Generate script (Stage 1)
+[13:16:53] 📸 Screenshot: 06_script_modal
+[13:16:54] 📸 Screenshot: 07_idea_filled
+[13:16:54] ⏳ Stage 1 started: waiting for script...
+[13:16:56]   poll #1: len=65, has_✅=False
+[13:17:26]   poll #16: len=126, has_✅=False
+[13:17:56]   poll #31: len=1010, has_✅=True
+[13:18:27]   poll #46: len=1010, has_✅=True
+[13:18:57]   poll #61: len=1010, has_✅=True
+[13:19:27]   poll #76: len=1010, has_✅=True
+[13:19:57]   poll #91: len=1010, has_✅=True
+[13:20:27]   poll #106: len=1010, has_✅=True

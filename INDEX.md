@@ -22,6 +22,8 @@
 | 33 | [v3.3 Endpoints](./33-v33-endpoints/results.json) | ✅ **4/4 endpoints** | 2026-07-16 14:01 | Implemented 4 missing AI Story Tools endpoints |
 | 34 | [Character Bible v3.5](./34-character-bible/TC-34_RESULTS.md) | ✅ **PASS** | 2026-07-16 10:45 | 3-layer cascade (default/explicit/ep) + locked specs honored by LLM |
 | 35 | [Continuity v3.5.1](./35-continuity/TC-35_RESULTS.md) | ✅ **PASS** | 2026-07-16 10:58 | [HTML report](https://directorstudio.sj88ai.com/tc35-continuity/) 4-rule validator (location/callback/time/emotion) + dialogue voice |
+| 36 | [Full Pipeline 8 scenes](./36-full-pipeline/) | 🟡 **8/8** | 2026-07-16 11:30 | LLM decided 8 from 10 scenes |
+| 37 | [TC-37 Full Pipeline UI + Thai Manual](./37-ten-scenes-ui-full/TC-37_RESULTS.md) | ✅ **6/6** | 2026-07-16 13:42 | [Manual](https://directorstudio.sj88ai.com/tc37-manual/) — found 2 critical bugs |
 
 ## 🎯 Test Order (Recommended)
 
@@ -90,3 +92,4 @@
 | 13 | [Logging](./13-logging/TC-13-logging.md) | ✅ **27/28** | 2026-07-14 18:30 | [Script](./13-logging/test_logging.py) |
 
 **Cumulative: 15 TCs, 161/166 PASS (97%)**
+

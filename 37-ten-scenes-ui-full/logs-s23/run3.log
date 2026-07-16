@@ -1,0 +1,37 @@
+[13:38:29] STEP: 1. Login
+[13:38:36] 📸: 01_logged_in
+[13:38:36] 📊 Scenes ready: 6
+[13:38:36] STEP: 2. Open project → EP1
+[13:38:41] 📸: 02_ep1_open
+[13:38:41] STEP: 3. Stage 2 - Veo prompts
+[13:38:43] 📸: 03_script_tab
+[13:38:43] DIALOG: Generate Veo prompts for all 6 scenes?
+
+(sequentia
+[13:38:43] ⏳ Stage 2 started: polling API...
+[13:38:47]   poll1: timeline=6
+[13:38:47] ✅ Stage 2 done: 3s
+[13:38:49] 📸: 04_veo_done
+[13:38:49] ✅ Stage 2 final: 5s
+[13:38:49] 📊 Veo count: 6
+[13:38:49]   veo None: 0 chars
+[13:38:49]   veo None: 0 chars
+[13:38:49] STEP: 4. Stage 3 - Videos
+[13:38:55]   veo-tab#1: btns=6
+[13:38:55] 📸: 05_veo_tab
+[13:38:55] 📊 Video buttons: 6
+[13:38:55] ✅ Video 1 submitted: 
+[13:38:56] ✅ Video 2 submitted: 
+[13:38:57] ✅ Video 3 submitted: 
+[13:38:58] ✅ Video 4 submitted: 
+[13:38:59] ⏳ Stage 3 polling: wait for 4 videos via API...
+[13:39:29] 📊 poll#1: 0/6 videos (30s)
+[13:39:59] 📊 poll#2: 0/6 videos (60s)
+[13:40:29] 📊 poll#3: 0/6 videos (91s)
+[13:40:59] 📊 poll#4: 0/6 videos (121s)
+[13:41:30] 📊 poll#5: 0/6 videos (151s)
+[13:42:00] 📊 poll#6: 0/6 videos (181s)
+[13:42:30] 📊 poll#7: 0/6 videos (211s)
+[13:43:00] 📊 poll#8: 0/6 videos (242s)
+[13:43:30] 📊 poll#9: 0/6 videos (272s)
+[13:44:01] 📊 poll#10: 0/6 videos (302s)

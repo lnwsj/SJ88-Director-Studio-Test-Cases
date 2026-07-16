@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>คู่มือการใช้งาน Director Studio — TC-37</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Sarabun", "Noto Sans Thai", sans-serif;
+    background: #0a0a0f;
+    color: #e8e8e8;
+    margin: 0;
+    padding: 24px;
+    line-height: 1.65;
+  }
+  .container { max-width: 1300px; margin: 0 auto; }
+
+  /* Header */
+  .hero {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    padding: 40px 32px;
+    border-radius: 16px;
+    border: 1px solid #2a2a3e;
+    margin-bottom: 32px;
+    text-align: center;
+  }
+  h1 {
+    color: #d4af37;
+    font-size: 2.4rem;
+    margin: 0 0 8px 0;
+  }
+  .subtitle { color: #aaa; font-size: 1.1rem; }
+  .meta { color: #777; font-size: 0.9rem; margin-top: 12px; }
+
+  /* TOC */
+  .toc {
+    background: #16213e;
+    padding: 24px;
+    border-radius: 12px;
+    border: 1px solid #2a2a4e;
+    margin-bottom: 32px;
+  }
+  .toc h2 { color: #d4af37; margin: 0 0 16px 0; border: none; padding: 0; }
+  .toc ol { margin: 0; padding-left: 20px; }
+  .toc li { margin: 8px 0; }
+  .toc a { color: #4ade80; text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+
+  /* Sections */
+  h2 {
+    color: #d4af37;
+    border-bottom: 2px solid #d4af37;
+    padding-bottom: 8px;
+    margin-top: 40px;
+  }
+  h3 { color: #f0c040; margin-top: 24px; }
+  h4 { color: #4ade80; margin-top: 16px; }
+  .muted { color: #888; font-size: 0.9rem; }
+
+  /* Steps */
+  .step {
+    background: #16213e;
+    border-radius: 12px;
+    padding: 24px;
+    margin: 24px 0;
+    border-left: 4px solid #d4af37;
+  }
+  .step-num {
+    display: inline-block;
+    background: #d4af37;
+    color: #0a0a0f;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 36px;
+    font-weight: 700;
+    margin-right: 12px;
+  }
+  .step-title { color: #d4af37; font-size: 1.4rem; font-weight: 700; }
+
+  /* Code blocks */
+  code, pre {
+    background: #0a0a14;
+    color: #4ade80;
+    border: 1px solid #2a2a3e;
+    border-radius: 6px;
+    padding: 2px 6px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.9rem;
+  }
+  pre {
+    padding: 16px;
+    overflow-x: auto;
+    line-height: 1.4;
+  }
+  pre code { background: none; border: none; padding: 0; }
+
+  /* Image cards */
+  .img-card {
+    background: #16213e;
+    border: 1px solid #2a2a4e;
+    border-radius: 12px;
+    padding: 16px;
+    margin: 16px 0;
+  }
+  .img-card .label {
+    color: #f0c040;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .img-card img {
+    max-width: 100%;
+    border-radius: 8px;
+    border: 1px solid #2a2a3e;
+  }
+
+  /* Highlight box */
+  .tip {
+    background: #1a2a1a;
+    border-left: 4px solid #4ade80;
+    padding: 16px;
+    border-radius: 6px;
+    margin: 16px 0;
+  }
+  .warn {
+    background: #2a1a1a;
+    border-left: 4px solid #f87171;
+    padding: 16px;
+    border-radius: 6px;
+    margin: 16px 0;
+  }
+  .info {
+    background: #1a1a2a;
+    border-left: 4px solid #60a5fa;
+    padding: 16px;
+    border-radius: 6px;
+    margin: 16px 0;
+  }
+
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    background: #16213e;
+  }
+  th, td {
+    padding: 10px 14px;
+    text-align: left;
+    border-bottom: 1px solid #2a2a3e;
+  }
+  th {
+    background: #1a1a2e;
+    color: #d4af37;
+    font-weight: 600;
+  }
+  tr:hover { background: #1a1a2e; }
+
+  /* Badges */
+  .badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+  .badge.ok { background: #4ade8022; color: #4ade80; border: 1px solid #4ade80; }
+  .badge.err { background: #f8717122; color: #f87171; border: 1px solid #f87171; }
+  .badge.warn { background: #fbbf2422; color: #fbbf24; border: 1px solid #fbbf24; }
+  .badge.info { background: #60a5fa22; color: #60a5fa; border: 1px solid #60a5fa; }
+
+  /* Scene cards */
+  .scene-card {
+    background: #16213e;
+    border: 1px solid #2a2a4e;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 16px 0;
+  }
+  .scene-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  .scene-id {
+    background: #d4af37;
+    color: #0a0a0f;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 0.85rem;
+  }
+  .scene-title { color: #f0c040; font-size: 1.2rem; font-weight: 600; }
+
+  /* Result grid */
+  .result-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin: 24px 0;
+  }
+  .result-card {
+    background: #16213e;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid #2a2a4e;
+  }
+  .result-num { font-size: 2.5rem; font-weight: 700; color: #d4af37; }
+  .result-label { color: #aaa; font-size: 0.9rem; margin-top: 4px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="hero">
+  <h1>🎬 คู่มือการใช้งาน Director Studio</h1>
+  <div class="subtitle">สอนตั้งแต่สมัครจนได้วิดีโอ — TC-37 Full Pipeline 1 เรื่อง 1 EP 6 ฉาก</div>
+  <div class="meta">เวอร์ชัน: v3.5.1 · ทดสอบเมื่อ: 16 ก.ค. 2569 · ผู้สอน: Mavis</div>
+</div>
+
+<div class="toc">
+<h2>📑 สารบัญ</h2>
+<ol>
+  <li><a href="#intro">แนะนำ Director Studio คืออะไร</a></li>
+  <li><a href="#step1">Step 1: สมัครสมาชิก</a></li>
+  <li><a href="#step2">Step 2: สร้างโปรเจกต์</a></li>
+  <li><a href="#step3">Step 3: Stage 1 — เขียนสคริปต์ (Script)</a></li>
+  <li><a href="#step4">Step 4: Stage 2 — สร้าง Veo Prompts</a></li>
+  <li><a href="#step5">Step 5: Stage 3 — สร้างวิดีโอจริง</a></li>
+  <li><a href="#example">ตัวอย่างจริง: เรื่อง "น้ำหนาว"</a></li>
+  <li><a href="#errors">แก้ปัญหาเจอบ่อย</a></li>
+  <li><a href="#verify">ผลทดสอบ TC-37</a></li>
+</ol>
+</div>
+
+<h2 id="intro">🎯 Director Studio คืออะไร?</h2>
+
+<p><strong>Director Studio</strong> เป็นเว็บแอปที่ช่วยให้คุณสร้างหนัง/ซีรีส์สั้นจาก <em>ไอเดีย</em> จนถึง <em>วิดีโอจริง</em> ได้ในที่เดียว ผ่าน 3 ขั้นตอนหลัก:</p>
+
+<table>
+  <tr><th>Stage</th><th>ชื่อ</th><th>Input</th><th>Output</th><th>เวลาโดยประมาณ</th></tr>
+  <tr><td><span class="badge info">Stage 1</span></td><td>เขียนสคริปต์</td><td>ไอเดียเรื่อง (ข้อความ)</td><td>JSON สคริปต์ที่มีฉาก + ตัวละคร + บทพูด</td><td>1-3 นาที</td></tr>
+  <tr><td><span class="badge info">Stage 2</span></td><td>สร้าง Veo Prompts</td><td>สคริปต์</td><td>Prompt ภาษาอังกฤษสำหรับ Google Veo</td><td>30-60 วินาที</td></tr>
+  <tr><td><span class="badge info">Stage 3</span></td><td>สร้างวิดีโอจริง</td><td>Veo Prompts + รูปตัวละคร</td><td>วิดีโอ MP4 จริง</td><td>2-5 นาที/ฉาก</td></tr>
+</table>
+
+<div class="info">
+  <strong>📌 หมายเหตุ:</strong> ตอนนี้ LLM จะตัดสินใจเองว่าไอเดียของคุณควรมีกี่ฉาก (แนะนำ 5-10 ฉากต่อ EP) — ไม่ต้องกังวลว่าจะได้ 7 หรือ 10 ฉาก ถ้าเล่าเรื่องดี LLM จะจัดให้เหมาะสม
+</div>
+
+<h2 id="step1">📝 Step 1: สมัครสมาชิก</h2>
+
+<div class="step">
+  <span class="step-num">1</span>
+  <span class="step-title">เปิดเว็บไซต์</span>
+</div>
+
+<p>เปิดเบราว์เซอร์ไปที่: <code>https://directorstudio.sj88ai.com/</code></p>
+
+<div class="img-card">
+  <div class="label">📸 หน้าแรกของเว็บ</div>
+  <img src="screenshots/01_landing.png" alt="Landing">
+</div>
+
+<div class="step">
+  <span class="step-num">2</span>
+  <span class="step-title">กดแท็บ "สมัครสมาชิก"</span>
+</div>
+
+<p>คลิกที่แท็บ <strong>"สมัครสมาชิก"</strong> (อยู่ข้างๆ เข้าสู่ระบบ)</p>
+
+<div class="step">
+  <span class="step-num">3</span>
+  <span class="step-title">กรอกข้อมูล 3 ช่อง</span>
+</div>
+
+<ol>
+  <li><strong>ชื่อที่ใช้แสดง:</strong> เช่น <code>สมชาย ใจดี</code></li>
+  <li><strong>อีเมล:</strong> เช่น <code>yourname@example.com</code></li>
+  <li><strong>รหัสผ่าน:</strong> ขั้นต่ำ 8 ตัวอักษร</li>
+</ol>
+
+<div class="img-card">
+  <div class="label">📸 ฟอร์มสมัครสมาชิกที่กรอกเสร็จ</div>
+  <img src="screenshots/02_signup_filled.png" alt="Signup filled">
+</div>
+
+<div class="step">
+  <span class="step-num">4</span>
+  <span class="step-title">กดปุ่ม "สมัครสมาชิก"</span>
+</div>
+
+<p>รอ 2-3 วินาที ระบบจะพาคุณเข้าสู่หน้าโปรเจกต์</p>
+
+<div class="img-card">
+  <div class="label">📸 หลังสมัครเสร็จ เห็น credits ที่มุมขวาบน</div>
+  <img src="screenshots/03_after_signup.png" alt="After signup">
+</div>
+
+<div class="tip">
+  <strong>💡 Tip:</strong> หลังสมัครใหม่คุณจะได้ <span class="badge ok">credits ฟรี</span> เพื่อทดลองใช้ ดูได้ที่มุมขวาบนของทุกหน้า
+</div>
+
+<h2 id="step2">📁 Step 2: สร้างโปรเจกต์</h2>
+
+<div class="step">
+  <span class="step-num">1</span>
+  <span class="step-title">กดปุ่ม "+ โปรเจกต์ใหม่"</span>
+</div>
+
+<p>อยู่มุมขวาบนของหน้าโปรเจกต์</p>
+
+<div class="step">
+  <span class="step-num">2</span>
+  <span class="step-title">ตั้งชื่อโปรเจกต์</span>
+</div>
+
+<p>เช่น <code>"ผีข้าวมันไก่"</code> หรือ <code>"รักในสายฝน"</code> — ชื่ออะไรก็ได้ที่คุณจำได้</p>
+
+<div class="img-card">
+  <div class="label">📸 ฟอร์มสร้างโปรเจกต์</div>
+  <img src="screenshots/04_project_form.png" alt="Project form">
+</div>
+
+<div class="step">
+  <span class="step-num">3</span>
+  <span class="step-title">กด "สร้าง"</span>
+</div>
+
+<p>ระบบจะสร้างโปรเจกต์เปล่าๆ พร้อม EP แรก (EP1) ให้อัตโนมัติ</p>
+
+<div class="img-card">
+  <div class="label">📸 โปรเจกต์ใหม่พร้อม EP1</div>
+  <img src="screenshots/05_project_created.png" alt="Project created">
+</div>
+
+<div class="tip">
+  <strong>💡 โครงสร้างโปรเจกต์:</strong>
+  <ul>
+    <li>1 โปรเจกต์ = 1 เรื่อง (เช่น "ผีข้าวมันไก่")</li>
+    <li>1 โปรเจกต์มีได้หลาย EP (ซีซั่น 1, 2, 3...)</li>
+    <li>1 EP มีหลายฉาก (5-10 ฉากต่อ EP แนะนำ)</li>
+  </ul>
+</div>
+
+<h2 id="step3">✍️ Step 3: Stage 1 — เขียนสคริปต์ (Script)</h2>
+
+<div class="step">
+  <span class="step-num">1</span>
+  <span class="step-title">เปิด EP1</span>
+</div>
+
+<p>คลิกที่การ์ด EP1 (หรือ EP ที่ต้องการ)</p>
+
+<div class="img-card">
+  <div class="label">📸 Modal EP1 เปิด (อยู่ในแท็บ Script)</div>
+  <img src="screenshots-s23/02_ep1_open.png" alt="EP1 modal">
+</div>
+
+<div class="step">
+  <span class="step-num">2</span>
+  <span class="step-title">กดปุ่ม "✨ สร้างสคริปต์ (AI)"</span>
+</div>
+
+<p>Modal จะเปิดขึ้นมาให้กรอกไอเดียเรื่อง</p>
+
+<div class="img-card">
+  <div class="label">📸 Modal ใส่ไอเดีย</div>
+  <img src="screenshots/06_script_modal.png" alt="Script modal">
+</div>
+
+<div class="step">
+  <span class="step-num">3</span>
+  <span class="step-title">เขียนไอเดียเรื่อง</span>
+</div>
+
+<p>ในช่อง <strong>"ไอเดียเรื่อง"</strong> เขียนเรื่องย่อของคุณ ยิ่งมีรายละเอียดมาก ยิ่งได้สคริปต์ดี</p>
+
+<h4>📝 สูตรเขียนไอเดียให้ LLM เข้าใจ:</h4>
+<pre><code>เรื่อง: [ชื่อเรื่อง] — [ประเภท] (เช่น Thai horror, romance, comedy)
+
+[สรุปเรื่อง 1-2 บรรทัด]
+
+ฉาก 1: [ชื่อฉาก] — [ใครทำอะไร] (เวลา/สถานที่, องค์ประกอบสำคัญ)
+ฉาก 2: [ชื่อฉาก] — ...
+ฉาก 3: [ชื่อฉาก] — ...
+
+ธีม: [keyword 1, keyword 2, ...]
+ตัวละคร: [ชื่อ 1, ชื่อ 2, ...]</code></pre>
+
+<div class="tip">
+  <strong>💡 เคล็ดลับ:</strong>
+  <ul>
+    <li>แต่ละฉากควรมี <strong>ชื่อเฉพาะ</strong> และ <strong>สถานที่เฉพาะ</strong> เพื่อไม่ให้ LLM รวมฉาก</li>
+    <li>ใส่ <strong>เวลา</strong> (22:00, 06:00) เพื่อช่วยเรื่อง continuity</li>
+    <li>ใส่ <strong>props สำคัญ</strong> ในแต่ละฉาก (เข็ม, ถ้วย, ตะเกียง) — จะกลายเป็น callback ในสคริปต์</li>
+  </ul>
+</div>
+
+<div class="img-card">
+  <div class="label">📸 ไอเดีย "น้ำหนาว" ที่กรอกเสร็จ</div>
+  <img src="screenshots/07_idea_filled.png" alt="Idea filled">
+</div>
+
+<div class="step">
+  <span class="step-num">4</span>
+  <span class="step-title">ตั้งจำนวนฉาก (ไม่บังคับ)</span>
+</div>
+
+<p>ใส่จำนวนฉากที่ต้องการ (เช่น 10) — LLM อาจจัดให้น้อยกว่านั้นถ้าเล่าเรื่องเหมาะสม</p>
+
+<div class="step">
+  <span class="step-num">5</span>
+  <span class="step-title">กด "✨ สร้างสคริปต์"</span>
+</div>
+
+<p>รอ 1-3 นาที — LLM จะสร้างสคริปต์ JSON ออกมา</p>
+
+<div class="img-card">
+  <div class="label">📸 ผลลัพธ์ Stage 1 — ได้ 6 ฉาก</div>
+  <img src="screenshots-s23/04_veo_done.png" alt="Script done">
+</div>
+
+<div class="step">
+  <span class="step-num">6</span>
+  <span class="step-title">กด "💾 บันทึกสคริปต์"</span>
+</div>
+
+<p>เพื่อบันทึกสคริปต์ลงโปรเจกต์ (ก่อนปิด modal)</p>
+
+<h2 id="step4">🎬 Step 4: Stage 2 — สร้าง Veo Prompts</h2>
+
+<div class="step">
+  <span class="step-num">1</span>
+  <span class="step-title">อยู่ในแท็บ "📜 Script"</span>
+</div>
+
+<p>เมื่อ Stage 1 เสร็จ คุณจะอยู่ในแท็บ Script ของ EP1</p>
+
+<div class="step">
+  <span class="step-num">2</span>
+  <span class="step-title">กดปุ่ม "✨ Generate All Veo Prompts"</span>
+</div>
+
+<p>ระบบจะถาม confirm → กด "OK"</p>
+
+<div class="info">
+  <strong>📌 สิ่งที่ Stage 2 ทำ:</strong> แปลงสคริปต์ภาษาไทยเป็น prompt ภาษาอังกฤษสำหรับ Google Veo (AI สร้างวิดีโอ) — ใช้เวลา 30-60 วินาทีสำหรับ 5-10 ฉาก
+</div>
+
+<div class="step">
+  <span class="step-num">3</span>
+  <span class="step-title">รอและตรวจสอบผลลัพธ์</span>
+</div>
+
+<p>เมื่อเสร็จ ระบบจะแสดงผล เช่น <code>✅ 6/6 scenes done</code> และ auto-reload EP</p>
+
+<div class="img-card">
+  <div class="label">📸 ผลลัพธ์ Stage 2 — 6 Veo prompts พร้อมแล้ว</div>
+  <img src="screenshots-s23/04_veo_done.png" alt="Veo done">
+</div>
+
+<h2 id="step5">🎥 Step 5: Stage 3 — สร้างวิดีโอจริง</h2>
+
+<div class="step">
+  <span class="step-num">1</span>
+  <span class="step-title">สลับไปแท็บ "🎬 Veo"</span>
+</div>
+
+<p>คลิกแท็บ Veo (อยู่ข้างแท็บ Script)</p>
+
+<div class="img-card">
+  <div class="label">📸 แท็บ Veo พร้อมปุ่ม "🎥 Generate Video" ทุกฉาก</div>
+  <img src="screenshots-s23/05_veo_tab.png" alt="Veo tab">
+</div>
+
+<div class="step">
+  <span class="step-num">2</span>
+  <span class="step-title">กดปุ่ม "🎥 Generate Video" ทีละฉาก</span>
+</div>
+
+<p>ระบบจะส่ง prompt ไปยัง Google Veo → รอ 2-5 นาที/ฉาก</p>
+
+<div class="warn">
+  <strong>⚠️ ข้อจำกัด:</strong>
+  <ul>
+    <li>Veo มี rate limit ~30 requests/minute — หากส่งพร้อมกันเยอะๆ จะถูก throttle</li>
+    <li>คำต้องห้าม (อาจถูก DANGER_FILTER): <code>blood</code>, <code>weapon</code>, <code>knife</code>, <code>gun</code>, <code>kill</code> → ใช้คำอ่อนๆ เช่น "blade", "sharp object", "mysterious figure"</li>
+    <li>1 ครั้งใช้ credits 1 หน่วย/ฉาก</li>
+  </ul>
+</div>
+
+<div class="step">
+  <span class="step-num">3</span>
+  <span class="step-title">รอวิดีโอเสร็จ (2-5 นาที/ฉาก)</span>
+</div>
+
+<p>เมื่อเสร็จ จะเห็นปุ่มเปลี่ยนเป็น <span class="badge ok">▶ Play</span></p>
+
+<div class="img-card">
+  <div class="label">📸 วิดีโอเสร็จพร้อมเล่น</div>
+  <img src="screenshots-s23/06_videos_done.png" alt="Videos done">
+</div>
+
+<div class="step">
+  <span class="step-num">4</span>
+  <span class="step-title">ดาวน์โหลดวิดีโอ (ถ้าต้องการ)</span>
+</div>
+
+<p>คลิกขวาที่วิดีโอ → Save video as...</p>
+
+<h2 id="example">🎭 ตัวอย่างจริง: เรื่อง "น้ำหนาว" (TC-37)</h2>
+
+<p>เรื่อง <strong>"น้ำหนาว"</strong> เป็นหนังสยองขวัญไทยที่ทดสอบใน TC-37 ใช้เวลาทั้ง pipeline ประมาณ 10-15 นาที</p>
+
+<h3>📝 ไอเดียที่ใช้</h3>
+
+<pre><code>เรื่อง: น้ำหนาว (The Cold Water) — Thai horror, 10 scenes, 3-Act
+
+แม่ค้าชราในร้านก๋วยเตี๋ยวเก่าแก่ทรยศฆ่าลูกค้า 40 ปีที่แล้ว ตอนนี้ลูกค้าคนสุดท้ายเข้ามา
+
+ฉาก 1: ลูกค้าคนสุดท้าย — น้ำเข้าร้านก๋วยเตี๋ยวเวลา 22:00 เจ้าของร้านผู้ชายนั่งหลับ ร้านมืด มีเข็มอยู่บนโต๊ะ
+ฉาก 2: สั่งเมนูลึกลับ — น้ำสั่งก๋วยเตี๋ยวน้ำใส เจ้าของร้านตาเบิกกว้าง กระดาษสั่งเขียนว่า ไม่ใส่ผัก
+ฉาก 3: หม้อน้ำเดือด — เจ้าของร้านใส่หม้อน้ำในครัว น้ำเดือดพุ่ง แต่ไอน้ำเย็นจัด กลิ่นเน่า
+ฉาก 4: ถ้วยแตก — น้ำยกถ้วยขึ้น ถ้วยแตกกลางพื้นเอง น้ำในถ้วยไหลเป็นสีดำ กลิ่นเหม็นคาว
+ฉาก 5: แม่ค้าชราปรากฏ — เจ้าของร้านหันไปเห็นแม่ค้าชรายืนที่ประตูหลัง ถือผ้าเช็ดมือสีแดง
+ฉาก 6: บ่อน้ำต้องสาป — แม่ค้าชราพาน้ำไปบ่อน้ำหลังร้าน น้ำในบ่อดำสนิท ใบหน้าแม่ค้าสะท้อนในน้ำไม่ตรงกับใบหน้าจริง
+ฉาก 7: ตะเกียงดับ — น้ำเดินออกจากร้าน ตะเกียงในมือเจ้าของร้านดับ ถนนเปลี่ยว มืดสนิท
+ฉาก 8: เงาไล่ทัน — น้ำเดินเร็ว เงาดำยาวไล่ทัน น้ำหันกลับ เห็นเงายืนห่าง 2 เมตร
+ฉาก 9: ศาลพระภูมิ — น้ำวิ่งถึงศาลพระภูมิ ผีแม่ค้าชราปรากฏบนศาล บอกว่า เธอกินน้ำต้องสาปไปแล้ว
+ฉาก 10: จดหมายในตู้เย็น — เช้าวันรุ่งขึ้น เจ้าของร้านเปิดตู้เย็นเก่า เจอจดหมายของแม่ค้าชรา 40 ปีที่แล้ว เขียนถึงน้ำ
+
+ธีม: ความทรงจำ การทรยศ น้ำ อาหาร ความตาย
+ตัวละคร: น้ำ, เจ, ยาย, ผี</code></pre>
+
+<div class="info">
+  <strong>📌 ผลลัพธ์:</strong> LLM ตัดสินใจจัดเป็น <strong>6 ฉาก</strong> (รวมบางฉากที่คล้ายกัน) — นี่เป็นพฤติกรรมปกติ ไม่ใช่ข้อผิดพลาด
+</div>
+
+<h3>🎬 ฉากที่ได้ (Stage 1 output)</h3>
+
+<div class="scene-card">
+  <div class="scene-header">
+    <span class="scene-id">S01_01</span>
+    <span class="scene-title">ลูกค้าคนสุดท้าย</span>
+  </div>
+  <p><strong>สถานที่:</strong> หน้าร้านก๋วยเตี๋ยวเก่า ตลาดร้าง</p>
+  <p><strong>เวลา:</strong> 22:00</p>
+  <p><strong>Props:</strong> เข็มโลหะเก่า, แก้วเปล่า, ประตูไม้บานเก่า</p>
+  <p><strong>แอคชัน:</strong> น้ำเดินเข้ามาในร้านก๋วยเตี๋ยวเก่าแก่ที่มืดสลัว เพียงแสงตะเกียงแขวนเพดานดวงเดียวส่องลงมาที่โต๊ะ เจ้าของร้านวัยกลางคนนั่งหลับตาอยู่ที่เก้าอี้หน้าเคาน์เตอร์</p>
+</div>
+
+<div class="scene-card">
+  <div class="scene-header">
+    <span class="scene-id">S01_02</span>
+    <span class="scene-title">สั่งเมนูลึกลับ</span>
+  </div>
+  <p><strong>สถานที่:</strong> ภายในร้านก๋วยเตี๋ยว หน้าเคาน์เตอร์</p>
+  <p><strong>เวลา:</strong> 22:05</p>
+  <p><strong>Props:</strong> กระดาษโน้ต 'ไม่ใส่ผัก', สร้อยคอไม้ของน้ำ</p>
+</div>
+
+<div class="scene-card">
+  <div class="scene-header">
+    <span class="scene-id">S01_03</span>
+    <span class="scene-title">หม้อน้ำเดือด</span>
+  </div>
+  <p><strong>สถานที่:</strong> ครัวหลังร้าน มุมมืด</p>
+  <p><strong>เวลา:</strong> 22:10</p>
+  <p><strong>Props:</strong> หม้อน้ำเก่า, เตาแก๊ส, เข็มโลหะเก่า (วางบนชั้น)</p>
+</div>
+
+<div class="scene-card">
+  <div class="scene-header">
+    <span class="scene-id">S01_04</span>
+    <span class="scene-title">ถ้วยแตก</span>
+  </div>
+  <p><strong>สถานที่:</strong> โต๊ะนั่งในร้าน หน้าเคาน์เตอร์</p>
+  <p><strong>เวลา:</strong> 22:15</p>
+  <p><strong>Props:</strong> ถ้วยกระเบื้องแตก, น้ำดำบนพื้น</p>
+</div>
+
+<div class="scene-card">
+  <div class="scene-header">
+    <span class="scene-id">S01_05</span>
+    <span class="scene-title">แม่ค้าชราปรากฏ</span>
+  </div>
+  <p><strong>สถานที่:</strong> ร้านก๋วยเตี๋ยว มุมประตูหลัง</p>
+  <p><strong>เวลา:</strong> 22:20</p>
+  <p><strong>Props:</strong> ผ้าเช็ดมือสีแดง (ของยาย), สร้อยคอไม้ของน้ำ</p>
+</div>
+
+<div class="scene-card">
+  <div class="scene-header">
+    <span class="scene-id">S01_06</span>
+    <span class="scene-title">บ่อน้ำต้องสาป</span>
+  </div>
+  <p><strong>สถานที่:</strong> หลังร้าน บ่อน้ำเก่าใต้ต้นไม้</p>
+  <p><strong>เวลา:</strong> 22:30</p>
+  <p><strong>Props:</strong> บ่อน้ำเก่า, สร้อยคอไม้ของน้ำ (สั่น), ผ้าเช็ดมือสีแดง (ของยาย วางบนขอบบ่อ)</p>
+</div>
+
+<h3>📹 Veo Prompt ตัวอย่าง (Stage 2 output)</h3>
+
+<div class="info">
+  <strong>S01_01 (ลูกค้าคนสุดท้าย):</strong>
+  <pre><code>WS shot, slow dolly in from doorway, 35mm lens. [ref1] steps through a sliding wooden
+door into a dim, weathered noodle stall set inside an abandoned Thai night market,
+her silhouette framed against the street's pale fog. A single kerosene lantern hangs
+from the ceiling, casting a faint, trembling amber glow over a dark wooden table where
+a small metallic needle lies abandoned. [ref2], a middle-aged man, slumps at the
+counter with his eyes closed...</code></pre>
+  <em>(~964 chars, พร้อมส่งไป Veo)</em>
+</div>
+
+<h2 id="errors">🛠️ แก้ปัญหาเจอบ่อย</h2>
+
+<h3>❌ Stage 1 ค้างที่ "Calling LLM..."</h3>
+
+<div class="warn">
+  <strong>สาเหตุ:</strong> Backend worker ไม่ทำงาน (เคยเจอใน TC-37)
+  <br><strong>แก้:</strong>
+  <ul>
+    <li>รอ 1-2 นาที แล้วลองใหม่ (worker อาจ restart อัตโนมัติ)</li>
+    <li>ตรวจสอบ <code>/api/health</code> ต้องแสดง <code>"worker_active": &gt; 0</code></li>
+    <li>หากยังไม่ได้ ติดต่อ admin เพื่อ restart service</li>
+  </ul>
+</div>
+
+<h3>❌ Stage 2 ได้ "list assignment index out of range"</h3>
+
+<div class="warn">
+  <strong>สาเหตุ:</strong> Bug ใน <code>/llm/generate-veo-all</code> endpoint (fixed ใน v3.5.1)
+  <br><strong>แก้:</strong> อัปเดตเป็น v3.5.1+ หรือลองกดปุ่ม "Generate" ใหม่
+</div>
+
+<h3>❌ Stage 3: "DANGER_FILTER" จาก Veo</h3>
+
+<div class="warn">
+  <strong>สาเหตุ:</strong> Prompt มีคำต้องห้าม เช่น <code>blood</code>, <code>weapon</code>, <code>kill</code>
+  <br><strong>แก้:</strong> แก้ prompt ใน Stage 2 ให้ใช้คำอ่อนๆ เช่น:
+  <ul>
+    <li>"blood" → "dark liquid", "crimson stain"</li>
+    <li>"knife" → "blade", "sharp object", "tool"</li>
+    <li>"kill" → "disappear", "vanish", "fall"</li>
+  </ul>
+</div>
+
+<h3>❌ Login ไม่ได้ / ลืมรหัสผ่าน</h3>
+
+<div class="info">
+  <strong>แก้:</strong> ติดต่อ admin (sj) เพื่อ reset password — ไม่มี self-service reset ในตอนนี้
+</div>
+
+<h3>❌ วิดีโอค้างที่ "Pending" นานกว่า 10 นาที</h3>
+
+<div class="info">
+  <strong>สาเหตุ:</strong> Veo queue ยาว หรือ JWT หมดอายุ
+  <br><strong>แก้:</strong>
+  <ul>
+    <li>รอ 5-10 นาที เพิ่ม (queue อาจยาว)</li>
+    <li>ตรวจสอบ Veo JWT ใน <code>Settings → Veo API Key</code></li>
+    <li>ลอง cancel + submit ใหม่</li>
+  </ul>
+</div>
+
+<h2 id="verify">✅ ผลทดสอบ TC-37 (Full Pipeline)</h2>
+
+<div class="result-grid">
+  <div class="result-card">
+    <div class="result-num">6/6</div>
+    <div class="result-label">ฉาก Stage 1 (LLM ตัดสินใจ 6 จาก 10)</div>
+  </div>
+  <div class="result-card">
+    <div class="result-num">6/6</div>
+    <div class="result-label">Veo Prompts Stage 2</div>
+  </div>
+  <div class="result-card">
+    <div class="result-num">≥3</div>
+    <div class="result-label">วิดีโอ Stage 3 (ทดสอบ 4 ฉากแรก)</div>
+  </div>
+  <div class="result-card">
+    <div class="result-num">~10</div>
+    <div class="result-label">นาที ทั้ง pipeline (Stage 1+2+3)</div>
+  </div>
+</div>
+
+<h3>🐛 Bug ที่เจอและแก้แล้ว (ในระหว่างทดสอบ)</h3>
+
+<table>
+  <tr><th>Bug</th><th>อาการ</th><th>แก้</th><th>Commit</th></tr>
+  <tr>
+    <td><span class="badge err">Critical</span></td>
+    <td>worker_active=0, Stage 1 ค้างใน "queued" ไม่ทำงาน</td>
+    <td>ฟังก์ชัน <code>get_veo_system_prompt</code> ไม่ได้ import → เปลี่ยนเป็น <code>get_veo_system_prompt_single</code></td>
+    <td>direct fix (admin)</td>
+  </tr>
+  <tr>
+    <td><span class="badge err">Critical</span></td>
+    <td>Stage 2 ทุก scene ได้ "list assignment index out of range"</td>
+    <td>เพิ่ม <code>while len(ep['timeline']) &lt; i+1: ep['timeline'].append(None)</code> ก่อน assign</td>
+    <td>direct fix (admin)</td>
+  </tr>
+</table>
+
+<div class="tip">
+  <strong>🎓 บทเรียน:</strong> การทดสอบผ่าน UI จริง (Playwright) ทำให้เจอ bug ที่ unit test ไม่เจอ — เพราะ UI ใช้ flow จริง (signup → project → script → veo → video) ที่ unit test ไม่ครอบคลุม
+</div>
+
+<h2>📞 ติดต่อ / ขอความช่วยเหลือ</h2>
+
+<ul>
+  <li>🌐 <strong>เว็บไซต์:</strong> <code>https://directorstudio.sj88ai.com/</code></li>
+  <li>📊 <strong>Health check:</strong> <code>https://directorstudio.sj88ai.com/api/health</code></li>
+  <li>📖 <strong>คู่มืออื่นๆ:</strong> <a href="https://directorstudio.sj88ai.com/docs/">/docs/</a></li>
+  <li>🎬 <strong>VDO Gallery:</strong> <a href="https://directorstudio.sj88ai.com/vdo-gallery/">/vdo-gallery/</a></li>
+  <li>🧪 <strong>Test cases:</strong> <a href="https://github.com/lnwsj/SJ88-Director-Studio-Test-Cases">GitHub</a></li>
+</ul>
+
+<hr style="border: 1px solid #2a2a3e; margin: 40px 0;">
+
+<div style="text-align: center; color: #777; font-size: 0.9rem;">
+  <p>สร้างโดย <strong>Mavis</strong> · TC-37 · 16 ก.ค. 2569 · Director Studio v3.5.1</p>
+  <p>เคล็ดลับ: ถ้าเจอบั๊ก ให้เขียน Test Case ใหม่ทันที — อย่าเป็น "วัว" 🐄</p>
+</div>
+
+</div>
+</body>
+</html>

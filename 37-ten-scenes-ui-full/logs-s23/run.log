@@ -1,0 +1,22 @@
+[13:29:33] STEP: 1. Login
+[13:29:38] 📸: 01_logged_in
+[13:29:41] 📸: 02_after_login
+[13:29:41] 📊 Scenes ready: 6
+[13:29:41] STEP: 2. Open project
+[13:29:43] 📸: 03_project_open
+[13:29:43] STEP: 2b. Open EP1
+[13:29:46] 📸: 04_ep1_open
+[13:29:46] STEP: 3. Stage 2 - Veo prompts
+[13:29:48] 📸: 04_script_tab
+[13:29:48] DIALOG: Generate Veo prompts for all 6 scenes?
+
+(sequential, ~30s to
+[13:29:48] ⏳ Stage 2 started: waiting...
+[13:29:52]   poll1: ⏳ 0/6 scenes done
+[13:30:08]   poll5: ⏳ 0/6 scenes done
+[13:30:24]   poll9: ⏳ 0/6 scenes done
+[13:30:40]   poll13: 
+[13:30:56]   poll17: 
+[13:31:12]   poll21: 
+[13:31:28]   poll25: 
+[13:31:45]   poll29: 
