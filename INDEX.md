@@ -18,6 +18,8 @@
 | 29 | [Refs Cascade v3.3.0.1](./29-refs-cascade/TC-29-Report.md) | ✅ **PASS** | 2026-07-15 15:30 | AI reads refs from project + IDEA (no forced SHARED_REFS) |
 | 30 | [v3.4 Per-Scene Regenerate](./30-per-scene-regenerate/TC-30-Report.md) | ✅ **11/11** | 2026-07-15 16:50 | 🔄 Per-scene regen with optional feedback (real UI test) |
 | 31 | [Post-Deployment Verify](./31-deployment-verification/report.md) | ✅ **14/15** | 2026-07-16 13:46 | After deploying v3.4.0, all 8 🔄 buttons + APIs work |
+| 32 | [VDO Gallery](./32-vdo-gallery/screenshots/) | ✅ **14/14** | 2026-07-16 13:56 | [Live](https://directorstudio.sj88ai.com/vdo-gallery/) 8 TC-27 v2 videos |
+| 33 | [v3.3 Endpoints](./33-v33-endpoints/results.json) | ✅ **4/4 endpoints** | 2026-07-16 14:01 | Implemented 4 missing AI Story Tools endpoints |
 
 ## 🎯 Test Order (Recommended)
 
