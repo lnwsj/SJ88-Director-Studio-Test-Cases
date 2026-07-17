@@ -1,0 +1,21 @@
+{
+  "id": "8bcfc2ed765b406f",
+  "name": "TC-27 เรื่องต่อกัน 10 ซีน",
+  "kind": "episode",
+  "data": {
+    "episodes": [
+      {
+        "episode_title": "จดหมายจากยาย",
+        "episode_title_en": "Grandmother's Letter",
+        "episode_logline": "หลังยายเสีย น้ำกลับมาที่บ้านเกิดและพบจดหมายลึกลับที่นำทางเธอไปสู่ความลับของตระกูลที่ซ่อนอยู่ในผ้าแดงโบราณ",
+        "characters_in_ep": [
+          "ref1",
+          "ref3",
+          "ref4"
+        ]
+      }
+    ]
+  },
+  "created_at": 1784252898.7165508,
+  "updated_at": 1784252975.0301635
+}

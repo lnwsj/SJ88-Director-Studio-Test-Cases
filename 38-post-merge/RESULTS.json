@@ -32,7 +32,7 @@
   {
     "name": "script-generate",
     "passed": true,
-    "msg": "length=428 chars"
+    "msg": "length=784 chars"
   },
   {
     "name": "save-script",

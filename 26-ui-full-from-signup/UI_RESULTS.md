@@ -1,29 +1,35 @@
 # TC-26 Results: UI Full E2E from Signup
 
-**Date**: 2026-07-15T11:04:48.540424
-**Email**: uitest_1784113052@test.local
+**Date**: 2026-07-17T01:36:50.842016
+**Email**: uitest_1784251795@test.local
 **Project**: TC-26 ผ้าแดง (UI Test)
 
-## Result: 10/10 PASS
+## Result: 8/10 PASS
 
-- ✅ **signup**: Logged in as uitest_1784113052@test.local
+- ✅ **signup**: Logged in as uitest_1784251795@test.local
 - ✅ **create-project**: Project opened in detail view
-- ✅ **generate-script**: Script generated (362 chars)
+- ✅ **generate-script**: Script generated (126 chars)
 - ✅ **open-episode**: Episode modal opened
-- ✅ **generate-veo-prompts**: Stage 2 Veo prompts generated
-- ✅ **generate-video**: Real Veo video generated (8.1MB MP4) — downloaded from UI flow
+- ❌ **generate-veo-prompts**: gen-veo-all-btn not visible
+- ❌ **generate-video**: Error: Page.wait_for_selector: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator("button[data-act='generate']") to be visible
+
 - ✅ **close-episode**: Closed
-- ✅ **export-json**: 4396 bytes
-- ✅ **export-md**: 943 bytes
-- ✅ **export-txt**: 2032 bytes
+- ✅ **export-json**: 185 bytes
+- ✅ **export-md**: 160 bytes
+- ✅ **export-txt**: 125 bytes
 
 ## Videos
-- tc26_real_veo.mp4 (7,818,730 bytes / 7.8MB) — Real Veo API video from UI E2E
+- tc26_real_veo.mp4 (7.5MB)
 
 ## Downloads
 - project_1784113052.json (4396 bytes)
 - project_1784113052.md (943 bytes)
 - project_1784113052.txt (2032 bytes)
+- project_1784251795.json (185 bytes)
+- project_1784251795.md (160 bytes)
+- project_1784251795.txt (125 bytes)
 
 ## Screenshots
 - 01a_signup_page.png
@@ -43,6 +49,8 @@
 - 03c_waiting_15.png
 - 03c_waiting_18.png
 - 03c_waiting_21.png
+- 03c_waiting_24.png
+- 03c_waiting_27.png
 - 03d_script_result.png
 - 04a_episode_list.png
 - 04b_episode_modal.png
@@ -54,6 +62,7 @@
 - 05c_waiting_15.png
 - 05c_waiting_20.png
 - 05d_veo_done.png
+- 06_ERROR.png
 - 06a_veo_tab.png
 - 06b_waiting_00.png
 - 06b_waiting_03.png
