@@ -1,0 +1,57 @@
+[
+  {
+    "name": "login",
+    "passed": true,
+    "msg": "url=https://directorstudio.sj88ai.com/"
+  },
+  {
+    "name": "create-project",
+    "passed": true,
+    "msg": "TC-38 Admin Test"
+  },
+  {
+    "name": "refs-section",
+    "passed": true,
+    "msg": "Character References section"
+  },
+  {
+    "name": "refs-upload-input",
+    "passed": true,
+    "msg": "file input"
+  },
+  {
+    "name": "refs-name-input",
+    "passed": true,
+    "msg": "name input"
+  },
+  {
+    "name": "refs-add-button",
+    "passed": true,
+    "msg": "add button"
+  },
+  {
+    "name": "script-generate",
+    "passed": true,
+    "msg": "length=428 chars"
+  },
+  {
+    "name": "save-script",
+    "passed": true,
+    "msg": "saved"
+  },
+  {
+    "name": "ep-cards",
+    "passed": true,
+    "msg": "1 EP cards"
+  },
+  {
+    "name": "veo-tab",
+    "passed": true,
+    "msg": "Veo tab clicked"
+  },
+  {
+    "name": "veo-gen-btn",
+    "passed": false,
+    "msg": "count=0"
+  }
+]
